@@ -4,6 +4,7 @@ Runs after the User Behaviour dashboard refresh (repo `tuktuki-user-behaviour`),
 
 1. **Behaviour data** — copy the refreshed behaviour repo in:
    `cp -r ../tuktuki-user-behaviour/data/* data/behaviour/ && cp ../tuktuki-user-behaviour/source/dashboard.html source/behaviour.html`
+2a. **OEM data** — with the Adjust connector (`copilot_reporting_tool`) get installs, reinstalls, reattributions, sessions, daus, uninstalls, D1, D7 and time_spent_per_user_d0 by month, network and campaign for the networks Vivo Global, OPPO Global, Xiaomi Global and Transsion Holdings (Oct 2025 to the end of last month) → `data/oem/oem_monthly.csv`, and the same by day for the current month → `data/oem/oem_daily.csv` (same column names).
 2. **GA dimensions snapshot** — run the `ga_dims` SQL (see `tools/ga_dims.sql`) with the Google Cloud BigQuery
    connector (`execute_sql_readonly`, project `tuktuki-54fa9`) and save the rows as `data/behaviour/ga/ga_dims.json`
    (list of `{dim, value, users, new_users, sessions, minutes_per_user}`). Read-only.

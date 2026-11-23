@@ -3,7 +3,7 @@
   "id": "ads_00",
   "book": "ads",
   "title": "Dashboard",
-  "rows": 25,
+  "rows": 47,
   "tables": 1,
   "charts": 0
  },
@@ -216,10 +216,26 @@
   "charts": 0
  },
  {
+  "id": "infl_00",
+  "book": "infl",
+  "title": "Dashboard",
+  "rows": 76,
+  "tables": 3,
+  "charts": 0
+ },
+ {
+  "id": "infl_01",
+  "book": "infl",
+  "title": "Reachout Counts",
+  "rows": 20,
+  "tables": 1,
+  "charts": 0
+ },
+ {
   "id": "infl_02",
   "book": "infl",
   "title": "Agencies",
-  "rows": 6,
+  "rows": 4,
   "tables": 1,
   "charts": 0
  },
@@ -243,7 +259,7 @@
   "id": "infl_05",
   "book": "infl",
   "title": "Oct Casting Probables",
-  "rows": 17,
+  "rows": 15,
   "tables": 1,
   "charts": 0
  },
@@ -276,6 +292,62 @@
   "book": "infl",
   "title": "Promotions",
   "rows": 17,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "infl_10",
+  "book": "infl",
+  "title": "Review Pages",
+  "rows": 43,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "infl_11",
+  "book": "infl",
+  "title": "CPI-Direct",
+  "rows": 4,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "infl_12",
+  "book": "infl",
+  "title": "Barter",
+  "rows": 16,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "infl_13",
+  "book": "infl",
+  "title": "Face IPs",
+  "rows": 1,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "infl_14",
+  "book": "infl",
+  "title": "Additional Activities",
+  "rows": 137,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "infl_16",
+  "book": "infl",
+  "title": "Tracker Dashboard",
+  "rows": 36,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "infl_18",
+  "book": "infl",
+  "title": "Influencer Tracker",
+  "rows": 34,
   "tables": 1,
   "charts": 0
  }

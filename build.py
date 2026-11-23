@@ -62,7 +62,6 @@ LAYOUT = [
         ("packages", "Subscriptions & packages", [("part", "app_rev"), ("sec", "purchases"), ("kids", "admin", 8, 10), ("part", "packages")]),
         ("renewals", "Renewals", [("sec", "subs"), ("kids", "admin", 11, 12), ("card", "admin", "Renewal by purchase month")]),
         ("ads", "Rewarded ads & AdMob", [("part", "admob"), ("sec", "ads")]),
-        ("channels", "Channel quality", [("sec", "channels")]),
         ("obs", "Observations & suggestions", [("part", "appobs"), ("kids", "admin", 15, 15), ("card", "admin", "Your range vs"), ("part", "fixed_ref_open"), ("card", "admin", "Findings"), ("kids", "admin", 18, 19), ("part", "fixed_ref_close"), ("sec", "tracking")]),
     ]),
     ("demo", "Demographics", [
@@ -71,7 +70,6 @@ LAYOUT = [
         ("geo", "Locations & language", [("kids", "ga", 10, 12), ("kids", "ga", 23, 23), ("part", "demo_city")]),
         ("interests", "Interests & devices", [("kids", "ga", 13, 15), ("kids", "ga", 26, 26)]),
         ("timing", "Timings & behaviour", [("kids", "ga", 19, 22), ("kids", "ga", 24, 25), ("kids", "ga", 27, 27)]),
-        ("quality", "Channel quality", [("clone", "channels"), ("part", "demo_quality")]),
         ("obs", "Observations & suggestions", [("part", "demoobs"), ("kids", "ga", 16, 18), ("kids", "ga", 28, 29)]),
     ]),
     ("series", "Series", [
@@ -92,8 +90,21 @@ LAYOUT = [
         ("daily", "Day by day", [("part", "pm_daily")]),
         ("wm", "Week & month · all metrics", [("part", "pm_wm")]),
         ("sheets", "Daily Ads report sheets", [("part", "sheetpick:" + ",".join(f"ads_{i:02d}" for i in range(16)))]),
-        ("infl", "Influencers & casting", [("part", "infl")]),
+        ("channels", "Channel quality", [("part", "chq"), ("sec", "channels"), ("part", "demo_quality")]),
         ("obs", "Observations & suggestions", [("part", "pmobs")]),
+    ]),
+    ("infl", "Influencers", [
+        ("overview", "Overview", [("part", "infl_over")]),
+        ("casting", "Who was cast, by month", [("part", "infl_cast")]),
+        ("promo", "Promotions, CPI & barter", [("part", "infl_promo")]),
+        ("tracker", "Tracker & targets", [("part", "infl_tracker")]),
+        ("obs", "Observations & suggestions", [("part", "inflobs")]),
+    ]),
+    ("oem", "OEM", [
+        ("overview", "Overview", [("part", "oem_over")]),
+        ("detail", "By network & campaign", [("part", "oem_detail")]),
+        ("other", "Other sources", [("part", "oem_other")]),
+        ("obs", "Observations & suggestions", [("part", "oemobs")]),
     ]),
 ]
 
@@ -145,7 +156,8 @@ def load_master():
     import subprocess
     subprocess.run([sys.executable, os.path.join(ROOT, "tools", "spend_daily.py")], check=True, stdout=subprocess.DEVNULL)
     daily = json.load(open(os.path.join(DATA, "spend", "daily.json"), encoding="utf-8"))
-    return {"index": index, "sheets": sheets, "engine": eng, "pmHistory": hist, "spendDaily": daily}
+    oem = {k: read_csv(os.path.join(DATA, "oem", f"oem_{k}.csv")) for k in ("monthly", "daily") if os.path.exists(os.path.join(DATA, "oem", f"oem_{k}.csv"))}
+    return {"index": index, "sheets": sheets, "engine": eng, "pmHistory": hist, "spendDaily": daily, "oem": oem}
 
 
 def assemble(master_sheets):
@@ -200,7 +212,7 @@ def assemble(master_sheets):
     out = []
     nav = []
     for pid, plabel, tabs in LAYOUT:
-        dot = {"dash": "#3b2bd6", "app": "#2f6fd1", "demo": "#d6407f", "series": "#7c4ddb", "social": "#e0a321", "pm": "#f08c2e"}.get(pid, "#888")
+        dot = {"dash": "#3b2bd6", "app": "#2f6fd1", "demo": "#d6407f", "series": "#7c4ddb", "social": "#e0a321", "pm": "#f08c2e", "infl": "#12a150", "oem": "#5a6b7d"}.get(pid, "#888")
         nav.append(f'<button class="m-page" data-page="{pid}"><i style="background:{dot}"></i>{html.escape(plabel)}</button>')
         tb, body = [], []
         for t in tabs:

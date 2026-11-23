@@ -23,6 +23,10 @@ BOOKS = [
 ]
 
 
+# hidden sheets worth showing (no contact details)
+HIDDEN_OK = {"infl": ("Dashboard", "Influencer Tracker", "Tracker Dashboard", "CPI-Direct", "Barter", "Additional Activities", "Review Pages", "Reachout Counts", "Face IPs")}
+
+
 def fmt(v, nf):
     if v is None:
         return ""
@@ -76,7 +80,7 @@ def sheet_tables(ws):
     rows = []
     maxc = 0
     hc, hr = hidden_sets(ws)
-    for r in ws.iter_rows():
+    for r in ws.iter_rows(max_row=min(ws.max_row, 20000), max_col=min(ws.max_column, 90)):
         if r and r[0].row in hr:
             continue
         lvl = ws.row_dimensions[r[0].row].outlineLevel if r else 0
@@ -176,7 +180,7 @@ def main():
         wbf = openpyxl.load_workbook(os.path.join(ORIG, fn)) if key == 'ig' else None  # chart definitions (only the IG workbook has charts)
         import gc; gc.collect()
         for i, ws in enumerate(wbv.worksheets):
-            if ws.sheet_state != "visible":
+            if ws.sheet_state != "visible" and ws.title not in HIDDEN_OK.get(key, ()):
                 continue
             sid = f"{key}_{i:02d}"
             data = {"id": sid, "book": key, "bookLabel": label, "title": ws.title,

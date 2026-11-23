@@ -1,11 +1,11 @@
 <style>
 #dash-root .tb { gap: var(--cds-gap-lg); }
-#dash-root .tb #m-top { position: relative; border-radius: 18px; padding: 22px 24px; color: #fff; overflow: hidden;
-  background: radial-gradient(120% 140% at 0% 0%, #3b2bd6 0%, #6d3bd8 38%, #c2418e 72%, #f0864a 100%); }
-#dash-root .tb #m-top h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: clamp(24px, 3.2vw, 34px); margin: 0 0 6px; color: #fff; }
-#dash-root .tb #m-top p { margin: 0; max-width: 62rem; color: rgba(255,255,255,.88); font-size: var(--cds-font-size-caption); line-height: 1.5; }
-#dash-root .tb #m-top .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
-#dash-root .tb #m-top .chips span { background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.28); border-radius: 999px; padding: 3px 10px; font-size: 12px; }
+#dash-root .tb #m-top { border: 1px solid var(--color-border-line); border-radius: 16px; padding: 18px 22px; background: linear-gradient(120deg, color-mix(in srgb, #7c4ddb 7%, var(--color-panel)) 0%, var(--color-panel) 55%, color-mix(in srgb, #f08c2e 6%, var(--color-panel)) 100%); }
+#dash-root .tb #m-top h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: clamp(22px, 2.6vw, 30px); margin: 0 0 4px; color: var(--color-fg); }
+#dash-root .tb #m-top p { margin: 0; color: var(--color-fg-muted); font-size: 13.5px; line-height: 1.5; max-width: 60rem; }
+#dash-root .tb #m-top .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+#dash-root .tb #m-top .chips span { background: var(--color-bg); border: 1px solid var(--color-border-line); color: var(--color-fg-muted); border-radius: 999px; padding: 2px 10px; font-size: 12px; }
+#dash-root .tb #m-top .chips span:first-child { color: var(--color-fg); font-weight: 600; }
 #dash-root .tb .m-sticky { position: sticky; top: 0; z-index: 20; background: var(--color-bg); padding: 8px 0 6px; display: flex; flex-direction: column; gap: 8px; border-bottom: 1px solid var(--color-border-line); }
 #dash-root .tb .m-nav { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
 #dash-root .tb .m-nav button { font: inherit; font-size: 14px; white-space: nowrap; color: var(--color-fg-muted); background: transparent; border: 1px solid transparent; border-radius: 10px; padding: 7px 14px; cursor: pointer; display: inline-flex; gap: 7px; align-items: center; }
@@ -100,7 +100,7 @@
 
 <div id="m-top">
   <h1>Tuktuki master tracker</h1>
-  <p>Every Tuktuki report in one place: Adjust, the admin panel, Google Analytics, the Daily Ads report (Meta, Google Ads, ShareChat), the Instagram &amp; YouTube report, the Business Performance Tracker and the Influencer dashboard. <b>Every number, chart, observation and suggestion follows the date range below</b>; changes are shown against the same number of days just before it.</p>
+  <p>App, audience, series, social, paid marketing, influencers and OEM in one place. Everything follows the date range; changes compare with the same number of days just before it.</p>
   <div class="chips" data-draw="mHeroChips"></div>
 </div>
 
@@ -323,4 +323,48 @@
   <details class="mdet"><summary>Agencies</summary><div class="body"><div data-sheet="infl_02"></div></div></details>
 </template>
 
+<template data-part="chq"><div class="card pb"><h3>Which acquisition channels bring users who stay</h3><p>Every Adjust channel by month: installs, retention, time on install day and how many new users reach the 1st and 5th video. Paid channels are compared with organic and influencer installs; the Business Performance Tracker's own source table is at the bottom.</p></div><div class="grid"><div class="card"><h3>Day-1 retention by channel (months in the range)</h3><div class="chart" data-draw="mChq" data-k="d1"></div></div><div class="card"><h3>Installs by channel (months in the range)</h3><div class="chart" data-draw="mChq" data-k="inst"></div></div></div></template>
+<template data-part="infl_over">
+  <div class="kpis" data-draw="mInflKpis"></div>
+  <div class="grid">
+    <div class="card"><h3>Influencer spend and trackable installs by month</h3><p class="note">Spend: Business Performance Tracker (Table 3, Sep–Nov). Installs: Adjust “Influencer” channel.</p><div class="legend"><span><i class="k0"></i>Spend (₹)</span><span><i class="k1"></i>Installs</span></div><div class="chart" data-draw="mInflChart" data-k="spend"></div></div>
+    <div class="card"><h3>Influencer installs: retention vs paid</h3><div class="legend"><span><i class="k0"></i>Influencer D1</span><span><i class="k1"></i>Paid D1</span><span><i class="k2"></i>Influencer D7</span></div><div class="chart" data-draw="mInflChart" data-k="ret"></div></div>
+    <div class="card"><h3>Influencers cast per month</h3><p class="note">Casting sheet and the monthly casting-probables sheets. Cast = closed / shoot done.</p><div class="legend"><span><i style="background:#12a150"></i>Cast</span><span><i style="background:#e0a321"></i>In discussion</span><span><i style="background:#8a8f98"></i>Dropped</span></div><div class="chart" data-draw="mInflChart" data-k="cast"></div></div>
+    <div class="card"><h3>Casting cost by series (₹)</h3><p class="note">Influencers cast in the range.</p><div class="chart" data-draw="mInflChart" data-k="series"></div></div>
+  </div>
+  <div class="card"><h3>Which influencer went into which series</h3><div class="tw" data-draw="mInflSeriesTbl"></div></div>
+</template>
+<template data-part="infl_cast">
+  <div class="ctl"><span>Show</span><div class="seg" data-ic="st"><button data-v="all" aria-pressed="true">Everyone</button><button data-v="Cast">Cast</button><button data-v="In discussion">In discussion</button><button data-v="Dropped">Dropped</button></div><input class="msearch" type="search" placeholder="Search name or series" data-ic="q"></div>
+  <div data-draw="mInflMonths"></div>
+</template>
+<template data-part="infl_promo">
+  <details class="mdet" open><summary>Promotions <span class="muted">paid reels and stories</span></summary><div class="body"><div data-sheet="infl_09"></div></div></details>
+  <details class="mdet"><summary>Agencies</summary><div class="body"><div data-sheet="infl_02"></div></div></details>
+  <details class="mdet"><summary>CPI deals (pay per download)</summary><div class="body"><div data-sheet="infl_11"></div></div></details>
+  <details class="mdet"><summary>Barter posts</summary><div class="body"><div data-sheet="infl_12"></div></div></details>
+  <details class="mdet"><summary>Review pages</summary><div class="body"><div data-sheet="infl_10"></div></div></details>
+  <details class="mdet"><summary>Additional activities (trailers, festive posts)</summary><div class="body"><div data-sheet="infl_14"></div></div></details>
+</template>
+<template data-part="infl_tracker">
+  <details class="mdet" open><summary>Influencers closed <span class="muted">Business Performance Tracker, Table 5</span></summary><div class="body"><div data-sheet="biz_00" data-table="AG"></div></div></details>
+  <details class="mdet" open><summary>Targets vs actuals <span class="muted">Influencer dashboard</span></summary><div class="body"><div data-sheet="infl_16"></div></div></details>
+  <details class="mdet"><summary>Influencer tracker — one row per influencer</summary><div class="body"><div data-sheet="infl_18"></div></div></details>
+  <details class="mdet"><summary>Outreach summary and daily reach-out counts</summary><div class="body"><div data-sheet="infl_00"></div><div data-sheet="infl_01"></div></div></details>
+  <details class="mdet"><summary>Monthly casting-probables sheets, as written</summary><div class="body"><div data-sheet="infl_03"></div><div data-sheet="infl_04"></div><div data-sheet="infl_05"></div><div data-sheet="infl_06"></div><div data-sheet="infl_07"></div><div data-sheet="infl_08"></div></div></details>
+</template>
+<template data-part="inflobs"><div class="obsg" data-draw="mObs" data-sec="infl"></div></template>
+<template data-part="oem_over">
+  <div class="kpis" data-draw="mOemKpis"></div>
+  <div class="grid">
+    <div class="card"><h3>Installs by OEM, by month</h3><p class="note">Adjust networks: Oppo Affinity, Xiaomi, Vivo Affinity, Transsion. Months in the range are dark.</p><div class="legend" data-draw="mOemLegend"></div><div class="chart" data-draw="mOemChart" data-k="inst"></div></div>
+    <div class="card"><h3>Day-1 retention by OEM, by month</h3><div class="legend" data-draw="mOemLegend"></div><div class="chart" data-draw="mOemChart" data-k="d1"></div></div>
+    <div class="card"><h3>Installs a day in November</h3><p class="note">Day-level data exists for November 2026 (the Vivo pilot).</p><div class="legend" data-draw="mOemLegend"></div><div class="chart" data-draw="mOemChart" data-k="daily"></div></div>
+    <div class="card"><h3>Still active: DAU from OEM installs</h3><p class="note">Average daily active users the network is credited with, by month.</p><div class="legend" data-draw="mOemLegend"></div><div class="chart" data-draw="mOemChart" data-k="dau"></div></div>
+  </div>
+  <div class="card"><h3>Each OEM in the range</h3><div class="tw" data-draw="mOemTbl2"></div></div>
+</template>
+<template data-part="oem_detail"><div class="card"><h3>Network × campaign × month</h3><p class="note">Months in the range. Retention is for the month's install cohort.</p><div class="tw" data-draw="mOemDetail"></div></div></template>
+<template data-part="oem_other"><div class="card"><h3>Every non-Meta/Google source (Adjust channels)</h3><p class="note">MOLOCO, Mobinet, affiliates, QR posters, social, influencer and OEM channels by month, months in the range.</p><div class="tw" data-draw="mOemOther"></div></div></template>
+<template data-part="oemobs"><div class="obsg" data-draw="mObs" data-sec="oem"></div></template>
 <template data-part="pmobs"><div class="obsg" data-draw="mObs" data-sec="pm"></div></template>
