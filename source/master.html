@@ -329,14 +329,24 @@
   <div class="grid">
     <div class="card"><h3>Influencer spend and trackable installs by month</h3><p class="note">Spend: Business Performance Tracker (Table 3, Sep–Nov). Installs: Adjust “Influencer” channel.</p><div class="legend"><span><i class="k0"></i>Spend (₹)</span><span><i class="k1"></i>Installs</span></div><div class="chart" data-draw="mInflChart" data-k="spend"></div></div>
     <div class="card"><h3>Influencer installs: retention vs paid</h3><div class="legend"><span><i class="k0"></i>Influencer D1</span><span><i class="k1"></i>Paid D1</span><span><i class="k2"></i>Influencer D7</span></div><div class="chart" data-draw="mInflChart" data-k="ret"></div></div>
-    <div class="card"><h3>Influencers cast per month</h3><p class="note">Casting sheet and the monthly casting-probables sheets. Cast = closed / shoot done.</p><div class="legend"><span><i style="background:#12a150"></i>Cast</span><span><i style="background:#e0a321"></i>In discussion</span><span><i style="background:#8a8f98"></i>Dropped</span></div><div class="chart" data-draw="mInflChart" data-k="cast"></div></div>
-    <div class="card"><h3>Casting cost by series (₹)</h3><p class="note">Influencers cast in the range.</p><div class="chart" data-draw="mInflChart" data-k="series"></div></div>
+    <div class="card"><h3>Influencers cast per month</h3><p class="note">Cast only (“Casted” in the monthly casting sheets; before September, confirmed rows of the Casting sheet). Approved-but-not-cast names are not counted.</p><div class="legend"><span><i style="background:#12a150"></i>Cast</span><span><i class="k1"></i>Cost of cast talent (₹)</span></div><div class="chart" data-draw="mInflChart" data-k="cast"></div></div>
+    <div class="card"><h3>Casting cost by series (₹)</h3><p class="note">Cast influencers in the months of the range.</p><div class="chart" data-draw="mInflChart" data-k="series"></div></div>
   </div>
-  <div class="card"><h3>Which influencer went into which series</h3><div class="tw" data-draw="mInflSeriesTbl"></div></div>
+  <div class="card"><h3>Which cast influencer went into which series</h3><div class="tw" data-draw="mInflSeriesTbl"></div></div>
 </template>
 <template data-part="infl_cast">
-  <div class="ctl"><span>Show</span><div class="seg" data-ic="st"><button data-v="all" aria-pressed="true">Everyone</button><button data-v="Cast">Cast</button><button data-v="In discussion">In discussion</button><button data-v="Dropped">Dropped</button></div><input class="msearch" type="search" placeholder="Search name or series" data-ic="q"></div>
-  <div data-draw="mInflMonths"></div>
+  <div class="card pb"><h3>Influencers cast</h3><p>Everyone marked “Casted” in the monthly casting sheets (Sep 2026 onward), plus confirmed names from the Casting sheet for May–Aug. All totals on the Influencers pages count these people only.</p></div>
+  <div class="ctl"><span>Months</span><div class="seg" data-ic="scope"><button data-v="range" aria-pressed="true">In the date range</button><button data-v="all">All months</button></div><input class="msearch" type="search" placeholder="Search name or series" data-ic="q"></div>
+  <div data-draw="mInflMonths" data-st="Cast"></div>
+</template>
+<template data-part="infl_avail">
+  <div class="card pb"><h3>Approved, not cast</h3><p>People approved in the monthly casting sheets but marked “Not casted” — available to cast. Their quoted costs are shown for reference and are left out of every total.</p></div>
+  <div class="ctl"><span>Months</span><div class="seg" data-ic="scope"><button data-v="range" aria-pressed="true">In the date range</button><button data-v="all">All months</button></div><input class="msearch" type="search" placeholder="Search name or series" data-ic="q"></div>
+  <div data-draw="mInflMonths" data-st="Available"></div>
+</template>
+<template data-part="infl_months">
+  <div class="card"><h3>Casting month by month</h3><p class="note">Every month in the casting sheets; months in the date range are highlighted. Cost and downloads are for cast people only.</p><div class="tw" data-draw="mInflMonthTbl" data-nocollapse></div></div>
+  <div class="card"><h3>Cast vs approved-not-cast, by month</h3><div class="legend"><span><i style="background:#12a150"></i>Cast</span><span><i style="background:#c9ccd3"></i>Approved, not cast</span></div><div class="chart" data-draw="mInflChart" data-k="split"></div></div>
 </template>
 <template data-part="infl_promo">
   <details class="mdet" open><summary>Promotions <span class="muted">paid reels and stories</span></summary><div class="body"><div data-sheet="infl_09"></div></div></details>

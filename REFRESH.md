@@ -24,3 +24,13 @@ Runs after the User Behaviour dashboard refresh (repo `tuktuki-user-behaviour`),
 `data/spend/pm_history.json` (Meta + Google spend Oct 2025 – Jun 2026) is fixed history and is not refreshed.
 If a new sheet is added to a workbook it shows up automatically in `data/sheets/`; add it to `LAYOUT` in `build.py`
 to give it a tab (the build prints nothing for unplaced sheets, so check `data/sheets/index.json`).
+
+## Influencer casting (how the Influencers pages read the sheets)
+
+- The monthly casting sheets (Sep Casting Probables … January 2027) are the source of truth from September 2026.
+  Their **Casting Status** column decides the section: "Casted" → **Cast**; "Not casted" / "Not Casted Yet" → **Approved, not cast**.
+  A one-cell "Smaller Influencers" row switches the tier from Big Star to Influencer for the rows under it.
+- Before September only the Casting sheet exists; its confirmed rows (a date, "Closed", "Shoot Done" or assets acquired) count as Cast.
+- The Casting sheet also fills in character, coordinator, tier and trackable downloads for the same person within two months.
+- Every count, cost and chart counts Cast people only; approved-not-cast quotes are shown but never added in.
+- A new month's sheet needs one line in `ROSTER` in source/app.js (sheet id → month).

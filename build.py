@@ -95,7 +95,9 @@ LAYOUT = [
     ]),
     ("infl", "Influencers", [
         ("overview", "Overview", [("part", "infl_over")]),
-        ("casting", "Who was cast, by month", [("part", "infl_cast")]),
+        ("casting", "Cast", [("part", "infl_cast")]),
+        ("available", "Approved, not cast", [("part", "infl_avail")]),
+        ("months", "Month by month", [("part", "infl_months")]),
         ("promo", "Promotions, CPI & barter", [("part", "infl_promo")]),
         ("tracker", "Tracker & targets", [("part", "infl_tracker")]),
         ("obs", "Observations & suggestions", [("part", "inflobs")]),

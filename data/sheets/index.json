@@ -267,7 +267,7 @@
   "id": "infl_06",
   "book": "infl",
   "title": "Nov Casting Probables",
-  "rows": 15,
+  "rows": 14,
   "tables": 1,
   "charts": 0
  },
@@ -275,7 +275,7 @@
   "id": "infl_07",
   "book": "infl",
   "title": "Dec Casting Probables",
-  "rows": 23,
+  "rows": 24,
   "tables": 1,
   "charts": 0
  },
@@ -283,7 +283,7 @@
   "id": "infl_08",
   "book": "infl",
   "title": "January 2027",
-  "rows": 8,
+  "rows": 7,
   "tables": 1,
   "charts": 0
  },
