@@ -257,6 +257,7 @@ def build():
     os.makedirs(os.path.join(ROOT, "docs"), exist_ok=True)
     with open(os.path.join(ROOT, "docs", "index.html"), "w", encoding="utf-8") as f:
         f.write(out)
+    open(os.path.join(ROOT, "docs", ".nojekyll"), "w").close()
     print(f"built docs/index.html ({len(out)//1024} KB); {note}")
 
 

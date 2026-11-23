@@ -14,4 +14,4 @@ One page that pulls every Tuktuki report together, in six sections with tabs:
 `docs/index.html` is the built page (a static snapshot; open it in a browser). It is refreshed every Monday
 together with the User Behaviour dashboard — see [REFRESH.md](REFRESH.md).
 
-Private repo, no GitHub Pages.
+Public repo. Live page (GitHub Pages, main /docs): https://kshitijbhatiakaul.github.io/tuktuki-master-tracker/
