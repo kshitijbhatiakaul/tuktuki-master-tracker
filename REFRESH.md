@@ -16,8 +16,9 @@ Runs after the User Behaviour dashboard refresh (repo `tuktuki-user-behaviour`),
 5. **Export**:
    `python3 tools/export_sheets.py <recalc> <staged>` and
    `python3 tools/export_engine.py "<recalc>/Updated Tuktuki Meta Daily Report.xlsx" <engine data folder>`
-6. **Build**: `python3 build.py build` (needs `beautifulsoup4`) — writes `docs/index.html`.
-7. Republish `docs/index.html` to the Master Tracker artifact (same URL), commit and push. Never rewrite history.
+6. **Daily spend** is rebuilt automatically by the build (`tools/spend_daily.py`): Meta exact days from the Day-wise sheet (Sep on) and the Meta API history in `data/spend/meta_account_daily.json` (Oct 2025 – Apr 2026); other months are spread evenly and flagged.
+7. **Build**: `python3 build.py build` (needs `beautifulsoup4`) — writes `docs/index.html`.
+8. Republish `docs/index.html` to the Master Tracker artifact (same URL), commit and push to main — GitHub Pages (main /docs) updates the public link https://kshitijbhatiakaul.github.io/tuktuki-master-tracker/. Never rewrite history.
 
 `data/spend/pm_history.json` (Meta + Google spend Oct 2025 – Jun 2026) is fixed history and is not refreshed.
 If a new sheet is added to a workbook it shows up automatically in `data/sheets/`; add it to `LAYOUT` in `build.py`

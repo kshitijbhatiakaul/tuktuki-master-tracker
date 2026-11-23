@@ -45,52 +45,55 @@ SHIM = SHIM.replace(
 R = "range"  # tabs that follow the date range get a marker
 LAYOUT = [
     ("dash", "Dashboard", [
-        ("monthly", "Monthly highlights", [("part", "monthly")]),
-        ("range", "Key numbers for a date range", [("sec", "glance"), ("sec", "more")], R),
-        ("business", "Revenue & business", [("part", "business")]),
-        ("summary", "What the data says", [("sec", "insights"), ("sec", "actions")], R),
+        ("overview", "Overview", [("part", "overview")]),
+        ("months", "Month by month", [("part", "monthly")]),
+        ("compare", "Compare periods", [("part", "compare")]),
+        ("relaunch", "Before vs after relaunch", [("part", "relaunch"), ("sec", "eras")]),
+        ("revenue", "Revenue & brand deals", [("part", "revenue")]),
+        ("summary", "Observations & suggestions", [("part", "dashobs"), ("sec", "insights"), ("sec", "actions")]),
+        ("more", "All key numbers", [("sec", "glance"), ("sec", "more")]),
     ]),
     ("app", "App insights", [
-        ("growth", "Installs & uninstalls", [("sec", "growth"), ("kids", "admin", 13, 14), ("part", "uninstalls")], R),
-        ("retention", "Retention & comebacks", [("sec", "retention"), ("sec", "comeback")], R),
-        ("viewing", "Viewing & drop points", [("kids", "admin", 0, 5), ("sec", "depth"), ("sec", "dropoff")], R),
-        ("sessions", "Session time", [("part", "sessions"), ("sec", "engagement")], R),
-        ("packages", "Packages & revenue", [("sec", "purchases"), ("kids", "admin", 8, 10), ("part", "packages")], R),
-        ("renewals", "Renewals", [("sec", "subs"), ("kids", "admin", 11, 12), ("card", "admin", "Renewal by purchase month")], R),
-        ("ads", "Rewarded ads & AdMob", [("sec", "ads"), ("part", "admob")], R),
-        ("channels", "Channel quality", [("sec", "channels"), ("sec", "eras")], R),
-        ("obs", "Observations & suggestions", [("kids", "admin", 15, 15), ("card", "admin", "Your range vs"), ("card", "admin", "Findings"), ("kids", "admin", 18, 19), ("part", "appobs"), ("sec", "tracking")], R),
+        ("growth", "Installs & uninstalls", [("part", "app_growth"), ("sec", "growth"), ("kids", "admin", 13, 14), ("part", "uninstalls")]),
+        ("retention", "Retention", [("part", "app_ret"), ("sec", "retention")]),
+        ("comeback", "Reinstalls & reactivations", [("sec", "comeback")]),
+        ("viewing", "Viewing & drop points", [("part", "app_view"), ("kids", "admin", 0, 5), ("sec", "depth"), ("sec", "dropoff")]),
+        ("sessions", "Session time", [("part", "sessions"), ("sec", "engagement")]),
+        ("packages", "Subscriptions & packages", [("part", "app_rev"), ("sec", "purchases"), ("kids", "admin", 8, 10), ("part", "packages")]),
+        ("renewals", "Renewals", [("sec", "subs"), ("kids", "admin", 11, 12), ("card", "admin", "Renewal by purchase month")]),
+        ("ads", "Rewarded ads & AdMob", [("part", "admob"), ("sec", "ads")]),
+        ("channels", "Channel quality", [("sec", "channels")]),
+        ("obs", "Observations & suggestions", [("part", "appobs"), ("kids", "admin", 15, 15), ("card", "admin", "Your range vs"), ("part", "fixed_ref_open"), ("card", "admin", "Findings"), ("kids", "admin", 18, 19), ("part", "fixed_ref_close"), ("sec", "tracking")]),
     ]),
     ("demo", "Demographics", [
-        ("audience", "Audience", [("kids", "ga", 0, 6)], R),
-        ("agegender", "Age & gender", [("kids", "ga", 7, 9), ("part", "demo_age")], R),
-        ("geo", "Locations & language", [("kids", "ga", 10, 12), ("kids", "ga", 23, 23), ("part", "demo_city")], R),
+        ("audience", "Audience", [("kids", "ga", 0, 6)]),
+        ("agegender", "Age & gender", [("kids", "ga", 7, 9), ("part", "demo_age")]),
+        ("geo", "Locations & language", [("kids", "ga", 10, 12), ("kids", "ga", 23, 23), ("part", "demo_city")]),
         ("interests", "Interests & devices", [("kids", "ga", 13, 15), ("kids", "ga", 26, 26)]),
         ("timing", "Timings & behaviour", [("kids", "ga", 19, 22), ("kids", "ga", 24, 25), ("kids", "ga", 27, 27)]),
-        ("quality", "Channel quality", [("clone", "channels"), ("part", "demo_quality")], R),
-        ("obs", "Observations & suggestions", [("kids", "ga", 16, 18), ("kids", "ga", 28, 29)]),
+        ("quality", "Channel quality", [("clone", "channels"), ("part", "demo_quality")]),
+        ("obs", "Observations & suggestions", [("part", "demoobs"), ("kids", "ga", 16, 18), ("kids", "ga", 28, 29)]),
     ]),
     ("series", "Series", [
-        ("overview", "How each series performs", [("part", "series")], R),
-        ("table", "Viewership by show", [("kids", "admin", 6, 7)], R),
-        ("movers", "Gainers & losers", [("card", "admin", "Shows gaining")], R),
+        ("overview", "How each series performs", [("part", "series")]),
+        ("table", "Viewership by show", [("kids", "admin", 6, 7)]),
+        ("movers", "Gainers & losers", [("card", "admin", "Shows gaining")]),
         ("promo", "Promotion & where opens come from", [("part", "series_promo")]),
-        ("obs", "Observations & suggestions", [("part", "series_obs")], R),
+        ("obs", "Observations & suggestions", [("part", "series_obs")]),
     ]),
     ("social", "Social media", [
-        ("ig", "Instagram overview", [("part", "ig")]),
-        ("iglog", "Instagram post log", [("part", "sheet:ig_01")]),
-        ("igworks", "What works on Instagram", [("part", "sheet:ig_02")]),
-        ("yt", "YouTube overview", [("part", "yt")]),
-        ("ytlog", "YouTube video log", [("part", "sheet:ig_04")]),
-        ("ytworks", "What works on YouTube", [("part", "sheet:ig_05")]),
-        ("sugg", "Suggestions", [("part", "social_sugg"), ("part", "sheet:ig_06")]),
+        ("ig", "Instagram", [("part", "ig")]),
+        ("yt", "YouTube", [("part", "yt")]),
+        ("logs", "Post & video logs", [("part", "sheetpick:ig_01,ig_04,ig_02,ig_05,ig_06")]),
+        ("sugg", "Observations & suggestions", [("part", "social_sugg")]),
     ]),
     ("pm", "Performance marketing", [
         ("overview", "Overview", [("part", "pm")]),
-        ("wm", "Weekly & monthly · all metrics", [("part", "pm_wm")]),
-    ] + [(f"s{i:02d}", None, [("part", f"sheet:ads_{i:02d}")]) for i in range(16)] + [
+        ("daily", "Day by day", [("part", "pm_daily")]),
+        ("wm", "Week & month · all metrics", [("part", "pm_wm")]),
+        ("sheets", "Daily Ads report sheets", [("part", "sheetpick:" + ",".join(f"ads_{i:02d}" for i in range(16)))]),
         ("infl", "Influencers & casting", [("part", "infl")]),
+        ("obs", "Observations & suggestions", [("part", "pmobs")]),
     ]),
 ]
 
@@ -139,7 +142,10 @@ def load_master():
         sheets[it["id"]] = json.load(open(os.path.join(sdir, it["id"] + ".json"), encoding="utf-8"))
     eng = json.load(open(os.path.join(DATA, "ads_engine.json"), encoding="utf-8"))
     hist = json.load(open(os.path.join(DATA, "spend", "pm_history.json"), encoding="utf-8"))
-    return {"index": index, "sheets": sheets, "engine": eng, "pmHistory": hist}
+    import subprocess
+    subprocess.run([sys.executable, os.path.join(ROOT, "tools", "spend_daily.py")], check=True, stdout=subprocess.DEVNULL)
+    daily = json.load(open(os.path.join(DATA, "spend", "daily.json"), encoding="utf-8"))
+    return {"index": index, "sheets": sheets, "engine": eng, "pmHistory": hist, "spendDaily": daily}
 
 
 def assemble(master_sheets):
@@ -179,6 +185,10 @@ def assemble(master_sheets):
             return [d]
         if kind == "part":
             name = it[1]
+            if name.startswith("sheetpick:"):
+                ids = name[10:].split(",")
+                opts = "".join(f'<option value="{i}">{html.escape(master_sheets[i]["title"])}</option>' for i in ids if i in master_sheets)
+                return [BeautifulSoup(f'<div class="card"><div class="ctl"><b>Sheet</b> <select class="msel" data-sheetpick>{opts}</select><span class="muted" data-sheetnote></span></div><div data-sheethost></div></div>', "html.parser")]
             if name.startswith("sheet:"):
                 sid = name[6:]
                 t = master_sheets[sid]
@@ -190,7 +200,8 @@ def assemble(master_sheets):
     out = []
     nav = []
     for pid, plabel, tabs in LAYOUT:
-        nav.append(f'<button class="m-page" data-page="{pid}">{html.escape(plabel)}</button>')
+        dot = {"dash": "#3b2bd6", "app": "#2f6fd1", "demo": "#d6407f", "series": "#7c4ddb", "social": "#e0a321", "pm": "#f08c2e"}.get(pid, "#888")
+        nav.append(f'<button class="m-page" data-page="{pid}"><i style="background:{dot}"></i>{html.escape(plabel)}</button>')
         tb, body = [], []
         for t in tabs:
             tid, tlabel, items = t[0], t[1], t[2]
@@ -198,7 +209,7 @@ def assemble(master_sheets):
             if tlabel is None:
                 sid = items[0][1][6:]
                 tlabel = master_sheets[sid]["title"]
-            tb.append(f'<button class="m-tab" data-tab="{tid}">{html.escape(tlabel)}{"<span class=rdot title=\"Follows the date range\">•</span>" if rng else ""}</button>')
+            tb.append(f'<button class="m-tab" data-tab="{tid}">{html.escape(tlabel)}</button>')
             holder = BeautifulSoup(f'<section class="m-tabpane" data-tab="{tid}"{" data-range" if rng else ""} hidden></section>', "html.parser").section
             for i in items:
                 for node in item(i):
@@ -216,9 +227,9 @@ def assemble(master_sheets):
     head = beh.find("header", id="top")
     rng = beh.find("div", id="range")
     styles = "".join(str(s) for s in beh.find_all("style")) + "".join(str(s) for s in mst.find_all("style"))
-    scripts = "".join(str(s) for s in beh.find_all("script")) + "<script>" + open(os.path.join(ROOT, "source", "master.js"), encoding="utf-8").read().replace("</script", "<\\/script") + "</script>"
+    scripts = "".join(str(s) for s in beh.find_all("script")) + "<script>" + open(os.path.join(ROOT, "source", "app.js"), encoding="utf-8").read().replace("</script", "<\\/script") + "</script>"
     top = mst.find("div", id="m-top")
-    body = f'{styles}<div class="tb">{top}<nav class="m-nav">{"".join(nav)}</nav>{rng}{"".join(str(p) for p in out)}</div>{scripts}'
+    body = f'{styles}<div class="tb">{top}<div class="m-sticky"><nav class="m-nav">{"".join(nav)}</nav>{rng}</div>{"".join(str(p) for p in out)}</div>{scripts}'
     return body
 
 
