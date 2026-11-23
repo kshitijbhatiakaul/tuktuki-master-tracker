@@ -1,0 +1,203 @@
+<style>
+#dash-root .tb #m-top h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; }
+#dash-root .tb .m-nav { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm); }
+#dash-root .tb .m-nav button, #dash-root .tb .m-tabs button, #dash-root .tb .mbtn { font: inherit; font-size: var(--cds-font-size-caption); color: var(--color-fg); background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+#dash-root .tb .m-nav button { font-size: var(--cds-font-size-body); padding: 8px 16px; }
+#dash-root .tb .m-nav button[aria-selected=true] { background: var(--color-fg); color: var(--color-bg); border-color: var(--color-fg); }
+#dash-root .tb .m-tabs { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 6px; margin-bottom: var(--cds-gap-lg); border-bottom: 1px solid var(--color-border-line); scrollbar-width: thin; }
+#dash-root .tb .m-tabs button { white-space: nowrap; border-radius: var(--cds-radius); background: transparent; border-color: transparent; color: var(--color-fg-muted); }
+#dash-root .tb .m-tabs button:hover { color: var(--color-fg); }
+#dash-root .tb .m-tabs button[aria-selected=true] { color: var(--color-fg); background: var(--color-panel); border-color: var(--color-border-line); font-weight: 600; }
+#dash-root .tb .rdot { color: #2f6fd1; margin-left: 4px; }
+#dash-root .tb .m-tabpane { display: flex; flex-direction: column; gap: var(--cds-gap-xl); }
+#dash-root .tb .m-tabpane[hidden], #dash-root .tb .m-page-pane[hidden] { display: none; }
+#dash-root .tb .msec { display: flex; flex-direction: column; gap: var(--cds-gap-md); }
+#dash-root .tb .mbtn[aria-pressed=true] { background: var(--color-fg); color: var(--color-bg); border-color: var(--color-fg); }
+#dash-root .tb .months { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+#dash-root .tb .months label { display: inline-flex; align-items: center; gap: 5px; font-size: var(--cds-font-size-caption); border: 1px solid var(--color-border-line); border-radius: 999px; padding: 4px 10px; background: var(--color-panel); cursor: pointer; }
+#dash-root .tb .months label:has(input:checked) { border-color: var(--color-fg); }
+#dash-root .tb .months .sep { width: 1px; height: 22px; background: var(--color-border-line); margin: 0 4px; }
+#dash-root .tb .sheetwrap { overflow: auto; max-height: 70vh; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); }
+#dash-root .tb .sheetwrap table td, #dash-root .tb .sheetwrap table th { text-align: left; vertical-align: top; }
+#dash-root .tb .sheetwrap td.num { text-align: right; }
+#dash-root .tb .sheetwrap td.long { white-space: normal; min-width: 16rem; max-width: 30rem; }
+#dash-root .tb .sheetwrap tr.hd td { position: sticky; top: 0; background: var(--color-panel); color: var(--color-fg-muted); font-weight: 600; white-space: normal; min-width: 5rem; z-index: 1; }
+#dash-root .tb .sheetwrap tr.ttl td { font-weight: 600; white-space: normal; background: var(--color-bg); }
+#dash-root .tb .sheetwrap tr.lvl1 td:first-child { padding-left: 18px; } #dash-root .tb .sheetwrap tr.lvl2 td:first-child { padding-left: 30px; }
+#dash-root .tb .sheetbar { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm); align-items: center; margin-bottom: var(--cds-gap-sm); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+#dash-root .tb .sheetbar input, #dash-root .tb select.msel, #dash-root .tb input.msearch { font: inherit; color: var(--color-fg); background: var(--color-bg); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: 4px 8px; }
+#dash-root .tb .sheetbar input { min-width: 14rem; }
+#dash-root .tb .sheetbar .pg { margin-left: auto; display: flex; gap: 6px; align-items: center; }
+#dash-root .tb .kv { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: var(--cds-gap-md); }
+#dash-root .tb .obs li b { font-weight: 600; }
+#dash-root .tb .pill { display: inline-block; font-size: 11px; padding: 1px 7px; border-radius: 999px; border: 1px solid var(--color-border-line); color: var(--color-fg-muted); margin-left: 6px; vertical-align: 1px; }
+#dash-root .tb .mtbl td.l { max-width: 22rem; overflow: hidden; text-overflow: ellipsis; }
+#dash-root .tb .mtbl th[data-k] { cursor: pointer; }
+#dash-root .tb .mtbl tr.sel td { background: color-mix(in srgb, #2f6fd1 8%, transparent); }
+#dash-root .tb .ctl { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm); align-items: center; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin-bottom: var(--cds-gap-sm); }
+@media print { #dash-root .tb .m-page-pane[hidden], #dash-root .tb .m-tabpane[hidden] { display: flex !important; } #dash-root .tb .m-nav, #dash-root .tb .m-tabs, #dash-root .tb .bar { display: none; } }
+</style>
+
+<div id="m-top">
+  <h1>Tuktuki master tracker</h1>
+  <p class="lede">One place for the app, audience, series, social media and paid marketing. It pulls the User Behaviour dashboard (Adjust, the Tuktuki admin panel and Google Analytics), the Daily Ads report (Meta, Google Ads, ShareChat), the Instagram &amp; YouTube report, the Business Performance Tracker and the Influencer dashboard. Tabs marked <span class="rdot">•</span> follow the date range; the Dashboard's monthly highlights use the month boxes.</p>
+</div>
+
+<template data-part="monthly">
+  <div class="card">
+    <h3>Pick months</h3>
+    <p class="note">Tick the months to compare. The tiles add up or average the ticked months; the table shows each month side by side.</p>
+    <div class="months" id="m-months"></div>
+  </div>
+  <div class="tiles" data-draw="mTiles"></div>
+  <div class="card">
+    <h3>Month by month</h3>
+    <p class="note">Sources in the last column. Retention counts only install cohorts old enough to have reached day 1 / day 7. Spend: Meta Ads, Google Ads and ShareChat from the Daily Ads report (July onward) or the Meta API and Adjust cost (before July); influencer, casting and OEM from the Business Performance Tracker (Table 3, Sep–Nov). Ret CPI is CPI ÷ retention index, the Daily Ads report's formula.</p>
+    <div class="tw" style="max-height:none" data-draw="mMonthTbl"></div>
+  </div>
+  <div class="grid">
+    <div class="card"><h3>Installs, DAU and MAU</h3><p class="note">Bars: installs. Lines: average daily and monthly active users. Ticked months are dark.</p><div class="legend"><span><i class="k0"></i>Installs</span><span><i class="k1"></i>DAU</span><span><i class="k2"></i>MAU</span></div><div class="chart" data-draw="mMonthChart" data-k="users"></div></div>
+    <div class="card"><h3>Marketing spend by channel (₹)</h3><p class="note">Influencer, casting and OEM spend is only recorded from September 2026.</p><div class="legend" data-draw="mSpendLegend"></div><div class="chart" data-draw="mMonthChart" data-k="spend"></div></div>
+    <div class="card"><h3>CPI and Ret CPI (₹)</h3><p class="note">Paid channels (Meta, Google, ShareChat). Ret CPI below CPI means paid users retained better than the 14% / 3% / 0.7% benchmarks.</p><div class="legend"><span><i class="k0"></i>CPI</span><span><i class="k1"></i>Ret CPI</span><span><i class="k2"></i>Influencer CPI</span></div><div class="chart" data-draw="mMonthChart" data-k="cpi"></div></div>
+    <div class="card"><h3>Day-1 and day-7 retention</h3><p class="note">All installs, Adjust.</p><div class="legend"><span><i class="k0"></i>Day 1</span><span><i class="k1"></i>Day 7</span></div><div class="chart" data-draw="mMonthChart" data-k="ret"></div></div>
+    <div class="card"><h3>Viewing depth</h3><p class="note">Episodes per active user a day and watch minutes per session (admin panel watch time ÷ Adjust sessions).</p><div class="legend"><span><i class="k0"></i>Episodes per active user a day</span><span><i class="k1"></i>Watch minutes per session</span></div><div class="chart" data-draw="mMonthChart" data-k="depth"></div></div>
+    <div class="card"><h3>Watch hours per user</h3><p class="note">Total watch hours in the month ÷ monthly active users.</p><div class="chart" data-draw="mMonthChart" data-k="hours"></div></div>
+  </div>
+  <div class="card"><h3>OEM and other non-Meta/Google sources</h3><p class="note">Installs and retention by OEM / ad network from Adjust. Spend is only recorded for OEM in November 2026 (Business Performance Tracker).</p><div class="tw" data-draw="mOemTbl"></div></div>
+</template>
+
+<template data-part="business">
+  <div class="grid">
+    <div class="card"><h3>Revenue by source vs target (₹)</h3><p class="note">Business Performance Tracker, Table 2.</p><div class="legend" data-draw="mRevLegend"></div><div class="chart" data-draw="mRevChart"></div></div>
+    <div class="card"><h3>User base vs target</h3><p class="note">Business Performance Tracker, Table 4.</p><div data-sheet="biz_00" data-table="AA"></div></div>
+  </div>
+  <div class="card"><h3>Revenue sources (Table 2)</h3><div data-sheet="biz_00" data-table="J"></div></div>
+  <div class="card"><h3>Brand deals (Table 1)</h3><div data-sheet="biz_00" data-table="A"></div></div>
+  <div class="card"><h3>Brand partnerships</h3><div data-sheet="biz_03"></div></div>
+  <div class="card"><h3>Content syndication</h3><div data-sheet="biz_02"></div></div>
+  <div class="card"><h3>Revenue planning</h3><div data-sheet="biz_00" data-table="CB"></div></div>
+</template>
+
+<template data-part="uninstalls">
+  <div class="grid">
+    <div class="card"><h3>Uninstalls by month (Adjust)</h3><p class="note">Uninstalls ÷ installs in the same month. Adjust receives uninstalls a few days late.</p><div class="chart" data-draw="mUninstChart"></div></div>
+    <div class="card"><h3>Uninstall rate (Business Performance Tracker, Table 7)</h3><div data-sheet="biz_00" data-table="AR"></div></div>
+  </div>
+  <div class="card pb"><h3>Why people uninstall</h3><p>No report records an uninstall reason: Adjust only sees that the app was removed, and the app has no exit survey. What the data does show is <b>when</b> people leave — see “When uninstalls happen” in Retention, and the video drop-off in Viewing. <span data-draw="mUninstNote"></span></p><ul style="margin-top:8px"><li>Add a one-question exit prompt when a user opens the app's settings to cancel or log out, and an in-app “Was this show not for you?” card after a user skips three episodes.</li><li>Send Adjust's uninstall event to Firebase/GA with the last screen and last show watched, so uninstalls can be split by show and by paywall exposure.</li></ul></div>
+</template>
+
+<template data-part="sessions">
+  <div class="card"><h3>Session time by month</h3><p class="note">Adjust sessions and the admin panel's watch time. Watch minutes per session = viewers × average watch minutes ÷ Adjust sessions.</p><div class="tw" data-draw="mSessTbl"></div></div>
+  <div class="card"><h3>App usage (Business Performance Tracker, Table 10)</h3><p class="note">Watch time and sessions split by paid and free users, as the tracker records them.</p><div data-sheet="biz_00" data-table="BF"></div></div>
+</template>
+
+<template data-part="packages">
+  <div class="grid">
+    <div class="card"><h3>Buckets compared (Table 9)</h3><div data-sheet="biz_00" data-table="BA"></div></div>
+    <div class="card"><h3>ARPU by month (Table 11)</h3><div data-sheet="biz_00" data-table="BL"></div></div>
+  </div>
+</template>
+
+<template data-part="admob">
+  <div class="grid">
+    <div class="card"><h3>AdMob by month (admin panel)</h3><p class="note">Revenue, impressions and eCPM (₹ per 1,000 impressions).</p><div class="tw" data-draw="mAdmobTbl"></div></div>
+    <div class="card"><h3>Fill rate and eCPM (Business Performance Tracker, Table 8)</h3><div data-sheet="biz_00" data-table="AW"></div></div>
+  </div>
+</template>
+
+<template data-part="appobs">
+  <div class="card pb"><h3>Month-on-month observations</h3><p class="note">Latest full month against the month before, from the monthly highlights.</p><ul class="obs" data-draw="mAppObs"></ul></div>
+</template>
+
+<template data-part="demo_age">
+  <div class="grid">
+    <div class="card"><h3>Age (Business Performance Tracker, Demographics)</h3><div data-sheet="biz_04" data-table="F"></div></div>
+    <div class="card"><h3>Gender (Business Performance Tracker, Demographics)</h3><div data-sheet="biz_04" data-table="K"></div></div>
+  </div>
+</template>
+
+<template data-part="demo_city">
+  <div class="card"><h3>Top cities (Business Performance Tracker, Demographics)</h3><div data-sheet="biz_04" data-table="A"></div></div>
+</template>
+
+<template data-part="demo_quality">
+  <div class="card"><h3>Acquisition quality by source (Business Performance Tracker, Table 3)</h3><p class="note">Installs, retention, cost and subscribers for each source, by month.</p><div data-sheet="biz_00" data-table="O"></div></div>
+</template>
+
+<template data-part="series">
+  <div class="tiles" data-draw="mSerTiles"></div>
+  <div class="grid">
+    <div class="card"><h3>Top 15 series by watch hours</h3><p class="note">Your date range. Bar = hours; label = episodes watched.</p><div class="chart" data-draw="mSerTop"></div></div>
+    <div class="card"><h3>Genres</h3><p class="note">Share of watch hours and hours per viewer-day by the admin panel's category.</p><div class="tw" data-draw="mSerGenre"></div></div>
+  </div>
+  <div class="card">
+    <h3>Every series in the range</h3>
+    <p class="note">Viewer-days = daily viewers added up. Drop = latest 7-day viewers vs the series' best 7 days. Trend = watch hours in the last 7 days of the range vs the 7 before. Click a column to sort; click a row to see its daily viewers.</p>
+    <div class="ctl"><input class="msearch" type="search" placeholder="Search series" data-ser-search><span data-draw="mSerCount"></span></div>
+    <div class="tw" style="max-height:38rem" data-draw="mSerTbl"></div>
+  </div>
+  <div class="card"><h3 data-draw="mSerPickTitle">Daily viewers</h3><p class="note">Viewers and watch hours a day for the series picked above (top series by default).</p><div class="legend"><span><i class="k0"></i>Viewers</span><span><i class="k1"></i>Watch hours</span></div><div class="chart" data-draw="mSerDaily"></div></div>
+</template>
+
+<template data-part="series_promo">
+  <div class="card pb"><h3>Where series opens come from</h3><p>The admin panel counts viewers and episodes per series but not <b>how</b> a user reached the series (home banner, search, continue-watching, a push, an ad deep link). Neither Adjust nor GA records it either, so this can't be split today. The table below shows the next-best signal: how much each series was pushed on paid ads, Instagram and YouTube, next to how much it was watched.</p><ul style="margin-top:8px"><li>Add a <code>source</code> parameter (home_rail, banner, search, continue, push, deeplink_ad, deeplink_social) to the series-open event and send it to GA and the admin panel.</li><li>Use per-series deep links in every ad and social post so opens from each channel can be counted.</li></ul></div>
+  <div class="card"><h3>Promotion vs viewing, by series</h3><p class="note">Ads: Creative Analysis sheet (since 1 Sep). Instagram / YouTube: post and video logs (since 1 Jul). Viewing: admin panel, last 30 days of data. Matched on series name.</p><div class="ctl"><input class="msearch" type="search" placeholder="Search series" data-promo-search></div><div class="tw" style="max-height:38rem" data-draw="mPromoTbl"></div></div>
+</template>
+
+<template data-part="series_obs">
+  <div class="card pb"><h3>What worked and what didn't</h3><ul class="obs" data-draw="mSerObs"></ul></div>
+  <div class="card pb"><h3>Suggestions</h3><ul class="obs" data-draw="mSerSugg"></ul></div>
+</template>
+
+<template data-part="ig">
+  <div class="tiles" data-draw="mIgTiles"></div>
+  <div class="grid" data-xcharts="ig_00"></div>
+  <div class="card"><h3>Monthly dashboard</h3><div data-sheet="ig_00"></div></div>
+  <div class="card"><h3>Social media reach (Business Performance Tracker, Table 6)</h3><div data-sheet="biz_00" data-table="AL"></div></div>
+</template>
+
+<template data-part="yt">
+  <div class="tiles" data-draw="mYtTiles"></div>
+  <div class="grid" data-xcharts="ig_03"></div>
+  <div class="card"><h3>Monthly dashboard</h3><div data-sheet="ig_03"></div></div>
+</template>
+
+<template data-part="social_sugg">
+  <div class="grid">
+    <div class="card"><h3>Instagram: what drives reach</h3><p class="note">From the post log (posts, excluding stories, since 1 Jul). Median reach by group; groups with at least 5 posts.</p><div class="tw" data-draw="mSocGroups" data-src="ig"></div></div>
+    <div class="card"><h3>YouTube: what drives views</h3><p class="note">From the video log. Median views by group; groups with at least 5 videos.</p><div class="tw" data-draw="mSocGroups" data-src="yt"></div></div>
+  </div>
+  <div class="grid">
+    <div class="card"><h3>Instagram: best posting hour</h3><p class="note">Median reach of posts by hour posted (IST).</p><div class="chart short" data-draw="mSocHour" data-src="ig"></div></div>
+    <div class="card"><h3>YouTube: best publishing hour</h3><p class="note">Median views of videos by hour published (IST).</p><div class="chart short" data-draw="mSocHour" data-src="yt"></div></div>
+  </div>
+  <div class="card pb"><h3>Suggestions</h3><ul class="obs" data-draw="mSocSugg"></ul></div>
+</template>
+
+<template data-part="pm">
+  <div class="ctl">Month <select class="msel" data-pm="month"></select> Platform <select class="msel" data-pm="plat"></select><span class="muted" data-draw="mPmAsOf"></span></div>
+  <div class="tiles" data-draw="mPmTiles"></div>
+  <div class="grid">
+    <div class="card"><h3>Spend by platform and month (₹)</h3><p class="note">Daily Ads report (July 2026 on) and the Meta API / Adjust cost before that.</p><div class="legend"><span><i class="k0"></i>Meta</span><span><i class="k1"></i>Google</span><span><i class="k2"></i>ShareChat</span></div><div class="chart" data-draw="mPmSpend"></div></div>
+    <div class="card"><h3>Adjust CPI and Ret CPI by month (₹)</h3><p class="note">Selected platform.</p><div class="legend"><span><i class="k0"></i>Adjust CPI</span><span><i class="k1"></i>Ret CPI</span><span><i class="k2"></i>Meta CPI</span></div><div class="chart" data-draw="mPmCpi"></div></div>
+    <div class="card"><h3>Retention of paid installs</h3><p class="note">Selected platform. Benchmarks: D1 14%, D7 3%.</p><div class="legend"><span><i class="k0"></i>D1</span><span><i class="k1"></i>D7</span><span><i class="k2"></i>D30</span></div><div class="chart" data-draw="mPmRet"></div></div>
+    <div class="card"><h3>Video funnel of paid installs</h3><p class="note">Selected month and platform, Adjust events.</p><div class="chart" data-draw="mPmFunnel"></div></div>
+  </div>
+  <div class="card"><h3>By campaign</h3><p class="note">Selected month and platform. Click a column to sort.</p><div class="tw" data-draw="mPmCamp"></div></div>
+  <div class="card"><h3>Month by month</h3><div class="tw" data-draw="mPmMonths"></div></div>
+  <div class="card"><h3>All user-acquisition sources (Business Performance Tracker, Table 3)</h3><div data-sheet="biz_00" data-table="O"></div></div>
+</template>
+
+<template data-part="pm_wm">
+  <div class="ctl">Metric <select class="msel" data-wm="metric"></select> Month <select class="msel" data-wm="month"></select> Show <select class="msel" data-wm="level"><option value="camp">Campaigns</option><option value="adset">Campaigns and ad sets</option><option value="ad">Everything (ads too)</option></select><input class="msearch" type="search" placeholder="Search" data-wm="q"></div>
+  <div class="card"><h3>Weekly and monthly, by campaign, ad set and ad</h3><p class="note">The Daily Ads report's weekly sheet shows one metric at a time; this shows any of them. W1 = 1st–7th, W2 = 8th–14th, W3 = 15th–21st, W4 = 22nd–28th, W5 = 29th–end.</p><div class="tw" style="max-height:44rem" data-draw="mWm"></div></div>
+</template>
+
+<template data-part="infl">
+  <div class="card"><h3>Influencers closed (Business Performance Tracker, Table 5)</h3><div data-sheet="biz_00" data-table="AG"></div></div>
+  <div class="card"><h3>Casting</h3><div data-sheet="infl_03"></div></div>
+  <div class="card"><h3>Promotions</h3><div data-sheet="infl_09"></div></div>
+  <div class="card"><h3>Casting probables by month</h3><div data-sheet="infl_04"></div><div data-sheet="infl_05" style="margin-top:12px"></div><div data-sheet="infl_06" style="margin-top:12px"></div><div data-sheet="infl_07" style="margin-top:12px"></div><div data-sheet="infl_08" style="margin-top:12px"></div></div>
+  <div class="card"><h3>Agencies</h3><div data-sheet="infl_02"></div></div>
+</template>
+

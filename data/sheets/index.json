@@ -1,0 +1,282 @@
+[
+ {
+  "id": "ads_00",
+  "book": "ads",
+  "title": "Dashboard",
+  "rows": 25,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "ads_01",
+  "book": "ads",
+  "title": "Daily Summary",
+  "rows": 168,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "ads_02",
+  "book": "ads",
+  "title": "Recommended Today",
+  "rows": 95,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "ads_03",
+  "book": "ads",
+  "title": "CPI Trend & Rules",
+  "rows": 104,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "ads_04",
+  "book": "ads",
+  "title": "All Platforms 7d·3d",
+  "rows": 190,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "ads_05",
+  "book": "ads",
+  "title": "Scale Plan",
+  "rows": 56,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "ads_06",
+  "book": "ads",
+  "title": "Weekly & Monthly",
+  "rows": 493,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "ads_07",
+  "book": "ads",
+  "title": "Ad Set Change Log",
+  "rows": 489,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "ads_08",
+  "book": "ads",
+  "title": "Ad Change Log",
+  "rows": 494,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "ads_09",
+  "book": "ads",
+  "title": "Weekly Optimisation",
+  "rows": 243,
+  "tables": 2,
+  "charts": 0
+ },
+ {
+  "id": "ads_10",
+  "book": "ads",
+  "title": "Day-wise",
+  "rows": 8906,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "ads_11",
+  "book": "ads",
+  "title": "Suggestions Tracker",
+  "rows": 278,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "ads_12",
+  "book": "ads",
+  "title": "Creative Analysis",
+  "rows": 412,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "ads_13",
+  "book": "ads",
+  "title": "Creative – Why by Ad Set",
+  "rows": 42,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "ads_14",
+  "book": "ads",
+  "title": "Creative Playbook",
+  "rows": 212,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "ads_15",
+  "book": "ads",
+  "title": "PM Comment Log",
+  "rows": 66,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "ig_00",
+  "book": "ig",
+  "title": "Dashboard",
+  "rows": 12,
+  "tables": 1,
+  "charts": 4
+ },
+ {
+  "id": "ig_01",
+  "book": "ig",
+  "title": "Post Log",
+  "rows": 735,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "ig_02",
+  "book": "ig",
+  "title": "What Works",
+  "rows": 129,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "ig_03",
+  "book": "ig",
+  "title": "YT Dashboard",
+  "rows": 12,
+  "tables": 1,
+  "charts": 4
+ },
+ {
+  "id": "ig_04",
+  "book": "ig",
+  "title": "YT Video Log",
+  "rows": 640,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "ig_05",
+  "book": "ig",
+  "title": "YT What Works",
+  "rows": 181,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "ig_06",
+  "book": "ig",
+  "title": "About",
+  "rows": 30,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "biz_00",
+  "book": "biz",
+  "title": "Sheet1",
+  "rows": 305,
+  "tables": 12,
+  "charts": 0
+ },
+ {
+  "id": "biz_02",
+  "book": "biz",
+  "title": "Syndication people",
+  "rows": 37,
+  "tables": 2,
+  "charts": 0
+ },
+ {
+  "id": "biz_03",
+  "book": "biz",
+  "title": "Brand Partnerships",
+  "rows": 5,
+  "tables": 2,
+  "charts": 0
+ },
+ {
+  "id": "biz_04",
+  "book": "biz",
+  "title": "Demographics",
+  "rows": 29,
+  "tables": 3,
+  "charts": 0
+ },
+ {
+  "id": "infl_02",
+  "book": "infl",
+  "title": "Agencies",
+  "rows": 6,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "infl_03",
+  "book": "infl",
+  "title": "Casting",
+  "rows": 61,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "infl_04",
+  "book": "infl",
+  "title": "Sep Casting Probables",
+  "rows": 6,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "infl_05",
+  "book": "infl",
+  "title": "Oct Casting Probables",
+  "rows": 17,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "infl_06",
+  "book": "infl",
+  "title": "Nov Casting Probables",
+  "rows": 15,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "infl_07",
+  "book": "infl",
+  "title": "Dec Casting Probables",
+  "rows": 23,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "infl_08",
+  "book": "infl",
+  "title": "January 2027",
+  "rows": 8,
+  "tables": 1,
+  "charts": 0
+ },
+ {
+  "id": "infl_09",
+  "book": "infl",
+  "title": "Promotions",
+  "rows": 17,
+  "tables": 1,
+  "charts": 0
+ }
+]

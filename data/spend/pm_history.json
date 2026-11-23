@@ -1,0 +1,50 @@
+{
+ "note": "Performance-marketing spend before July 2026 (the Daily Ads report starts in July). Meta: Meta Ads API, campaign spend by month, excluding brand-partner campaigns (Ayurvita, Goodveda, Be10x, JM Financial, Savesage, Cricsignal). Google: Adjust network cost. ShareChat started in August 2026. Google June 2026 is to 17 Jun (campaigns stopped).",
+ "months": {
+  "2025-10": {
+   "meta": 687995.34,
+   "google": 214320.8,
+   "sharechat": 0
+  },
+  "2025-11": {
+   "meta": 568024.58,
+   "google": 493658.88,
+   "sharechat": 0
+  },
+  "2025-12": {
+   "meta": 802592.87,
+   "google": 1810294.45,
+   "sharechat": 0
+  },
+  "2026-01": {
+   "meta": 958870.82,
+   "google": 2630871.22,
+   "sharechat": 0
+  },
+  "2026-02": {
+   "meta": 1393387.81,
+   "google": 2116401.56,
+   "sharechat": 0
+  },
+  "2026-03": {
+   "meta": 1131380.97,
+   "google": 2606729.77,
+   "sharechat": 0
+  },
+  "2026-04": {
+   "meta": 1406366.41,
+   "google": 2707546.99,
+   "sharechat": 0
+  },
+  "2026-05": {
+   "meta": 2028412.9,
+   "google": 2058825.96,
+   "sharechat": 0
+  },
+  "2026-06": {
+   "meta": 1626389.96,
+   "google": 930747.86,
+   "sharechat": 0
+  }
+ }
+}
