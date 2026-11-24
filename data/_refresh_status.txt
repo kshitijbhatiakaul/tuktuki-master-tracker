@@ -1,11 +1,11 @@
-Run 2026-11-24 12:05 IST  (push)
+Run 2026-11-24 13:55 IST  (schedule)
 onedrive=success ads_rebuild=success ig_rebuild=success adjust=success ga=success export=success social=success
 
 == onedrive
 Updated Tuktuki Meta Daily Report.xlsx: 2,979,154 bytes
 Updated Tuktuki Instagram Daily Analysis.xlsx: 561,064 bytes
 Tuktuki Business Performance Tracker.xlsx: 43,253 bytes
-TukTuki_Influencer_Dashboard.xlsx: 138,860 bytes
+TukTuki_Influencer_Dashboard.xlsx: 139,046 bytes
 engine/adset_meta.json: 9,518 bytes
 engine/ads_hist.json: 1,802,032 bytes
 
@@ -61,7 +61,7 @@ infl_04 Sep Casting Probables 6 rows 1 tables 0 charts
 infl_05 Oct Casting Probables 15 rows 1 tables 0 charts
 infl_06 Nov Casting Probables 14 rows 1 tables 0 charts
 infl_07 Dec Casting Probables 24 rows 1 tables 0 charts
-infl_08 January 2027 7 rows 1 tables 0 charts
+infl_08 January 2027 10 rows 1 tables 0 charts
 infl_09 Promotions 17 rows 1 tables 0 charts
 infl_10 Review Pages 43 rows 1 tables 0 charts
 infl_11 CPI-Direct 4 rows 1 tables 0 charts
@@ -74,7 +74,7 @@ ads_engine: 70 dash rows, 2776 weekly/monthly rows, end 2026-11-23
 
 == social
 META_TOKEN not set - Instagram left as in the workbook
-YouTube: 633 videos refreshed, 11 new
+YouTube: 634 videos refreshed, 12 new
 
 == sources
-sources: {'adjust': '2026-11-23', 'admin': '2026-11-18', 'ads': '2026-11-23', 'built': '2026-11-24', 'ga': '2026-11-22', 'oem': '2026-11-23', 'ig': '2026-11-23', 'yt': '2026-11-23'}
+sources: {'adjust': '2026-11-23', 'admin': '2026-11-18', 'ads': '2026-11-23', 'built': '2026-11-24', 'ga': '2026-11-22', 'ig': '2026-11-23', 'oem': '2026-11-23', 'yt': '2026-11-23'}
