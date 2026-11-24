@@ -1,9 +1,9 @@
 # Refresh schedule
 
-- **Monday — full refresh**: every step below.
-- **Tuesday–Friday — daily refresh**: everything except the admin panel and GA. Skip step 1's admin-panel and GA files and step 2 (GA dimensions); instead copy only the Adjust files from a fresh Adjust pull in the behaviour repo clone: `cp ../tuktuki-user-behaviour/data/*.csv data/behaviour/` (the behaviour repo itself is not pushed on these days). Do steps 2a–8. `data/behaviour/admin/` and `data/behaviour/ga/` stay as of Monday.
-
-- **Skip rule**: every run, manual or scheduled, records itself in the behaviour dashboard artifact's database (collection `refresh`, doc `tracker`: `date` = IST date, `lock`, `by`, `scope`). The cloud task "Master Tracker Daily Refresh" (~10 AM IST daily, no Mac) skips when `date` is today; otherwise it refreshes Adjust + OEM only, because the OneDrive workbooks need the Mac. **After a manual run, set `refresh/tracker.date` to today.**
+- **Every day ~9:10 IST — GitHub Action "Daily workbook refresh"** (free, no computer): downloads the four OneDrive workbooks and the Meta report's engine files through the Microsoft app "Tuktuki Tracker Sync" (read-only, Files.Read), recalculates, exports, rebuilds and pushes. If it fails saying the sign-in expired, run the **Connect OneDrive** workflow from the Actions tab. The GH_PAT access key keeps the sign-in fresh and expires after a year.
+- **Every day ~9:57 IST — cloud scheduled task "Master Tracker Daily Refresh"**: adds Adjust + OEM data (copy only `data/*.csv` from a fresh Adjust pull in the behaviour repo clone) and republishes the Claude artifact. `data/behaviour/admin/` and `data/behaviour/ga/` stay as of Monday.
+- **Monday 9:29 IST — Mac scheduled task**: the steps below except the workbooks (steps 3–5 are done by the GitHub Action).
+- **Skip rule**: every run records itself in the behaviour dashboard artifact's database (collection `refresh`, doc `tracker`: `date` = IST date, `lock`, `by`, `scope`). The cloud task skips when `date` is today. **After a manual run, set `refresh/tracker.date` to today.**
 
 # Monday refresh
 
