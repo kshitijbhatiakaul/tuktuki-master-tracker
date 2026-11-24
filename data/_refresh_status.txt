@@ -1,4 +1,4 @@
-Run 2026-11-24 19:34 IST  (schedule)
+Run 2026-11-24 23:06 IST  (schedule)
 onedrive=success ads_rebuild=success ig_rebuild=success adjust=success ga=success export=success social=success
 
 == onedrive
@@ -40,7 +40,7 @@ oem/oem_monthly.csv: 61 rows, 2025-12-01 to 2026-10-31
 oem/oem_daily.csv: 111 rows, 2026-11-01 to 2026-11-23
 
 == ga
-ga_daily.csv: 6 days
+ga_daily.csv: 7 days
 ga_dims.json: 121 rows
 ga_monthly.json: 14 months
 ga_breakdowns.json: 834 rows
@@ -74,7 +74,7 @@ ads_engine: 70 dash rows, 2776 weekly/monthly rows, end 2026-11-23
 
 == social
 META_TOKEN not set - Instagram left as in the workbook
-YouTube: 639 videos refreshed, 17 new
+YouTube: 640 videos refreshed, 18 new
 
 == sources
-sources: {'adjust': '2026-11-23', 'admin': '2026-11-23', 'ads': '2026-11-23', 'built': '2026-11-24', 'ga': '2026-11-22', 'ig': '2026-11-23', 'oem': '2026-11-23', 'yt': '2026-11-23'}
+sources: {'adjust': '2026-11-23', 'admin': '2026-11-23', 'ads': '2026-11-23', 'built': '2026-11-24', 'ga': '2026-11-23', 'ig': '2026-11-23', 'oem': '2026-11-23', 'yt': '2026-11-23'}
