@@ -1,0 +1,69 @@
+Run 2026-11-24 11:01 IST  (push)
+onedrive=success ads_rebuild=success adjust=success ga=failure export=success social=success
+
+== onedrive
+Updated Tuktuki Meta Daily Report.xlsx: 2,979,154 bytes
+Updated Tuktuki Instagram Daily Analysis.xlsx: 561,064 bytes
+Tuktuki Business Performance Tracker.xlsx: 43,253 bytes
+TukTuki_Influencer_Dashboard.xlsx: 138,828 bytes
+engine/adset_meta.json: 9,518 bytes
+engine/ads_hist.json: 1,802,032 bytes
+
+== ads
+engine files: 56
+Daily Ads data up to 2026-11-23 (last run Tue Nov 24, 9:20 am )
+pm extract: 0 new comment lines from prev.xlsx (run 2026-11-23); total 62
+trio: CPI trio on 6 sheets; retention + Ret Effective CPI blocks on Weekly & Monthly, both change logs, Weekly Optimisation B, Outlook, Suggestions, Creative Why, Creative Playbook
+cpi_trend: rows 100
+creative rows 406 | why 38 | playbook events 6
+saved /tmp/eng/out.xlsx | summary rows 117 | recs 22 | ledger 975 | suggestions 273 | day-wise rows 9017
+Daily Ads workbook rebuilt from the engine files
+
+== adjust
+behaviour/daily.csv: 414 rows, 2025-10-06 to 2026-11-23
+behaviour/events.csv: 414 rows, 2025-10-06 to 2026-11-23
+behaviour/cohorts.csv: 414 rows, 2025-10-06 to 2026-11-23
+behaviour/purchases.csv: 115 rows, 2026-08-01 to 2026-11-23
+behaviour/paycohort.csv: 101 rows, 2026-08-15 to 2026-11-23
+behaviour/channels.csv: 177 rows, 2025-10-01 to 2026-11-23
+behaviour/paychan.csv: 34 rows, 2026-09-01 to 2026-11-23
+behaviour/backcamp.csv: 290 rows, 2026-03-01 to 2026-11-23
+behaviour/mau.csv: 14 rows, 2025-10-01 to 2026-11-23
+oem/oem_monthly.csv: 61 rows, 2025-12-01 to 2026-10-31
+oem/oem_daily.csv: 105 rows, 2026-11-01 to 2026-11-23
+
+== ga
+ga_daily.csv: 6 days
+ga_dims.json: 121 rows
+!! GA Data API: 'dimensionValues'
+
+== export
+ig_04 YT Video Log 640 rows 1 tables 0 charts
+ig_05 YT What Works 181 rows 1 tables 0 charts
+ig_06 About 30 rows 1 tables 0 charts
+biz_00 Sheet1 309 rows 12 tables 0 charts
+biz_02 Syndication people 37 rows 2 tables 0 charts
+biz_03 Brand Partnerships 6 rows 2 tables 0 charts
+biz_04 Demographics 29 rows 3 tables 0 charts
+infl_00 Dashboard 76 rows 3 tables 0 charts
+infl_01 Reachout Counts 20 rows 1 tables 0 charts
+infl_02 Agencies 4 rows 1 tables 0 charts
+infl_03 Casting 61 rows 1 tables 0 charts
+infl_04 Sep Casting Probables 6 rows 1 tables 0 charts
+infl_05 Oct Casting Probables 15 rows 1 tables 0 charts
+infl_06 Nov Casting Probables 14 rows 1 tables 0 charts
+infl_07 Dec Casting Probables 24 rows 1 tables 0 charts
+infl_08 January 2027 6 rows 1 tables 0 charts
+infl_09 Promotions 17 rows 1 tables 0 charts
+infl_10 Review Pages 43 rows 1 tables 0 charts
+infl_11 CPI-Direct 4 rows 1 tables 0 charts
+infl_12 Barter 16 rows 1 tables 0 charts
+infl_13 Face IPs 1 rows 1 tables 0 charts
+infl_14 Additional Activities 137 rows 1 tables 0 charts
+infl_16 Tracker Dashboard 36 rows 1 tables 0 charts
+infl_18 Influencer Tracker 34 rows 1 tables 0 charts
+ads_engine: 70 dash rows, 2776 weekly/monthly rows, end 2026-11-23
+
+== social
+META_TOKEN not set - Instagram left as in the workbook
+YouTube: 633 videos refreshed, 11 new

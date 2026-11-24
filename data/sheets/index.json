@@ -11,7 +11,7 @@
   "id": "ads_01",
   "book": "ads",
   "title": "Daily Summary",
-  "rows": 168,
+  "rows": 162,
   "tables": 1,
   "charts": 0
  },
@@ -19,7 +19,7 @@
   "id": "ads_02",
   "book": "ads",
   "title": "Recommended Today",
-  "rows": 95,
+  "rows": 98,
   "tables": 1,
   "charts": 0
  },
@@ -35,7 +35,7 @@
   "id": "ads_04",
   "book": "ads",
   "title": "All Platforms 7d·3d",
-  "rows": 190,
+  "rows": 185,
   "tables": 1,
   "charts": 0
  },
@@ -43,7 +43,7 @@
   "id": "ads_05",
   "book": "ads",
   "title": "Scale Plan",
-  "rows": 56,
+  "rows": 59,
   "tables": 1,
   "charts": 0
  },
@@ -83,7 +83,7 @@
   "id": "ads_10",
   "book": "ads",
   "title": "Day-wise",
-  "rows": 8906,
+  "rows": 9021,
   "tables": 1,
   "charts": 0
  },
@@ -283,7 +283,7 @@
   "id": "infl_08",
   "book": "infl",
   "title": "January 2027",
-  "rows": 7,
+  "rows": 6,
   "tables": 1,
   "charts": 0
  },
