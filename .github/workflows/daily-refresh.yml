@@ -1,10 +1,19 @@
-# Daily: download the four workbooks + engine files from OneDrive, recalculate, export, rebuild docs/index.html
-# and push (GitHub Pages updates). No Claude credits and no computer needed.
-# Adjust, admin panel and GA data are refreshed by the Claude scheduled tasks, not here.
+# Refreshes the tracker without Claude: OneDrive workbooks (Daily Ads report, Instagram, Business tracker,
+# Influencer dashboard) + Adjust (installs, retention, channels, cohorts, purchases, MAU, OEM), then rebuilds
+# docs/index.html and pushes (GitHub Pages updates).
+# Runs several times a day so a workbook updated later in the day still shows up the same day.
+# Also runs when Claude pushes the Monday admin-panel data, so it appears straight away.
 name: Daily workbook refresh
 on:
   schedule:
-    - cron: "40 3 * * *"   # 09:10 IST (GitHub may start it a little late)
+    - cron: "40 3 * * *"    # 09:10 IST
+    - cron: "40 6 * * *"    # 12:10 IST
+    - cron: "40 9 * * *"    # 15:10 IST
+    - cron: "40 12 * * *"   # 18:10 IST
+    - cron: "40 16 * * *"   # 22:10 IST
+  push:
+    branches: [main]
+    paths: ["data/behaviour/admin/**", "data/behaviour/ga/**", "source/**", "build.py", "tools/**"]
   workflow_dispatch:
 permissions:
   contents: write
@@ -34,6 +43,13 @@ jobs:
         run: |
           if [ -s "${{ runner.temp }}/rt" ]; then gh secret set MS_REFRESH_TOKEN --repo "$GITHUB_REPOSITORY" < "${{ runner.temp }}/rt"; fi
           rm -f "${{ runner.temp }}/rt"
+      - name: Adjust data
+        continue-on-error: true
+        env:
+          ADJUST_API_TOKEN: ${{ secrets.ADJUST_API_TOKEN }}
+        run: |
+          if [ -z "$ADJUST_API_TOKEN" ]; then echo "ADJUST_API_TOKEN not set yet - Adjust data left as it was"; exit 0; fi
+          python3 tools/adjust_fetch.py
       - name: Recalculate, export, build
         run: |
           S="${{ runner.temp }}/staged"; R="${{ runner.temp }}/recalc"; mkdir -p "$R"
@@ -47,5 +63,7 @@ jobs:
           git config user.email "tracker-refresh@users.noreply.github.com"
           git add -A data docs
           if git diff --cached --quiet; then echo "No changes"; exit 0; fi
-          git commit -m "Daily workbook refresh $(TZ=Asia/Kolkata date +%F) (GitHub Actions)"
+          git commit -m "Tracker refresh $(TZ=Asia/Kolkata date '+%F %H:%M') IST (GitHub Actions)"
+          git pull --rebase -X theirs origin main || true
+          python3 build.py build && git add -A docs && git commit -q --amend --no-edit || true
           git push
