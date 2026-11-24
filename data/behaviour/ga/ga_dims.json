@@ -417,19 +417,19 @@
 },
 {
 "dim": "country",
-"value": "Türkiye",
-"users": 11,
-"new_users": 4,
-"sessions": 14,
-"minutes_per_user": 0.7
-},
-{
-"dim": "country",
 "value": "Spain",
 "users": 11,
 "new_users": 1,
 "sessions": 17,
 "minutes_per_user": 2.9
+},
+{
+"dim": "country",
+"value": "Türkiye",
+"users": 11,
+"new_users": 4,
+"sessions": 14,
+"minutes_per_user": 0.7
 },
 {
 "dim": "country",
@@ -457,19 +457,19 @@
 },
 {
 "dim": "country",
+"value": "Kuwait",
+"users": 8,
+"new_users": 3,
+"sessions": 13,
+"minutes_per_user": 19.2
+},
+{
+"dim": "country",
 "value": "Romania",
 "users": 8,
 "new_users": 4,
 "sessions": 6,
 "minutes_per_user": 2.3
-},
-{
-"dim": "country",
-"value": "Iran",
-"users": 8,
-"new_users": 2,
-"sessions": 11,
-"minutes_per_user": 0.5
 },
 {
 "dim": "country",
@@ -545,19 +545,19 @@
 },
 {
 "dim": "language",
-"value": "es-us",
-"users": 33,
-"new_users": 6,
-"sessions": 52,
-"minutes_per_user": 3.6
-},
-{
-"dim": "language",
 "value": "en-nz",
 "users": 33,
 "new_users": 11,
 "sessions": 32,
 "minutes_per_user": 2.6
+},
+{
+"dim": "language",
+"value": "es-us",
+"users": 33,
+"new_users": 6,
+"sessions": 52,
+"minutes_per_user": 3.6
 },
 {
 "dim": "language",
@@ -601,11 +601,11 @@
 },
 {
 "dim": "language",
-"value": "bn-in",
+"value": "es-es",
 "users": 16,
-"new_users": 4,
-"sessions": 19,
-"minutes_per_user": 6.5
+"new_users": 0,
+"sessions": 29,
+"minutes_per_user": 0.4
 },
 {
 "dim": "language",
@@ -617,19 +617,11 @@
 },
 {
 "dim": "language",
-"value": "es-es",
+"value": "bn-in",
 "users": 16,
-"new_users": 0,
-"sessions": 29,
-"minutes_per_user": 0.4
-},
-{
-"dim": "language",
-"value": "te-in",
-"users": 13,
-"new_users": 2,
-"sessions": 11,
-"minutes_per_user": 0.4
+"new_users": 4,
+"sessions": 19,
+"minutes_per_user": 6.5
 },
 {
 "dim": "language",
@@ -638,6 +630,14 @@
 "new_users": 7,
 "sessions": 15,
 "minutes_per_user": 11.5
+},
+{
+"dim": "language",
+"value": "te-in",
+"users": 13,
+"new_users": 2,
+"sessions": 11,
+"minutes_per_user": 0.4
 },
 {
 "dim": "os_version",
@@ -737,19 +737,19 @@
 },
 {
 "dim": "os_version",
-"value": "iOS 27.2.1",
-"users": 13,
-"new_users": 7,
-"sessions": 25,
-"minutes_per_user": 9.1
-},
-{
-"dim": "os_version",
 "value": "iOS 26.6.1",
 "users": 13,
 "new_users": 12,
 "sessions": 24,
 "minutes_per_user": 29
+},
+{
+"dim": "os_version",
+"value": "iOS 27.2.1",
+"users": 13,
+"new_users": 7,
+"sessions": 25,
+"minutes_per_user": 9.1
 },
 {
 "dim": "os_version",
@@ -777,6 +777,14 @@
 },
 {
 "dim": "os_version",
+"value": "iOS 26.5.2",
+"users": 5,
+"new_users": 0,
+"sessions": 6,
+"minutes_per_user": 15.7
+},
+{
+"dim": "os_version",
 "value": "iOS 27.2",
 "users": 5,
 "new_users": 3,
@@ -790,14 +798,6 @@
 "new_users": 2,
 "sessions": 6,
 "minutes_per_user": 20.4
-},
-{
-"dim": "os_version",
-"value": "iOS 26.5.2",
-"users": 5,
-"new_users": 0,
-"sessions": 6,
-"minutes_per_user": 15.7
 },
 {
 "dim": "region",

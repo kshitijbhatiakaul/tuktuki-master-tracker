@@ -1,5 +1,5 @@
-Run 2026-11-24 11:01 IST  (push)
-onedrive=success ads_rebuild=success adjust=success ga=failure export=success social=success
+Run 2026-11-24 11:07 IST  (push)
+onedrive=success ads_rebuild=success adjust=success ga=success export=success social=success
 
 == onedrive
 Updated Tuktuki Meta Daily Report.xlsx: 2,979,154 bytes
@@ -35,7 +35,8 @@ oem/oem_daily.csv: 105 rows, 2026-11-01 to 2026-11-23
 == ga
 ga_daily.csv: 6 days
 ga_dims.json: 121 rows
-!! GA Data API: 'dimensionValues'
+ga_monthly.json: 14 months
+ga_breakdowns.json: 834 rows
 
 == export
 ig_04 YT Video Log 640 rows 1 tables 0 charts
