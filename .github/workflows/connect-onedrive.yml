@@ -1,0 +1,21 @@
+# One-time (and whenever the daily refresh says the sign-in expired): connect OneDrive.
+# Run it from the Actions tab, open the run's log, and sign in at the address it shows with the code it shows.
+name: Connect OneDrive
+on: workflow_dispatch
+permissions: {}
+jobs:
+  connect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sign in (follow the instructions printed below)
+        env:
+          MS_CLIENT_ID: ${{ vars.MS_CLIENT_ID }}
+          MS_TENANT_ID: ${{ vars.MS_TENANT_ID }}
+          RT_OUT: ${{ runner.temp }}/rt
+        run: python3 tools/onedrive.py connect
+      - name: Save the sign-in as a repository secret
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: gh secret set MS_REFRESH_TOKEN --repo "$GITHUB_REPOSITORY" < "${{ runner.temp }}/rt" && rm -f "${{ runner.temp }}/rt"

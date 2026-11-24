@@ -1,0 +1,51 @@
+# Daily: download the four workbooks + engine files from OneDrive, recalculate, export, rebuild docs/index.html
+# and push (GitHub Pages updates). No Claude credits and no computer needed.
+# Adjust, admin panel and GA data are refreshed by the Claude scheduled tasks, not here.
+name: Daily workbook refresh
+on:
+  schedule:
+    - cron: "40 3 * * *"   # 09:10 IST (GitHub may start it a little late)
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: refresh
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq libreoffice-calc > /dev/null
+          pip install -q openpyxl beautifulsoup4
+      - name: Download from OneDrive
+        env:
+          MS_CLIENT_ID: ${{ vars.MS_CLIENT_ID }}
+          MS_TENANT_ID: ${{ vars.MS_TENANT_ID }}
+          MS_REFRESH_TOKEN: ${{ secrets.MS_REFRESH_TOKEN }}
+          RT_OUT: ${{ runner.temp }}/rt
+        run: python3 tools/onedrive.py fetch "${{ runner.temp }}/staged"
+      - name: Keep the OneDrive sign-in fresh
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          if [ -s "${{ runner.temp }}/rt" ]; then gh secret set MS_REFRESH_TOKEN --repo "$GITHUB_REPOSITORY" < "${{ runner.temp }}/rt"; fi
+          rm -f "${{ runner.temp }}/rt"
+      - name: Recalculate, export, build
+        run: |
+          S="${{ runner.temp }}/staged"; R="${{ runner.temp }}/recalc"; mkdir -p "$R"
+          soffice --headless --calc --convert-to xlsx:"Calc MS Excel 2007 XML" --outdir "$R" "$S"/*.xlsx
+          python3 tools/export_sheets.py "$R" "$S"
+          python3 tools/export_engine.py "$R/Updated Tuktuki Meta Daily Report.xlsx" "$S/engine"
+          python3 build.py build
+      - name: Commit and push
+        run: |
+          git config user.name "tracker-refresh[bot]"
+          git config user.email "tracker-refresh@users.noreply.github.com"
+          git add -A data docs
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "Daily workbook refresh $(TZ=Asia/Kolkata date +%F) (GitHub Actions)"
+          git push
