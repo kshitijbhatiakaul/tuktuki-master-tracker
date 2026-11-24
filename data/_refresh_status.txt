@@ -1,11 +1,11 @@
-Run 2026-11-24 11:58 IST  (push)
+Run 2026-11-24 12:05 IST  (push)
 onedrive=success ads_rebuild=success ig_rebuild=success adjust=success ga=success export=success social=success
 
 == onedrive
 Updated Tuktuki Meta Daily Report.xlsx: 2,979,154 bytes
 Updated Tuktuki Instagram Daily Analysis.xlsx: 561,064 bytes
 Tuktuki Business Performance Tracker.xlsx: 43,253 bytes
-TukTuki_Influencer_Dashboard.xlsx: 138,828 bytes
+TukTuki_Influencer_Dashboard.xlsx: 138,860 bytes
 engine/adset_meta.json: 9,518 bytes
 engine/ads_hist.json: 1,802,032 bytes
 
@@ -35,6 +35,7 @@ behaviour/channels.csv: 177 rows, 2025-10-01 to 2026-11-23
 behaviour/paychan.csv: 34 rows, 2026-09-01 to 2026-11-23
 behaviour/backcamp.csv: 290 rows, 2026-03-01 to 2026-11-23
 behaviour/mau.csv: 14 rows, 2025-10-01 to 2026-11-23
+behaviour/chanday.csv: 855 rows, 2026-08-01 to 2026-11-23
 oem/oem_monthly.csv: 61 rows, 2025-12-01 to 2026-10-31
 oem/oem_daily.csv: 105 rows, 2026-11-01 to 2026-11-23
 
@@ -60,7 +61,7 @@ infl_04 Sep Casting Probables 6 rows 1 tables 0 charts
 infl_05 Oct Casting Probables 15 rows 1 tables 0 charts
 infl_06 Nov Casting Probables 14 rows 1 tables 0 charts
 infl_07 Dec Casting Probables 24 rows 1 tables 0 charts
-infl_08 January 2027 6 rows 1 tables 0 charts
+infl_08 January 2027 7 rows 1 tables 0 charts
 infl_09 Promotions 17 rows 1 tables 0 charts
 infl_10 Review Pages 43 rows 1 tables 0 charts
 infl_11 CPI-Direct 4 rows 1 tables 0 charts

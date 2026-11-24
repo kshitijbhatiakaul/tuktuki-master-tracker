@@ -441,6 +441,14 @@
 },
 {
 "dim": "country",
+"value": "France",
+"users": 9,
+"new_users": 0,
+"sessions": 14,
+"minutes_per_user": 4.5
+},
+{
+"dim": "country",
 "value": "Indonesia",
 "users": 9,
 "new_users": 3,
@@ -449,11 +457,11 @@
 },
 {
 "dim": "country",
-"value": "France",
-"users": 9,
+"value": "Switzerland",
+"users": 8,
 "new_users": 0,
-"sessions": 14,
-"minutes_per_user": 4.5
+"sessions": 3,
+"minutes_per_user": 2.1
 },
 {
 "dim": "country",
@@ -473,11 +481,11 @@
 },
 {
 "dim": "country",
-"value": "Romania",
+"value": "Iran",
 "users": 8,
-"new_users": 4,
-"sessions": 6,
-"minutes_per_user": 2.3
+"new_users": 2,
+"sessions": 11,
+"minutes_per_user": 0.5
 },
 {
 "dim": "language",
@@ -625,19 +633,19 @@
 },
 {
 "dim": "language",
-"value": "en-ae",
-"users": 13,
-"new_users": 7,
-"sessions": 15,
-"minutes_per_user": 11.5
-},
-{
-"dim": "language",
 "value": "te-in",
 "users": 13,
 "new_users": 2,
 "sessions": 11,
 "minutes_per_user": 0.4
+},
+{
+"dim": "language",
+"value": "en-ae",
+"users": 13,
+"new_users": 7,
+"sessions": 15,
+"minutes_per_user": 11.5
 },
 {
 "dim": "os_version",
@@ -729,6 +737,14 @@
 },
 {
 "dim": "os_version",
+"value": "iOS 26.6.1",
+"users": 13,
+"new_users": 12,
+"sessions": 24,
+"minutes_per_user": 29
+},
+{
+"dim": "os_version",
 "value": "iOS 27.2.1",
 "users": 13,
 "new_users": 7,
@@ -742,14 +758,6 @@
 "new_users": 7,
 "sessions": 22,
 "minutes_per_user": 21.7
-},
-{
-"dim": "os_version",
-"value": "iOS 26.6.1",
-"users": 13,
-"new_users": 12,
-"sessions": 24,
-"minutes_per_user": 29
 },
 {
 "dim": "os_version",
@@ -777,19 +785,27 @@
 },
 {
 "dim": "os_version",
-"value": "iOS 26.5.2",
-"users": 5,
-"new_users": 0,
-"sessions": 6,
-"minutes_per_user": 15.7
-},
-{
-"dim": "os_version",
 "value": "iOS 18.7.8",
 "users": 5,
 "new_users": 2,
 "sessions": 6,
 "minutes_per_user": 20.4
+},
+{
+"dim": "os_version",
+"value": "iOS 27.2",
+"users": 5,
+"new_users": 3,
+"sessions": 5,
+"minutes_per_user": 4.4
+},
+{
+"dim": "os_version",
+"value": "iOS 26.5.2",
+"users": 5,
+"new_users": 0,
+"sessions": 6,
+"minutes_per_user": 15.7
 },
 {
 "dim": "os_version",
