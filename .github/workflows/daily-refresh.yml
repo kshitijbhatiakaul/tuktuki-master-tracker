@@ -68,7 +68,7 @@ jobs:
         env:
           META_TOKEN: ${{ secrets.META_TOKEN }}
           YT_API_KEY: ${{ secrets.YT_API_KEY }}
-          YT_CHANNEL_ID: ${{ vars.YT_CHANNEL_ID }}
+          YT_CHANNEL_ID: "@tuktuki_in"
         run: python3 tools/social_fetch.py
       - name: Build
         run: python3 build.py build
