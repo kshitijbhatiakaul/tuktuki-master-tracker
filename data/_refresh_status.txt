@@ -1,4 +1,4 @@
-Run 2026-11-24 13:55 IST  (schedule)
+Run 2026-11-24 14:09 IST  (push)
 onedrive=success ads_rebuild=success ig_rebuild=success adjust=success ga=success export=success social=success
 
 == onedrive
@@ -37,7 +37,7 @@ behaviour/backcamp.csv: 290 rows, 2026-03-01 to 2026-11-23
 behaviour/mau.csv: 14 rows, 2025-10-01 to 2026-11-23
 behaviour/chanday.csv: 855 rows, 2026-08-01 to 2026-11-23
 oem/oem_monthly.csv: 61 rows, 2025-12-01 to 2026-10-31
-oem/oem_daily.csv: 105 rows, 2026-11-01 to 2026-11-23
+oem/oem_daily.csv: 111 rows, 2026-11-01 to 2026-11-23
 
 == ga
 ga_daily.csv: 6 days
