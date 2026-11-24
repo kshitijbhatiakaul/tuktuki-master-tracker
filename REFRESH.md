@@ -3,6 +3,8 @@
 - **Monday — full refresh**: every step below.
 - **Tuesday–Friday — daily refresh**: everything except the admin panel and GA. Skip step 1's admin-panel and GA files and step 2 (GA dimensions); instead copy only the Adjust files from a fresh Adjust pull in the behaviour repo clone: `cp ../tuktuki-user-behaviour/data/*.csv data/behaviour/` (the behaviour repo itself is not pushed on these days). Do steps 2a–8. `data/behaviour/admin/` and `data/behaviour/ga/` stay as of Monday.
 
+- **Skip rule**: every run, manual or scheduled, records itself in the behaviour dashboard artifact's database (collection `refresh`, doc `tracker`: `date` = IST date, `lock`, `by`, `scope`). The cloud task "Master Tracker Daily Refresh" (~10 AM IST daily, no Mac) skips when `date` is today; otherwise it refreshes Adjust + OEM only, because the OneDrive workbooks need the Mac. **After a manual run, set `refresh/tracker.date` to today.**
+
 # Monday refresh
 
 Runs after the User Behaviour dashboard refresh (repo `tuktuki-user-behaviour`), in the same scheduled task.
