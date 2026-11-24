@@ -1,36 +1,30 @@
 # Refresh schedule
 
-- **Every day ~9:10 IST — GitHub Action "Daily workbook refresh"** (free, no computer): downloads the four OneDrive workbooks and the Meta report's engine files through the Microsoft app "Tuktuki Tracker Sync" (read-only, Files.Read), recalculates, exports, rebuilds and pushes. If it fails saying the sign-in expired, run the **Connect OneDrive** workflow from the Actions tab. The GH_PAT access key keeps the sign-in fresh and expires after a year.
-- **Every day ~9:57 IST — cloud scheduled task "Master Tracker Daily Refresh"**: adds Adjust + OEM data (copy only `data/*.csv` from a fresh Adjust pull in the behaviour repo clone) and republishes the Claude artifact. `data/behaviour/admin/` and `data/behaviour/ga/` stay as of Monday.
-- **Monday 9:29 IST — Mac scheduled task**: the steps below except the workbooks (steps 3–5 are done by the GitHub Action).
-- **Skip rule**: every run records itself in the behaviour dashboard artifact's database (collection `refresh`, doc `tracker`: `date` = IST date, `lock`, `by`, `scope`). The cloud task skips when `date` is today. **After a manual run, set `refresh/tracker.date` to today.**
+Everything except the admin panel is refreshed by the GitHub Action **"Daily workbook refresh"** (`.github/workflows/daily-refresh.yml`) — no Claude, no computer, no credits. It runs at 09:10, 12:10, 15:10, 18:10 and 22:10 IST, whenever Claude pushes admin data, and on demand (Actions tab → Run workflow). Every run writes `data/_refresh_status.txt` (step results + last log lines).
 
-# Monday refresh
+| Data | How the Action gets it | Key (repo secret) |
+|---|---|---|
+| Business tracker, Influencer dashboard, Instagram workbook | OneDrive download (`tools/onedrive.py fetch`), Microsoft app "Tuktuki Tracker Sync", read-only Files.Read | `MS_REFRESH_TOKEN` (kept fresh with `GH_PAT`) |
+| Daily Ads report (Meta, Google, ShareChat spend, recs, PM log) | Rebuilt daily from the Daily Ads Update's engine files on OneDrive with its own build.py (`tools/ads_rebuild.sh`); nothing is written back | same |
+| Adjust: daily, events, cohorts, purchases, channels, MAU, OEM | Reports Service API (`tools/adjust_fetch.py`) | `ADJUST_API_TOKEN` |
+| GA: daily, places/versions (BigQuery), monthly totals and breakdowns incl. age/gender/interests (GA Data API) | `tools/ga_fetch.py`, service account `tracker-read@claude-tuktuki.iam.gserviceaccount.com` | `GCP_SA_KEY` |
+| YouTube (views, likes, comments, new videos) | YouTube Data API, channel @tuktuki_in (`tools/social_fetch.py`) | `YT_API_KEY` |
+| Instagram (reach, views, interactions, new posts) | Instagram Graph API (`tools/social_fetch.py`) | `META_TOKEN` |
+| Admin panel (viewing, subscriptions, series) | **Claude, Mondays** — the behaviour routine pushes `data/behaviour/admin/` (and `source/behaviour.html`); the push starts the Action | — |
 
-Runs after the User Behaviour dashboard refresh (repo `tuktuki-user-behaviour`), in the same scheduled task.
+- If the OneDrive sign-in expires, run **Connect OneDrive** from the Actions tab. `GH_PAT` expires a year after it was created — make a new one the same way.
+- Analysis columns of the Instagram / YouTube logs come from the Monday Instagram workbook; the API only refreshes the numbers and adds new posts.
 
-1. **Behaviour data** — copy the refreshed behaviour repo in:
-   `cp -r ../tuktuki-user-behaviour/data/* data/behaviour/ && cp ../tuktuki-user-behaviour/source/dashboard.html source/behaviour.html`
-2a. **OEM data** — with the Adjust connector (`copilot_reporting_tool`) get installs, reinstalls, reattributions, sessions, daus, uninstalls, D1, D7 and time_spent_per_user_d0 by month, network and campaign for the networks Vivo Global, OPPO Global, Xiaomi Global and Transsion Holdings (Oct 2025 to the end of last month) → `data/oem/oem_monthly.csv`, and the same by day for the current month → `data/oem/oem_daily.csv` (same column names).
-2. **GA dimensions snapshot** — run the `ga_dims` SQL (see `tools/ga_dims.sql`) with the Google Cloud BigQuery
-   connector (`execute_sql_readonly`, project `tuktuki-54fa9`) and save the rows as `data/behaviour/ga/ga_dims.json`
-   (list of `{dim, value, users, new_users, sessions, minutes_per_user}`). Read-only.
-3. **Workbooks** — stage from the OneDrive folder on the Mac (read-only):
-   `Updated Tuktuki Meta Daily Report.xlsx`, `Updated Tuktuki Instagram Daily Analysis.xlsx`,
-   `Tuktuki Business Performance Tracker.xlsx`, `TukTuki_Influencer_Dashboard.xlsx`, and
-   `Tuktuki Meta Daily Report/_engine (do not edit)/data/adset_meta.json` + `ads_hist.json`.
-4. **Recalculate** (the pipelines save formulas without cached values):
-   `soffice --headless --calc --convert-to xlsx:"Calc MS Excel 2007 XML" --outdir <recalc> <staged>/*.xlsx`
-5. **Export**:
-   `python3 tools/export_sheets.py <recalc> <staged>` and
-   `python3 tools/export_engine.py "<recalc>/Updated Tuktuki Meta Daily Report.xlsx" <engine data folder>`
-6. **Daily spend** is rebuilt automatically by the build (`tools/spend_daily.py`): Meta exact days from the Day-wise sheet (Sep on) and the Meta API history in `data/spend/meta_account_daily.json` (Oct 2025 – Apr 2026); other months are spread evenly and flagged.
-7. **Build**: `python3 build.py build` (needs `beautifulsoup4`) — writes `docs/index.html`.
-8. Republish `docs/index.html` to the Master Tracker artifact (same URL), commit and push to main — GitHub Pages (main /docs) updates the public link https://kshitijbhatiakaul.github.io/tuktuki-master-tracker/. Never rewrite history.
+# Monday (Claude — admin panel only)
 
-`data/spend/pm_history.json` (Meta + Google spend Oct 2025 – Jun 2026) is fixed history and is not refreshed.
-If a new sheet is added to a workbook it shows up automatically in `data/sheets/`; add it to `LAYOUT` in `build.py`
-to give it a tab (the build prints nothing for unplaced sheets, so check `data/sheets/index.json`).
+The Monday behaviour routine (Mac scheduled task) refreshes the admin-panel data in `tuktuki-user-behaviour`, then here:
+1. `cp ../tuktuki-user-behaviour/data/admin/* data/behaviour/admin/ && cp ../tuktuki-user-behaviour/source/dashboard.html source/behaviour.html`
+2. Commit only those paths, `git pull --rebase`, push. Never commit `docs/` from Claude — the push starts the GitHub Action, which rebuilds and publishes.
+3. Optionally republish the Claude artifact copy from a local `python3 build.py build` (not committed).
+
+Building by hand: `python3 build.py build` (needs `openpyxl`, `beautifulsoup4`) writes `docs/index.html`.
+`data/spend/pm_history.json` (Meta + Google spend Oct 2025 – Jun 2026) is fixed history. A new workbook sheet appears in `data/sheets/` automatically;
+add it to `LAYOUT` in `build.py` to give it a tab.
 
 ## Influencer casting (how the Influencers pages read the sheets)
 
