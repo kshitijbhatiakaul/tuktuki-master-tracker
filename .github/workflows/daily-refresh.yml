@@ -29,7 +29,7 @@ jobs:
       - name: Install tools
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq libreoffice-calc > /dev/null
-          pip install -q openpyxl beautifulsoup4
+          pip install -q openpyxl beautifulsoup4 google-auth requests
       - name: Download from OneDrive
         env:
           MS_CLIENT_ID: 90ea05bc-7d0a-42c0-a921-041294dd144a
@@ -50,13 +50,28 @@ jobs:
         run: |
           if [ -z "$ADJUST_API_TOKEN" ]; then echo "ADJUST_API_TOKEN not set yet - Adjust data left as it was"; exit 0; fi
           python3 tools/adjust_fetch.py
-      - name: Recalculate, export, build
+      - name: Google Analytics data
+        continue-on-error: true
+        env:
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+        run: |
+          if [ -z "$GCP_SA_KEY" ]; then echo "GCP_SA_KEY not set yet - GA data left as it was"; exit 0; fi
+          python3 tools/ga_fetch.py
+      - name: Recalculate and export the workbooks
         run: |
           S="${{ runner.temp }}/staged"; R="${{ runner.temp }}/recalc"; mkdir -p "$R"
           soffice --headless --calc --convert-to xlsx:"Calc MS Excel 2007 XML" --outdir "$R" "$S"/*.xlsx
           python3 tools/export_sheets.py "$R" "$S"
           python3 tools/export_engine.py "$R/Updated Tuktuki Meta Daily Report.xlsx" "$S/engine"
-          python3 build.py build
+      - name: Instagram and YouTube numbers
+        continue-on-error: true
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          YT_API_KEY: ${{ secrets.YT_API_KEY }}
+          YT_CHANNEL_ID: ${{ vars.YT_CHANNEL_ID }}
+        run: python3 tools/social_fetch.py
+      - name: Build
+        run: python3 build.py build
       - name: Commit and push
         run: |
           git config user.name "tracker-refresh[bot]"
