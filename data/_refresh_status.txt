@@ -1,5 +1,5 @@
-Run 2026-11-24 11:07 IST  (push)
-onedrive=success ads_rebuild=success adjust=success ga=success export=success social=success
+Run 2026-11-24 11:58 IST  (push)
+onedrive=success ads_rebuild=success ig_rebuild=success adjust=success ga=success export=success social=success
 
 == onedrive
 Updated Tuktuki Meta Daily Report.xlsx: 2,979,154 bytes
@@ -10,7 +10,7 @@ engine/adset_meta.json: 9,518 bytes
 engine/ads_hist.json: 1,802,032 bytes
 
 == ads
-engine files: 56
+files from Tuktuki Meta Daily Report/_engine (do not edit): 56
 Daily Ads data up to 2026-11-23 (last run Tue Nov 24, 9:20 am )
 pm extract: 0 new comment lines from prev.xlsx (run 2026-11-23); total 62
 trio: CPI trio on 6 sheets; retention + Ret Effective CPI blocks on Weekly & Monthly, both change logs, Weekly Optimisation B, Outlook, Suggestions, Creative Why, Creative Playbook
@@ -18,6 +18,12 @@ cpi_trend: rows 100
 creative rows 406 | why 38 | playbook events 6
 saved /tmp/eng/out.xlsx | summary rows 117 | recs 22 | ledger 975 | suggestions 273 | day-wise rows 9017
 Daily Ads workbook rebuilt from the engine files
+
+== ig
+files from Tuktuki Social Analytics/_pipeline: 18
+Instagram data saved on 2026-11-24 (status report )
+{"rows": 731, "with_insights": 731, "frozen": 672, "youtube": {"yt_videos": 636, "yt_shorts": 525, "yt_with_retention": 608, "yt_frozen": 395}, "out": "/tmp/igp/out.xlsx"}
+Instagram workbook rebuilt from the pipeline files
 
 == adjust
 behaviour/daily.csv: 414 rows, 2025-10-06 to 2026-11-23
@@ -68,3 +74,6 @@ ads_engine: 70 dash rows, 2776 weekly/monthly rows, end 2026-11-23
 == social
 META_TOKEN not set - Instagram left as in the workbook
 YouTube: 633 videos refreshed, 11 new
+
+== sources
+sources: {'adjust': '2026-11-23', 'admin': '2026-11-18', 'ads': '2026-11-23', 'built': '2026-11-24', 'ga': '2026-11-22', 'oem': '2026-11-23', 'ig': '2026-11-23', 'yt': '2026-11-23'}
