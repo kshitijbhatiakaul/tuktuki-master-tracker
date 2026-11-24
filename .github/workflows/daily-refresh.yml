@@ -1,8 +1,9 @@
-# Refreshes the tracker without Claude: OneDrive workbooks (Daily Ads report, Instagram, Business tracker,
-# Influencer dashboard) + Adjust (installs, retention, channels, cohorts, purchases, MAU, OEM), then rebuilds
-# docs/index.html and pushes (GitHub Pages updates).
-# Runs several times a day so a workbook updated later in the day still shows up the same day.
+# Refreshes the tracker without Claude: OneDrive workbooks (Business tracker, Influencer dashboard, Instagram),
+# the Daily Ads report rebuilt daily from its engine files, Adjust, Google Analytics, Instagram + YouTube numbers;
+# then rebuilds docs/index.html and pushes (GitHub Pages updates).
+# Runs several times a day so anything updated later in the day still shows up the same day.
 # Also runs when Claude pushes the Monday admin-panel data, so it appears straight away.
+# Each run writes data/_refresh_status.txt (step results + last log lines) so problems are visible in the repo.
 name: Daily workbook refresh
 on:
   schedule:
@@ -21,58 +22,79 @@ concurrency: refresh
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 45
+    env:
+      MS_CLIENT_ID: 90ea05bc-7d0a-42c0-a921-041294dd144a
+      MS_TENANT_ID: 6b3d2c3e-7f87-4d9a-b903-6e948c86a7b0
+      MS_REFRESH_TOKEN: ${{ secrets.MS_REFRESH_TOKEN }}
+      RT_OUT: ${{ runner.temp }}/rt
+      S: ${{ runner.temp }}/staged
+      L: ${{ runner.temp }}/logs
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - name: Install tools
         run: |
+          mkdir -p "$L"
           sudo apt-get update -qq && sudo apt-get install -y -qq libreoffice-calc > /dev/null
-          pip install -q openpyxl beautifulsoup4 google-auth requests
+          pip install -q openpyxl beautifulsoup4 google-auth requests pandas numpy
       - name: Download from OneDrive
-        env:
-          MS_CLIENT_ID: 90ea05bc-7d0a-42c0-a921-041294dd144a
-          MS_TENANT_ID: 6b3d2c3e-7f87-4d9a-b903-6e948c86a7b0
-          MS_REFRESH_TOKEN: ${{ secrets.MS_REFRESH_TOKEN }}
-          RT_OUT: ${{ runner.temp }}/rt
-        run: python3 tools/onedrive.py fetch "${{ runner.temp }}/staged"
+        id: onedrive
+        run: python3 tools/onedrive.py fetch "$S" 2>&1 | tee "$L/onedrive.txt"; exit ${PIPESTATUS[0]}
+      - name: Rebuild the Daily Ads workbook from its engine files
+        id: ads
+        continue-on-error: true
+        run: bash tools/ads_rebuild.sh "$S" 2>&1 | tee "$L/ads.txt"; exit ${PIPESTATUS[0]}
       - name: Keep the OneDrive sign-in fresh
+        if: always()
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
-          if [ -s "${{ runner.temp }}/rt" ]; then gh secret set MS_REFRESH_TOKEN --repo "$GITHUB_REPOSITORY" < "${{ runner.temp }}/rt"; fi
-          rm -f "${{ runner.temp }}/rt"
+          if [ -s "$RT_OUT" ]; then gh secret set MS_REFRESH_TOKEN --repo "$GITHUB_REPOSITORY" < "$RT_OUT"; fi
+          rm -f "$RT_OUT"
       - name: Adjust data
+        id: adjust
         continue-on-error: true
         env:
           ADJUST_API_TOKEN: ${{ secrets.ADJUST_API_TOKEN }}
         run: |
-          if [ -z "$ADJUST_API_TOKEN" ]; then echo "ADJUST_API_TOKEN not set yet - Adjust data left as it was"; exit 0; fi
-          python3 tools/adjust_fetch.py
+          if [ -z "$ADJUST_API_TOKEN" ]; then echo "ADJUST_API_TOKEN not set" | tee "$L/adjust.txt"; exit 0; fi
+          python3 tools/adjust_fetch.py 2>&1 | tee "$L/adjust.txt"; exit ${PIPESTATUS[0]}
       - name: Google Analytics data
+        id: ga
         continue-on-error: true
         env:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
         run: |
-          if [ -z "$GCP_SA_KEY" ]; then echo "GCP_SA_KEY not set yet - GA data left as it was"; exit 0; fi
-          python3 tools/ga_fetch.py
+          if [ -z "$GCP_SA_KEY" ]; then echo "GCP_SA_KEY not set" | tee "$L/ga.txt"; exit 0; fi
+          python3 tools/ga_fetch.py 2>&1 | tee "$L/ga.txt"; exit ${PIPESTATUS[0]}
       - name: Recalculate and export the workbooks
+        id: export
         run: |
-          S="${{ runner.temp }}/staged"; R="${{ runner.temp }}/recalc"; mkdir -p "$R"
-          soffice --headless --calc --convert-to xlsx:"Calc MS Excel 2007 XML" --outdir "$R" "$S"/*.xlsx
-          python3 tools/export_sheets.py "$R" "$S"
-          python3 tools/export_engine.py "$R/Updated Tuktuki Meta Daily Report.xlsx" "$S/engine"
+          R="${{ runner.temp }}/recalc"; mkdir -p "$R"
+          soffice --headless --calc --convert-to xlsx:"Calc MS Excel 2007 XML" --outdir "$R" "$S"/*.xlsx > /dev/null
+          ( python3 tools/export_sheets.py "$R" "$S" && python3 tools/export_engine.py "$R/Updated Tuktuki Meta Daily Report.xlsx" "$S/engine" ) 2>&1 | tail -30 | tee "$L/export.txt"
       - name: Instagram and YouTube numbers
+        id: social
         continue-on-error: true
         env:
           META_TOKEN: ${{ secrets.META_TOKEN }}
           YT_API_KEY: ${{ secrets.YT_API_KEY }}
           YT_CHANNEL_ID: "@tuktuki_in"
-        run: python3 tools/social_fetch.py
+        run: python3 tools/social_fetch.py 2>&1 | tee "$L/social.txt"; exit ${PIPESTATUS[0]}
       - name: Build
         run: python3 build.py build
+      - name: Status file
+        if: always()
+        run: |
+          {
+            echo "Run $(TZ=Asia/Kolkata date '+%F %H:%M') IST  (${{ github.event_name }})"
+            echo "onedrive=${{ steps.onedrive.outcome }} ads_rebuild=${{ steps.ads.outcome }} adjust=${{ steps.adjust.outcome }} ga=${{ steps.ga.outcome }} export=${{ steps.export.outcome }} social=${{ steps.social.outcome }}"
+            for f in onedrive ads adjust ga export social; do [ -f "$L/$f.txt" ] && { echo; echo "== $f"; tail -25 "$L/$f.txt"; }; done
+          } > data/_refresh_status.txt
       - name: Commit and push
+        if: always()
         run: |
           git config user.name "tracker-refresh[bot]"
           git config user.email "tracker-refresh@users.noreply.github.com"
