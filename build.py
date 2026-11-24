@@ -21,7 +21,7 @@ from bs4 import BeautifulSoup
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(ROOT, "data")
 BEH = os.path.join(DATA, "behaviour")
-ADJUST = ["daily", "events", "cohorts", "channels", "backcamp", "purchases", "paycohort", "paychan", "mau"]
+ADJUST = ["daily", "events", "cohorts", "channels", "backcamp", "purchases", "paycohort", "paychan", "mau", "chanday"]
 GA = ["ga_breakdowns", "ga_explore", "ga_monthly"]
 ADMIN = ["admin_daily", "series_daily", "series_windows"]
 

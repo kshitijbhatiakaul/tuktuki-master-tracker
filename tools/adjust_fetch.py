@@ -28,6 +28,7 @@ SETS = [
     ("behaviour/paychan.csv", ["month", "channel"], {}),
     ("behaviour/backcamp.csv", ["month", "campaign_network", "channel"], {}),
     ("behaviour/mau.csv", ["month"], {}),
+    ("behaviour/chanday.csv", ["day", "channel"], {}),
     ("oem/oem_monthly.csv", ["network", "month", "campaign_network"], {"network__in": OEM}),
     ("oem/oem_daily.csv", ["day", "network", "campaign_network"], {"network__in": OEM}),
 ]

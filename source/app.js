@@ -709,6 +709,29 @@
     else hbar(el, g.filter(([, a]) => fin(a.d1)).sort((a, b) => b[1].d1 - a[1].d1).map(([k, a]) => ({ k, v: a.d1, c: a.d1 >= 0.14 ? '#12a150' : '#e0a321', note: F.big(a.inst) + ' installs' })), { f: F.p1 });
   });
 
+  // ====================================================================== channel behaviour table (replaces the behaviour page's chanTbl)
+  // Adds Finished 3rd / Reached 7th / Reached 10th video. These events started in Adjust on different days, so each rate
+  // counts only installs from the day its event began (and inside the date range), from the per-channel daily copy (chanday).
+  const CHD = (() => { const r = (window.__DASH_RAW || {}).chanday; return r && r.text ? d3.csvParse(r.text) : []; })();
+  const EVK = [['v3', 'third_video_view_complete_d0_conversions_cohort', 'Finished 3rd video'], ['v7', '7th video view_d0_conversions_cohort', 'Reached 7th video'], ['v10', '10th video view_d0_conversions_cohort', 'Reached 10th video']];
+  const EVSTART = Object.fromEntries(EVK.map(([k, col]) => { const by = d3.rollups(CHD, (v) => [d3.sum(v, (r) => +r[col] || 0), d3.sum(v, (r) => +r.first_video_view_d0_conversions_cohort || 0)], (r) => r.day).sort((a, b) => (a[0] < b[0] ? -1 : 1)); const f = by.find(([, [e, v1]]) => v1 && e / v1 >= 0.1); return [k, f ? f[0] : null]; }));
+  dash.draw('chanTbl', (tb) => {
+    tb.replaceChildren(); const ch = rowsOf('channels'); if (!ch.length) return;
+    const head = tb.closest('table').querySelector('thead tr');
+    head.innerHTML = ['Channel', 'Installs', 'Same-day uninstall', 'Day-1 ret.', 'Day-7 ret.', 'Min on install day', 'Watched 1st video', 'Finished 3rd video', 'Finished 5th video', 'Reached 7th video', 'Reached 10th video'].map((t) => `<th>${t}</th>`).join('');
+    const { s, e } = rng(); const ms = monthsIn(s, e); const wav = (rs, k) => { const i = d3.sum(rs, (r) => n(r.installs)); return i ? d3.sum(rs, (r) => n(r[k]) * n(r.installs)) / i : null; };
+    const g = d3.rollups(ch.filter((r) => ms.includes(r.month)), (rs) => ({ installs: d3.sum(rs, (r) => n(r.installs)), d0u: d3.sum(rs.filter((r) => r.month >= '2026-03'), (r) => n(r.uninstalls_total_d0)), d0i: d3.sum(rs.filter((r) => r.month >= '2026-03'), (r) => n(r.installs)), r1: wav(rs, 'retention_rate_d1'), r7: wav(rs, 'retention_rate_d7'), t0: wav(rs, 'time_spent_per_user_d0'), v1: d3.sum(rs, (r) => n(r.first_video_view_d0_conversions_cohort)), v1i: d3.sum(rs.filter((r) => r.month >= '2025-12'), (r) => n(r.installs)), v5: d3.sum(rs, (r) => n(r.fifth_video_view_complete_d0_conversions_cohort)), v5i: d3.sum(rs.filter((r) => r.month >= '2026-08'), (r) => n(r.installs)) }), (r) => r.channel)
+      .map(([channel, v]) => { const big = v.installs >= 100; const o = { channel, ...v, c_d0: big && v.d0i ? v.d0u / v.d0i : null, c_r1: big ? v.r1 : null, c_r7: big ? v.r7 : null, c_t0: big && v.t0 != null ? v.t0 / 60 : null, c_v1: big && v.v1i ? v.v1 / v.v1i : null, c_v5: big && v.v5i >= 100 ? v.v5 / v.v5i : null };
+        EVK.forEach(([k, col]) => { const st = EVSTART[k]; if (!st) { o['c_' + k] = null; return; } const R = CHD.filter((r) => r.channel === channel && r.day >= st && r.day >= s && r.day <= e); const i = d3.sum(R, (r) => +r.installs || 0); o['c_' + k] = i >= 100 ? d3.sum(R, (r) => +r[col] || 0) / i : null; });
+        return o; })
+      .filter((r) => r.installs > 0).sort((a, b) => b.installs - a.installs);
+    if (!g.length) { const tr = document.createElement('tr'); tr.innerHTML = '<td colspan="11" class="l">No installs in these months</td>'; tb.append(tr); return; }
+    const cols = [['c_d0', 'p0', 'low'], ['c_r1', 'p1', 'high'], ['c_r7', 'p1', 'high'], ['c_t0', 'd1', 'high'], ['c_v1', 'p0', 'high'], ['c_v3', 'p0', 'high'], ['c_v5', 'p0', 'high'], ['c_v7', 'p0', 'high'], ['c_v10', 'p0', 'high']];
+    const ext = Object.fromEntries(cols.map(([k]) => { const v = g.map((r) => r[k]).filter((x) => x != null); return [k, [d3.min(v), d3.max(v)]]; }));
+    g.forEach((r) => { const tr = document.createElement('tr'); tr.innerHTML = `<td>${esc(r.channel)}</td><td>${F.int(r.installs)}</td>` + cols.map(([k, f, dir]) => { const v = r[k]; let cls = ''; if (v != null && ext[k][0] !== ext[k][1]) { const [lo, hi] = ext[k]; if (v === (dir === 'high' ? hi : lo)) cls = 'ok'; else if (v === (dir === 'high' ? lo : hi)) cls = 'bad'; } return `<td class="${cls}">${v == null ? '—' : fmt(v, f)}</td>`; }).join(''); tb.append(tr); });
+    const card = tb.closest('.card'); if (card) { let nt = card.querySelector('.evnote'); if (!nt) { nt = document.createElement('p'); nt.className = 'note evnote'; tb.closest('.tw').after(nt); } nt.textContent = `Video steps are share of installs who did it on install day. Tracking began on different days, so each column counts installs from then on: finished 3rd video from ${EVSTART.v3 ? dLblY(EVSTART.v3) : '—'}, reached 7th video from ${EVSTART.v7 ? dLblY(EVSTART.v7) : '—'}, reached 10th video from ${EVSTART.v10 ? dLblY(EVSTART.v10) : '—'} (blank if the range ends before that, or under 100 installs).`; }
+  });
+
   // ====================================================================== influencers
   const parseINR = (s) => { if (s == null) return null; const t = String(s).toLowerCase().replace(/,/g, ''); const m = /([\d.]+)\s*(cr|crore|l\b|lakh|lakhs|lac|k\b)?/.exec(t); if (!m) return null; let v = parseFloat(m[1]); if (!Number.isFinite(v)) return null; const u = m[2] || ''; if (/^cr/.test(u)) v *= 1e7; else if (/^l/.test(u)) v *= 1e5; else if (u === 'k') v *= 1e3; return v >= 1000 ? v : null; };
   const MONIDX = (s) => MON.findIndex((x) => String(s || '').toLowerCase().startsWith(x.toLowerCase()));
