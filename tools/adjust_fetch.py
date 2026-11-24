@@ -3,7 +3,7 @@
   ADJUST_API_TOKEN=... python3 tools/adjust_fetch.py
 
 Each file keeps its own columns: the metric list is read from the file's header, so the output matches what the
-tracker already expects. Ranges run from each file's first date to yesterday (IST). A file is only replaced when
+tracker already expects (same metric slugs as the Adjust connector). Ranges run from each file's first date to yesterday (IST). A file is only replaced when
 Adjust answers with the same columns; otherwise the old file is kept and the problem is printed.
 """
 import csv, datetime, io, os, sys, urllib.error, urllib.parse, urllib.request
