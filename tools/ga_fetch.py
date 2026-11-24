@@ -54,7 +54,7 @@ def ga(dims, metrics, start, end, limit=10000):
               "metrics": [{"name": m} for m in metrics], "limit": limit})
     out = []
     for row in r.get("rows", []):
-        out.append([d["value"] for d in row["dimensionValues"]] + [float(m["value"]) for m in row["metricValues"]])
+        out.append([d["value"] for d in row.get("dimensionValues", [])] + [float(m["value"]) for m in row.get("metricValues", [])])
     return out
 
 
