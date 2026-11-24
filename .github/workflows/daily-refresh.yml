@@ -44,6 +44,10 @@ jobs:
         id: ads
         continue-on-error: true
         run: bash tools/ads_rebuild.sh "$S" 2>&1 | tee "$L/ads.txt"; exit ${PIPESTATUS[0]}
+      - name: Rebuild the Instagram workbook from its pipeline files
+        id: ig
+        continue-on-error: true
+        run: bash tools/ig_rebuild.sh "$S" 2>&1 | tail -30 | tee "$L/ig.txt"; exit ${PIPESTATUS[0]}
       - name: Keep the OneDrive sign-in fresh
         if: always()
         env:
@@ -82,14 +86,16 @@ jobs:
           YT_CHANNEL_ID: "@tuktuki_in"
         run: python3 tools/social_fetch.py 2>&1 | tee "$L/social.txt"; exit ${PIPESTATUS[0]}
       - name: Build
-        run: python3 build.py build
+        run: |
+          python3 tools/sources.py "$S" | tee "$L/sources.txt"
+          python3 build.py build
       - name: Status file
         if: always()
         run: |
           {
             echo "Run $(TZ=Asia/Kolkata date '+%F %H:%M') IST  (${{ github.event_name }})"
-            echo "onedrive=${{ steps.onedrive.outcome }} ads_rebuild=${{ steps.ads.outcome }} adjust=${{ steps.adjust.outcome }} ga=${{ steps.ga.outcome }} export=${{ steps.export.outcome }} social=${{ steps.social.outcome }}"
-            for f in onedrive ads adjust ga export social; do [ -f "$L/$f.txt" ] && { echo; echo "== $f"; tail -25 "$L/$f.txt"; }; done
+            echo "onedrive=${{ steps.onedrive.outcome }} ads_rebuild=${{ steps.ads.outcome }} ig_rebuild=${{ steps.ig.outcome }} adjust=${{ steps.adjust.outcome }} ga=${{ steps.ga.outcome }} export=${{ steps.export.outcome }} social=${{ steps.social.outcome }}"
+            for f in onedrive ads ig adjust ga export social sources; do [ -f "$L/$f.txt" ] && { echo; echo "== $f"; tail -25 "$L/$f.txt"; }; done
           } > data/_refresh_status.txt
       - name: Commit and push
         if: always()

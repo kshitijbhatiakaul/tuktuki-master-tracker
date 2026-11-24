@@ -306,7 +306,7 @@
   dash.draw('mVsNote', (el) => { const { s, e } = prevRng(); el.textContent = `▲▼ compare with ${dLblY(s)} – ${dLblY(e)} · totals are compared per day of data, so a shorter admin-panel feed doesn't look like a drop`; });
   dash.draw('mHeroChips', (el) => {
     const Mo = model(); const { s, e } = rng(); const c = cur();
-    el.innerHTML = [`Range ${dLblY(s)} – ${dLblY(e)} (${c.days || 0} days)`, Mo ? `Adjust to ${dLblY(Mo.last)}` : '', Mo && Mo.lastAdm ? `Admin panel to ${dLblY(Mo.lastAdm)}` : '', `Daily Ads report to ${M.engine.meta.end_date || '?'}`].filter(Boolean).map((t) => `<span>${esc(t)}</span>`).join('');
+    const X = SRC(); el.innerHTML = `<span>${esc(`Range ${dLblY(s)} – ${dLblY(e)} (${c.days || 0} days)`)}</span>` + ['adjust', 'ads', 'admin', 'ga', 'ig', 'yt'].filter((k) => X[k]).map((k) => `<span${X[k] < YDAY ? ' class="stale"' : ''}>${esc(SRCN[k])} to ${esc(dLbl(X[k]))}</span>`).join('');
     const pane = document.querySelector('.m-page-pane:not([hidden]) > .m-tabpane:not([hidden])'); if (pane) { renderSheets(pane); setTimeout(() => collapseTables(pane), 80); }
   });
   dash.draw('mEstNote', (el) => { el.textContent = cur().est ? 'Some days in this range use the month’s spend spread evenly — no daily figure exists for Google and ShareChat, or for Meta in May–Aug 2026.' : 'Exact daily spend.'; });
@@ -678,6 +678,26 @@
     const a = dashAgg(pmRows(rangeMonths(), 'All')); if (a.spend) { const ml = rangeMonths().filter((m) => pmMonths().map(monthKey).includes(m)).map(mlabel).join(', '); if (fin(a.d1) && a.d1 < 0.14) L.push({ kind: 'bad', t: `<b>Paid day-1 retention ${F.p1(a.d1)}</b> is under the 14% benchmark (${ml}).`, tip: 'Tighten audiences and lead creatives with the deepest-binge series.' }); if (fin(a.ctr)) L.push({ kind: 'info', t: `<b>Funnel (${ml}):</b> CTR ${F.p2(a.ctr)}, ${fmt(a.ainst ? a.v1 / a.ainst : null, 'p0')} of paid installs watch a first video and ${fmt(a.ainst ? a.v7 / a.ainst : null, 'p0')} reach the 7th.`, tip: 'Optimise campaigns for the 3rd or 5th video event rather than the install.' }); ['Meta', 'Google', 'ShareChat'].forEach((pl) => { const b = dashAgg(pmRows(rangeMonths(), pl)); if (b.spend > 1000 && b.retcpi) L.push({ kind: b.retcpi <= a.retcpi ? 'good' : 'bad', t: `<b>${pl}:</b> ${F.inr(b.spend)} at Adjust CPI ${fmt(b.cpi, 'inr1')}, Ret CPI ${fmt(b.retcpi, 'inr1')} (all platforms ${fmt(a.retcpi, 'inr1')}).`, tip: b.retcpi <= a.retcpi ? `${pl} beats the blend on quality-adjusted cost — test more budget.` : `${pl} costs more per retained user than the blend.` }); }); }
     return L;
   }
+  // ====================================================================== data freshness
+  // A metric whose source stops before yesterday (IST) gets a small "last updated <day>" tag; up-to-date ones get nothing.
+  const YDAY = (() => { const n = new Date(Date.now() + 5.5 * 3600e3); n.setUTCDate(n.getUTCDate() - 1); return n.toISOString().slice(0, 10); })();
+  const SRCN = { adjust: 'Adjust', admin: 'Admin panel', ads: 'Daily Ads report', ga: 'Google Analytics', oem: 'Adjust (OEM)', ig: 'Instagram', yt: 'YouTube' };
+  const SRC = () => { const Mo = model(); const x = Object.assign({}, M.sources || {}); if (Mo) { x.adjust = x.adjust || Mo.last; x.admin = x.admin || Mo.lastAdm; } x.ads = x.ads || (M.engine.meta || {}).end_date; return x; };
+  const staleOf = (k) => { const d = SRC()[k]; return d && d < YDAY ? d : null; };
+  const KSRC = [[/^mSerTiles$/, null, 'admin'], [/^mSocKpis$/, null, (h) => h.dataset.src], [/^m(PmTiles|DwKpis|Dw\w*)$/, null, 'ads'], [/^mOemKpis$/, /spend/i, ''], [/^mOemKpis$/, null, 'oem'],
+    [/^mInflKpis$/, /installs|retention/i, 'adjust'], [/^mKpis$/, /influencer|casting|oem/i, ''], [/^mKpis$/, /episode|watch|subscri|admob|payer|payment|revenue|ecpm/i, 'admin'],
+    [/^mKpis$/, /spend|cpi|cost/i, 'ads'], [/^mKpis$/, /install|active|retention|reinstall|reactivation|uninstall|session|mau/i, 'adjust']];
+  const PAGESRC = { dash: ['adjust', 'admin', 'ads'], app: ['adjust', 'admin'], demo: ['ga'], series: ['admin'], social: ['ig', 'yt'], pm: ['ads', 'adjust'], infl: ['adjust'], oem: ['oem'] };
+  function markStale(pane) {
+    if (!pane) return;
+    const page = (pane.closest('.m-page-pane') || {}).dataset; const ks = ((page && PAGESRC[page.page]) || []).filter(staleOf);
+    if (ks.length && !pane.querySelector(':scope > .stalebar')) pane.insertAdjacentHTML('afterbegin', `<div class="stalebar">Not updated to ${dLblY(YDAY)}: ${ks.map((k) => `<b>${SRCN[k]}</b> — last updated ${dLblY(staleOf(k))}`).join(' · ')}</div>`);
+    pane.querySelectorAll('.kpi').forEach((card) => {
+      if (card.querySelector('.stale')) return; const host = card.closest('[data-draw]'); if (!host) return; const label = (card.querySelector('.l span') || {}).textContent || '';
+      let src = ''; for (const [d, re, sv] of KSRC) { if (d.test(host.dataset.draw) && (!re || re.test(label))) { src = typeof sv === 'function' ? sv(host) : sv; break; } }
+      const d = src && staleOf(src); if (d) (card.querySelector('.s') || card).insertAdjacentHTML('beforeend', ` <span class="stale" title="${SRCN[src]} has data up to this day only">last updated ${dLbl(d)}</span>`);
+    });
+  }
   const OBS = { dash: obsDash, app: obsApp, demo: obsDemo, series: obsSeries, social: obsSocial, pm: obsPm };
   dash.draw('mObs', (el) => { let L = []; try { L = OBS[el.dataset.sec](); } catch (err) { console.error(err); } if (el.dataset.n) L = L.slice(0, +el.dataset.n); el.innerHTML = L.length ? L.map((o) => `<div class="ob ${o.kind}"><span class="ic">${{ good: '↑', bad: '!', info: 'i' }[o.kind]}</span><div><div class="t">${o.t}</div>${o.tip ? `<div class="obtip">${o.tip}</div>` : ''}</div></div>`).join('') : '<div class="empty">Nothing moved much in this range compared with the period before.</div>'; });
 
@@ -806,7 +826,7 @@
     const [p, t] = h.split('/'); show(p || 'dash', t);
     document.addEventListener('click', (e) => { const a = e.target.closest('a[href^="#"]'); if (!a) return; const id = a.getAttribute('href').slice(1); if (id.includes('/')) return; const el = document.getElementById(id) || document.getElementById('b-' + id); if (!el) return; const pane = el.closest('.m-tabpane'); if (!pane) return; e.preventDefault(); show(pane.closest('.m-page-pane').dataset.page, pane.dataset.tab); setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 60); });
     addEventListener('hashchange', () => { const [p2, t2] = location.hash.slice(1).split('/'); show(p2, t2); });
-    let tm; new MutationObserver(() => { clearTimeout(tm); tm = setTimeout(() => { const pane = document.querySelector('.m-page-pane:not([hidden]) > .m-tabpane:not([hidden])'); if (pane) collapseTables(pane); }, 150); }).observe(document.getElementById('dash-root'), { childList: true, subtree: true });
+    let tm; new MutationObserver(() => { clearTimeout(tm); tm = setTimeout(() => { const pane = document.querySelector('.m-page-pane:not([hidden]) > .m-tabpane:not([hidden])'); if (pane) { collapseTables(pane); markStale(pane); } }, 150); }).observe(document.getElementById('dash-root'), { childList: true, subtree: true });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();

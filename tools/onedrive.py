@@ -100,13 +100,13 @@ def tree(src, out, token, skip=("raw",)):
     return n
 
 
-def engine(out):
+def engine(out, src=ENGINE):
     t = post(f"{AUTH}/token", {"grant_type": "refresh_token", "client_id": CLIENT, "refresh_token": os.environ["MS_REFRESH_TOKEN"], "scope": SCOPE})
     if "access_token" not in t:
         sys.exit("OneDrive sign-in expired - run the 'Connect OneDrive' workflow again.")
     save_rt(t)
     os.makedirs(out, exist_ok=True)
-    print("engine files:", tree(ENGINE, out, t["access_token"]))
+    print("files from", src + ":", tree(src, out, t["access_token"]))
 
 
 if __name__ == "__main__":
@@ -114,5 +114,7 @@ if __name__ == "__main__":
         connect()
     elif sys.argv[1] == "engine":
         engine(sys.argv[2])
+    elif sys.argv[1] == "folder":
+        engine(sys.argv[3], sys.argv[2])
     else:
         fetch(sys.argv[2])

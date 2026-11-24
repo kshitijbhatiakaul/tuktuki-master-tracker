@@ -159,7 +159,9 @@ def load_master():
     subprocess.run([sys.executable, os.path.join(ROOT, "tools", "spend_daily.py")], check=True, stdout=subprocess.DEVNULL)
     daily = json.load(open(os.path.join(DATA, "spend", "daily.json"), encoding="utf-8"))
     oem = {k: read_csv(os.path.join(DATA, "oem", f"oem_{k}.csv")) for k in ("monthly", "daily") if os.path.exists(os.path.join(DATA, "oem", f"oem_{k}.csv"))}
-    return {"index": index, "sheets": sheets, "engine": eng, "pmHistory": hist, "spendDaily": daily, "oem": oem}
+    src_path = os.path.join(DATA, "sources.json")
+    sources = json.load(open(src_path)) if os.path.exists(src_path) else {}
+    return {"index": index, "sheets": sheets, "engine": eng, "pmHistory": hist, "spendDaily": daily, "oem": oem, "sources": sources}
 
 
 def assemble(master_sheets):

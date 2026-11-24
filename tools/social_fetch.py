@@ -171,9 +171,18 @@ def youtube():
 
 
 ok = True
-for f in (instagram, youtube):
+done = {}
+yday = (datetime.datetime.now(IST).date() - datetime.timedelta(days=1)).isoformat()
+for key, f, env in (("ig", instagram, "META_TOKEN"), ("yt", youtube, "YT_API_KEY")):
     try:
-        ok = f() and ok
+        r = f()
+        ok = r and ok
+        if r and os.environ.get(env):
+            done[key] = yday
     except Exception as e:
         print(f"!! {f.__name__}: {e}"); ok = False
+api = os.path.join(os.path.dirname(ROOT), "_api_dates.json")
+prev = json.load(open(api)) if os.path.exists(api) else {}
+prev.update(done)
+json.dump(prev, open(api, "w"), indent=1)
 sys.exit(0 if ok else 1)
