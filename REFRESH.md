@@ -1,3 +1,8 @@
+# Refresh schedule
+
+- **Monday — full refresh**: every step below.
+- **Tuesday–Friday — daily refresh**: everything except the admin panel and GA. Skip step 1's admin-panel and GA files and step 2 (GA dimensions); instead copy only the Adjust files from a fresh Adjust pull in the behaviour repo clone: `cp ../tuktuki-user-behaviour/data/*.csv data/behaviour/` (the behaviour repo itself is not pushed on these days). Do steps 2a–8. `data/behaviour/admin/` and `data/behaviour/ga/` stay as of Monday.
+
 # Monday refresh
 
 Runs after the User Behaviour dashboard refresh (repo `tuktuki-user-behaviour`), in the same scheduled task.
