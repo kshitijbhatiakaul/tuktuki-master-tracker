@@ -15,7 +15,7 @@ ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
 IST = datetime.timezone(datetime.timedelta(hours=5, minutes=30))
 TODAY = datetime.datetime.now(IST).date()
 YDAY = TODAY - datetime.timedelta(days=1)
-OEM = "Oppo Affinity,Xiaomi,Vivo Affinity,Transsion Holdings"
+OEM = "Oppo Affinity,Xiaomi,Vivo Affinity,Transsion Holdings,Ai Markit Partner,Affiliate,Affiliate_Vivo,Affinity veve"
 
 # file, dimension columns (in file order), extra filters
 SETS = [
