@@ -23,8 +23,8 @@ jobs:
           pip install -q openpyxl beautifulsoup4
       - name: Download from OneDrive
         env:
-          MS_CLIENT_ID: ${{ vars.MS_CLIENT_ID }}
-          MS_TENANT_ID: ${{ vars.MS_TENANT_ID }}
+          MS_CLIENT_ID: 90ea05bc-7d0a-42c0-a921-041294dd144a
+          MS_TENANT_ID: 6b3d2c3e-7f87-4d9a-b903-6e948c86a7b0
           MS_REFRESH_TOKEN: ${{ secrets.MS_REFRESH_TOKEN }}
           RT_OUT: ${{ runner.temp }}/rt
         run: python3 tools/onedrive.py fetch "${{ runner.temp }}/staged"
