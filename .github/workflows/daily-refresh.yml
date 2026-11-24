@@ -14,7 +14,7 @@ on:
     - cron: "40 16 * * *"   # 22:10 IST
   push:
     branches: [main]
-    paths: ["data/behaviour/admin/**", "data/behaviour/ga/**", "source/**", "build.py", "tools/**"]
+    paths: ["data/behaviour/admin/**", "data/behaviour/ga/**", "source/**", "build.py", "tools/**", ".github/workflows/daily-refresh.yml"]
   workflow_dispatch:
 permissions:
   contents: write
@@ -27,16 +27,14 @@ jobs:
       MS_CLIENT_ID: 90ea05bc-7d0a-42c0-a921-041294dd144a
       MS_TENANT_ID: 6b3d2c3e-7f87-4d9a-b903-6e948c86a7b0
       MS_REFRESH_TOKEN: ${{ secrets.MS_REFRESH_TOKEN }}
-      RT_OUT: ${{ runner.temp }}/rt
-      S: ${{ runner.temp }}/staged
-      L: ${{ runner.temp }}/logs
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - name: Install tools
         run: |
-          mkdir -p "$L"
+          echo "RT_OUT=$RUNNER_TEMP/rt" >> "$GITHUB_ENV"; echo "S=$RUNNER_TEMP/staged" >> "$GITHUB_ENV"; echo "L=$RUNNER_TEMP/logs" >> "$GITHUB_ENV"
+          mkdir -p "$RUNNER_TEMP/logs"
           sudo apt-get update -qq && sudo apt-get install -y -qq libreoffice-calc > /dev/null
           pip install -q openpyxl beautifulsoup4 google-auth requests pandas numpy
       - name: Download from OneDrive
