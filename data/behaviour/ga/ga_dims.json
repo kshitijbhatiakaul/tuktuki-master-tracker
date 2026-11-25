@@ -433,6 +433,14 @@
 },
 {
 "dim": "country",
+"value": "Spain",
+"users": 12,
+"new_users": 1,
+"sessions": 22,
+"minutes_per_user": 2.7
+},
+{
+"dim": "country",
 "value": "Algeria",
 "users": 12,
 "new_users": 0,
@@ -449,14 +457,6 @@
 },
 {
 "dim": "country",
-"value": "Spain",
-"users": 12,
-"new_users": 1,
-"sessions": 22,
-"minutes_per_user": 2.7
-},
-{
-"dim": "country",
 "value": "Kuwait",
 "users": 10,
 "new_users": 4,
@@ -465,19 +465,19 @@
 },
 {
 "dim": "country",
-"value": "Germany",
-"users": 9,
-"new_users": 2,
-"sessions": 10,
-"minutes_per_user": 3.6
-},
-{
-"dim": "country",
 "value": "Nigeria",
 "users": 9,
 "new_users": 4,
 "sessions": 12,
 "minutes_per_user": 1.3
+},
+{
+"dim": "country",
+"value": "Iran",
+"users": 9,
+"new_users": 3,
+"sessions": 12,
+"minutes_per_user": 0.5
 },
 {
 "dim": "language",
@@ -553,19 +553,19 @@
 },
 {
 "dim": "language",
-"value": "es-us",
-"users": 37,
-"new_users": 7,
-"sessions": 61,
-"minutes_per_user": 6.9
-},
-{
-"dim": "language",
 "value": "en-dz",
 "users": 37,
 "new_users": 17,
 "sessions": 44,
 "minutes_per_user": 24.2
+},
+{
+"dim": "language",
+"value": "es-us",
+"users": 37,
+"new_users": 7,
+"sessions": 61,
+"minutes_per_user": 6.9
 },
 {
 "dim": "language",
@@ -609,19 +609,19 @@
 },
 {
 "dim": "language",
-"value": "en-ca",
-"users": 19,
-"new_users": 8,
-"sessions": 32,
-"minutes_per_user": 17.8
-},
-{
-"dim": "language",
 "value": "id-id",
 "users": 19,
 "new_users": 4,
 "sessions": 37,
 "minutes_per_user": 0.6
+},
+{
+"dim": "language",
+"value": "en-ca",
+"users": 19,
+"new_users": 8,
+"sessions": 32,
+"minutes_per_user": 17.8
 },
 {
 "dim": "language",
@@ -777,19 +777,19 @@
 },
 {
 "dim": "os_version",
-"value": "iOS 18.7.8",
-"users": 6,
-"new_users": 2,
-"sessions": 7,
-"minutes_per_user": 17.2
-},
-{
-"dim": "os_version",
 "value": "iOS 26.5.2",
 "users": 6,
 "new_users": 0,
 "sessions": 7,
 "minutes_per_user": 14.8
+},
+{
+"dim": "os_version",
+"value": "iOS 18.7.8",
+"users": 6,
+"new_users": 2,
+"sessions": 7,
+"minutes_per_user": 17.2
 },
 {
 "dim": "os_version",
