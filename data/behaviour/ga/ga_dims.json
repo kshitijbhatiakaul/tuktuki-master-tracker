@@ -433,19 +433,19 @@
 },
 {
 "dim": "country",
-"value": "Türkiye",
-"users": 12,
-"new_users": 4,
-"sessions": 16,
-"minutes_per_user": 0.6
-},
-{
-"dim": "country",
 "value": "Algeria",
 "users": 12,
 "new_users": 0,
 "sessions": 17,
 "minutes_per_user": 0.1
+},
+{
+"dim": "country",
+"value": "Türkiye",
+"users": 12,
+"new_users": 4,
+"sessions": 16,
+"minutes_per_user": 0.6
 },
 {
 "dim": "country",
@@ -601,6 +601,14 @@
 },
 {
 "dim": "language",
+"value": "bn-in",
+"users": 19,
+"new_users": 4,
+"sessions": 22,
+"minutes_per_user": 5.5
+},
+{
+"dim": "language",
 "value": "en-ca",
 "users": 19,
 "new_users": 8,
@@ -614,14 +622,6 @@
 "new_users": 4,
 "sessions": 37,
 "minutes_per_user": 0.6
-},
-{
-"dim": "language",
-"value": "bn-in",
-"users": 19,
-"new_users": 4,
-"sessions": 22,
-"minutes_per_user": 5.5
 },
 {
 "dim": "language",
@@ -745,19 +745,19 @@
 },
 {
 "dim": "os_version",
-"value": "iOS 27.0.1",
-"users": 14,
-"new_users": 8,
-"sessions": 24,
-"minutes_per_user": 22.7
-},
-{
-"dim": "os_version",
 "value": "Android 8.0.0",
 "users": 14,
 "new_users": 6,
 "sessions": 18,
 "minutes_per_user": 17.4
+},
+{
+"dim": "os_version",
+"value": "iOS 27.0.1",
+"users": 14,
+"new_users": 8,
+"sessions": 24,
+"minutes_per_user": 22.7
 },
 {
 "dim": "os_version",
