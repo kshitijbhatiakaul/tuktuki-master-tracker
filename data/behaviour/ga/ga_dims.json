@@ -345,19 +345,19 @@
 },
 {
 "dim": "country",
-"value": "Saudi Arabia",
-"users": 50,
-"new_users": 17,
-"sessions": 71,
-"minutes_per_user": 17.1
-},
-{
-"dim": "country",
 "value": "Bangladesh",
 "users": 50,
 "new_users": 7,
 "sessions": 64,
 "minutes_per_user": 3.2
+},
+{
+"dim": "country",
+"value": "Saudi Arabia",
+"users": 50,
+"new_users": 17,
+"sessions": 71,
+"minutes_per_user": 17.1
 },
 {
 "dim": "country",
@@ -441,19 +441,19 @@
 },
 {
 "dim": "country",
-"value": "Türkiye",
-"users": 12,
-"new_users": 4,
-"sessions": 16,
-"minutes_per_user": 0.6
-},
-{
-"dim": "country",
 "value": "Algeria",
 "users": 12,
 "new_users": 0,
 "sessions": 17,
 "minutes_per_user": 0.1
+},
+{
+"dim": "country",
+"value": "Türkiye",
+"users": 12,
+"new_users": 4,
+"sessions": 16,
+"minutes_per_user": 0.6
 },
 {
 "dim": "country",
@@ -465,19 +465,19 @@
 },
 {
 "dim": "country",
-"value": "Iran",
-"users": 9,
-"new_users": 3,
-"sessions": 12,
-"minutes_per_user": 0.5
-},
-{
-"dim": "country",
 "value": "Nigeria",
 "users": 9,
 "new_users": 4,
 "sessions": 12,
 "minutes_per_user": 1.3
+},
+{
+"dim": "country",
+"value": "Germany",
+"users": 9,
+"new_users": 2,
+"sessions": 10,
+"minutes_per_user": 3.6
 },
 {
 "dim": "language",
@@ -553,19 +553,19 @@
 },
 {
 "dim": "language",
-"value": "es-us",
-"users": 37,
-"new_users": 7,
-"sessions": 61,
-"minutes_per_user": 6.9
-},
-{
-"dim": "language",
 "value": "en-dz",
 "users": 37,
 "new_users": 17,
 "sessions": 44,
 "minutes_per_user": 24.2
+},
+{
+"dim": "language",
+"value": "es-us",
+"users": 37,
+"new_users": 7,
+"sessions": 61,
+"minutes_per_user": 6.9
 },
 {
 "dim": "language",
@@ -601,6 +601,14 @@
 },
 {
 "dim": "language",
+"value": "bn-in",
+"users": 19,
+"new_users": 4,
+"sessions": 22,
+"minutes_per_user": 5.5
+},
+{
+"dim": "language",
 "value": "id-id",
 "users": 19,
 "new_users": 4,
@@ -614,14 +622,6 @@
 "new_users": 8,
 "sessions": 32,
 "minutes_per_user": 17.8
-},
-{
-"dim": "language",
-"value": "bn-in",
-"users": 19,
-"new_users": 4,
-"sessions": 22,
-"minutes_per_user": 5.5
 },
 {
 "dim": "language",
