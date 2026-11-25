@@ -1,17 +1,15 @@
 # Refreshes the tracker without Claude: OneDrive workbooks (Business tracker, Influencer dashboard, Instagram),
 # the Daily Ads report rebuilt daily from its engine files, Adjust, Google Analytics, Instagram + YouTube numbers;
 # then rebuilds docs/index.html and pushes (GitHub Pages updates).
-# Runs several times a day so anything updated later in the day still shows up the same day.
+# Runs every hour (07:37–23:37 IST) so anything updated during the day shows up within the hour.
 # Also runs when Claude pushes the Monday admin-panel data, so it appears straight away.
 # Each run writes data/_refresh_status.txt (step results + last log lines) so problems are visible in the repo.
 name: Daily workbook refresh
 on:
   schedule:
-    - cron: "40 3 * * *"    # 09:10 IST
-    - cron: "40 6 * * *"    # 12:10 IST
-    - cron: "40 9 * * *"    # 15:10 IST
-    - cron: "40 12 * * *"   # 18:10 IST
-    - cron: "40 16 * * *"   # 22:10 IST
+    # GitHub starts scheduled runs late or skips them when it is busy, so the tracker checks every hour
+    # from ~07:30 to ~23:30 IST; a run with nothing new commits nothing.
+    - cron: "7 2-18 * * *"
   push:
     branches: [main]
     paths: ["data/behaviour/admin/**", "data/behaviour/ga/**", "source/**", "build.py", "tools/**", ".github/workflows/daily-refresh.yml"]
