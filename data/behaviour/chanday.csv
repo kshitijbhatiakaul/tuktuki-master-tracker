@@ -794,7 +794,7 @@ day,channel,installs,first_video_view_d0_conversions_cohort,third_video_view_com
 2026-11-17,Facebook,1843,1477,649,623,611,7
 2026-11-17,Google Ads,57,43,15,14,14,0
 2026-11-17,Google Organic Search,2,1,1,1,1,0
-2026-11-17,Influencer,421,331,151,157,150,0
+2026-11-17,Influencer,422,332,152,157,150,0
 2026-11-17,Organic,209,53,15,14,17,0
 2026-11-17,ShareChat,56,46,25,19,16,1
 2026-11-17,Social Media,46,40,23,18,18,0
@@ -837,7 +837,7 @@ day,channel,installs,first_video_view_d0_conversions_cohort,third_video_view_com
 2026-11-21,Vivo 国际 | Vivo Global,84,73,27,32,27,23
 2026-11-21,tuktuki,93,78,34,26,26,21
 2026-11-22,Facebook,2236,1721,755,711,686,602
-2026-11-22,Google Ads,107,90,46,38,39,33
+2026-11-22,Google Ads,108,90,46,38,39,33
 2026-11-22,Google Organic Search,2,1,0,0,0,0
 2026-11-22,Influencer,407,299,134,119,123,110
 2026-11-22,Organic,214,41,4,5,9,11
@@ -845,12 +845,22 @@ day,channel,installs,first_video_view_d0_conversions_cohort,third_video_view_com
 2026-11-22,Social Media,57,50,33,30,28,23
 2026-11-22,Vivo 国际 | Vivo Global,8,8,5,5,4,4
 2026-11-22,tuktuki,96,75,33,32,28,21
-2026-11-23,Facebook,2077,1589,676,639,630,535
+2026-11-23,Facebook,2079,1589,677,639,632,538
 2026-11-23,Google Ads,94,81,50,49,40,36
 2026-11-23,Google Organic Search,4,4,1,1,1,1
-2026-11-23,Influencer,453,332,133,139,131,126
+2026-11-23,Influencer,453,332,134,139,131,126
 2026-11-23,Organic,178,43,13,11,12,11
 2026-11-23,ShareChat,122,94,38,28,31,27
 2026-11-23,Social Media,60,55,31,28,29,26
 2026-11-23,Vivo 国际 | Vivo Global,86,66,35,37,32,32
 2026-11-23,tuktuki,106,84,32,33,29,20
+2026-11-24,AI Markit,628,476,200,199,187,168
+2026-11-24,Facebook,1488,1144,495,466,448,402
+2026-11-24,Google Ads,74,59,29,24,21,17
+2026-11-24,Google Organic Search,3,0,0,0,0,0
+2026-11-24,Influencer,402,285,132,125,118,110
+2026-11-24,Organic,180,29,8,7,9,9
+2026-11-24,ShareChat,70,54,26,23,22,20
+2026-11-24,Social Media,58,55,37,37,35,27
+2026-11-24,Vivo 国际 | Vivo Global,122,94,36,38,35,33
+2026-11-24,tuktuki,120,98,49,47,37,35

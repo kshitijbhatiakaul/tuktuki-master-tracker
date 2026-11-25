@@ -1,43 +1,43 @@
-Run 2026-11-24 23:06 IST  (schedule)
+Run 2026-11-25 09:50 IST  (push)
 onedrive=success ads_rebuild=success ig_rebuild=success adjust=success ga=success export=success social=success
 
 == onedrive
 Updated Tuktuki Meta Daily Report.xlsx: 2,979,154 bytes
 Updated Tuktuki Instagram Daily Analysis.xlsx: 561,064 bytes
-Tuktuki Business Performance Tracker.xlsx: 41,421 bytes
+Tuktuki Business Performance Tracker.xlsx: 40,939 bytes
 TukTuki_Influencer_Dashboard.xlsx: 139,095 bytes
 engine/adset_meta.json: 9,518 bytes
-engine/ads_hist.json: 1,802,032 bytes
+engine/ads_hist.json: 1,826,324 bytes
 
 == ads
-files from Tuktuki Meta Daily Report/_engine (do not edit): 56
-Daily Ads data up to 2026-11-23 (last run Tue Nov 24, 9:20 am )
+files from Tuktuki Meta Daily Report/_engine (do not edit): 57
+Daily Ads data up to 2026-11-24 (last run Wed Nov 25, 9:15 am )
 pm extract: 0 new comment lines from prev.xlsx (run 2026-11-23); total 62
 trio: CPI trio on 6 sheets; retention + Ret Effective CPI blocks on Weekly & Monthly, both change logs, Weekly Optimisation B, Outlook, Suggestions, Creative Why, Creative Playbook
-cpi_trend: rows 100
+cpi_trend: rows 103
 creative rows 406 | why 38 | playbook events 6
-saved /tmp/eng/out.xlsx | summary rows 117 | recs 22 | ledger 975 | suggestions 273 | day-wise rows 9017
+saved /tmp/eng/out.xlsx | summary rows 116 | recs 24 | ledger 975 | suggestions 275 | day-wise rows 9132
 Daily Ads workbook rebuilt from the engine files
 
 == ig
 files from Tuktuki Social Analytics/_pipeline: 18
-Instagram data saved on 2026-11-24 (status report )
-{"rows": 731, "with_insights": 731, "frozen": 672, "youtube": {"yt_videos": 636, "yt_shorts": 525, "yt_with_retention": 608, "yt_frozen": 395}, "out": "/tmp/igp/out.xlsx"}
+Instagram data saved on 2026-11-25 (status report )
+{"rows": 736, "with_insights": 736, "frozen": 672, "youtube": {"yt_videos": 636, "yt_shorts": 525, "yt_with_retention": 608, "yt_frozen": 395}, "out": "/tmp/igp/out.xlsx"}
 Instagram workbook rebuilt from the pipeline files
 
 == adjust
-behaviour/daily.csv: 414 rows, 2025-10-06 to 2026-11-23
-behaviour/events.csv: 414 rows, 2025-10-06 to 2026-11-23
-behaviour/cohorts.csv: 414 rows, 2025-10-06 to 2026-11-23
-behaviour/purchases.csv: 115 rows, 2026-08-01 to 2026-11-23
-behaviour/paycohort.csv: 101 rows, 2026-08-15 to 2026-11-23
-behaviour/channels.csv: 177 rows, 2025-10-01 to 2026-11-23
-behaviour/paychan.csv: 34 rows, 2026-09-01 to 2026-11-23
-behaviour/backcamp.csv: 290 rows, 2026-03-01 to 2026-11-23
-behaviour/mau.csv: 14 rows, 2025-10-01 to 2026-11-23
-behaviour/chanday.csv: 855 rows, 2026-08-01 to 2026-11-23
+behaviour/daily.csv: 415 rows, 2025-10-06 to 2026-11-24
+behaviour/events.csv: 415 rows, 2025-10-06 to 2026-11-24
+behaviour/cohorts.csv: 415 rows, 2025-10-06 to 2026-11-24
+behaviour/purchases.csv: 116 rows, 2026-08-01 to 2026-11-24
+behaviour/paycohort.csv: 102 rows, 2026-08-15 to 2026-11-24
+behaviour/channels.csv: 178 rows, 2025-10-01 to 2026-11-24
+behaviour/paychan.csv: 35 rows, 2026-09-01 to 2026-11-24
+behaviour/backcamp.csv: 293 rows, 2026-03-01 to 2026-11-24
+behaviour/mau.csv: 14 rows, 2025-10-01 to 2026-11-24
+behaviour/chanday.csv: 865 rows, 2026-08-01 to 2026-11-24
 oem/oem_monthly.csv: 61 rows, 2025-12-01 to 2026-10-31
-oem/oem_daily.csv: 111 rows, 2026-11-01 to 2026-11-23
+oem/oem_daily.csv: 117 rows, 2026-11-01 to 2026-11-24
 
 == ga
 ga_daily.csv: 7 days
@@ -70,11 +70,11 @@ infl_13 Face IPs 1 rows 1 tables 0 charts
 infl_14 Additional Activities 137 rows 1 tables 0 charts
 infl_16 Tracker Dashboard 36 rows 1 tables 0 charts
 infl_18 Influencer Tracker 34 rows 1 tables 0 charts
-ads_engine: 70 dash rows, 2776 weekly/monthly rows, end 2026-11-23
+ads_engine: 70 dash rows, 2776 weekly/monthly rows, end 2026-11-24
 
 == social
 META_TOKEN not set - Instagram left as in the workbook
 YouTube: 640 videos refreshed, 18 new
 
 == sources
-sources: {'adjust': '2026-11-23', 'admin': '2026-11-23', 'ads': '2026-11-23', 'built': '2026-11-24', 'ga': '2026-11-23', 'ig': '2026-11-23', 'oem': '2026-11-23', 'yt': '2026-11-23'}
+sources: {'adjust': '2026-11-24', 'admin': '2026-11-23', 'ads': '2026-11-24', 'built': '2026-11-25', 'ga': '2026-11-23', 'ig': '2026-11-24', 'oem': '2026-11-24', 'yt': '2026-11-24'}
