@@ -433,19 +433,19 @@
 },
 {
 "dim": "country",
-"value": "Türkiye",
-"users": 12,
-"new_users": 4,
-"sessions": 16,
-"minutes_per_user": 0.6
-},
-{
-"dim": "country",
 "value": "Spain",
 "users": 12,
 "new_users": 1,
 "sessions": 22,
 "minutes_per_user": 2.7
+},
+{
+"dim": "country",
+"value": "Türkiye",
+"users": 12,
+"new_users": 4,
+"sessions": 16,
+"minutes_per_user": 0.6
 },
 {
 "dim": "country",
@@ -465,11 +465,11 @@
 },
 {
 "dim": "country",
-"value": "Italy",
+"value": "Iran",
 "users": 9,
-"new_users": 5,
-"sessions": 10,
-"minutes_per_user": 0.8
+"new_users": 3,
+"sessions": 12,
+"minutes_per_user": 0.5
 },
 {
 "dim": "country",
@@ -601,6 +601,14 @@
 },
 {
 "dim": "language",
+"value": "id-id",
+"users": 19,
+"new_users": 4,
+"sessions": 37,
+"minutes_per_user": 0.6
+},
+{
+"dim": "language",
 "value": "en-ca",
 "users": 19,
 "new_users": 8,
@@ -614,14 +622,6 @@
 "new_users": 4,
 "sessions": 22,
 "minutes_per_user": 5.5
-},
-{
-"dim": "language",
-"value": "id-id",
-"users": 19,
-"new_users": 4,
-"sessions": 37,
-"minutes_per_user": 0.6
 },
 {
 "dim": "language",
@@ -745,19 +745,19 @@
 },
 {
 "dim": "os_version",
-"value": "Android 8.0.0",
-"users": 14,
-"new_users": 6,
-"sessions": 18,
-"minutes_per_user": 17.4
-},
-{
-"dim": "os_version",
 "value": "iOS 27.0.1",
 "users": 14,
 "new_users": 8,
 "sessions": 24,
 "minutes_per_user": 22.7
+},
+{
+"dim": "os_version",
+"value": "Android 8.0.0",
+"users": 14,
+"new_users": 6,
+"sessions": 18,
+"minutes_per_user": 17.4
 },
 {
 "dim": "os_version",
@@ -777,19 +777,19 @@
 },
 {
 "dim": "os_version",
-"value": "iOS 26.5.2",
-"users": 6,
-"new_users": 0,
-"sessions": 7,
-"minutes_per_user": 14.8
-},
-{
-"dim": "os_version",
 "value": "iOS 18.7.8",
 "users": 6,
 "new_users": 2,
 "sessions": 7,
 "minutes_per_user": 17.2
+},
+{
+"dim": "os_version",
+"value": "iOS 26.5.2",
+"users": 6,
+"new_users": 0,
+"sessions": 7,
+"minutes_per_user": 14.8
 },
 {
 "dim": "os_version",
