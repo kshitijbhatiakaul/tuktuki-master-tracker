@@ -153,11 +153,11 @@
 },
 {
 "dim": "app_version",
-"value": "1.2.0",
+"value": "1.0.18",
 "users": 64,
-"new_users": 0,
+"new_users": 1,
 "sessions": 51,
-"minutes_per_user": 0.4
+"minutes_per_user": 0.8
 },
 {
 "dim": "city",
@@ -433,11 +433,11 @@
 },
 {
 "dim": "country",
-"value": "Kuwait",
+"value": "Spain",
 "users": 13,
-"new_users": 6,
-"sessions": 18,
-"minutes_per_user": 13.3
+"new_users": 1,
+"sessions": 23,
+"minutes_per_user": 2.5
 },
 {
 "dim": "country",
@@ -449,27 +449,19 @@
 },
 {
 "dim": "country",
-"value": "Spain",
+"value": "Kuwait",
 "users": 13,
-"new_users": 1,
-"sessions": 23,
-"minutes_per_user": 2.5
+"new_users": 6,
+"sessions": 18,
+"minutes_per_user": 13.3
 },
 {
 "dim": "country",
-"value": "(not set)",
+"value": "Romania",
 "users": 12,
-"new_users": 12,
-"sessions": 12,
-"minutes_per_user": 1.5
-},
-{
-"dim": "country",
-"value": "Germany",
-"users": 12,
-"new_users": 3,
-"sessions": 13,
-"minutes_per_user": 3.6
+"new_users": 6,
+"sessions": 10,
+"minutes_per_user": 2.6
 },
 {
 "dim": "country",
@@ -478,6 +470,14 @@
 "new_users": 0,
 "sessions": 19,
 "minutes_per_user": 0.2
+},
+{
+"dim": "country",
+"value": "(not set)",
+"users": 12,
+"new_users": 12,
+"sessions": 12,
+"minutes_per_user": 1.5
 },
 {
 "dim": "language",
@@ -633,11 +633,11 @@
 },
 {
 "dim": "language",
-"value": "en-ae",
+"value": "te-in",
 "users": 19,
-"new_users": 10,
+"new_users": 5,
 "sessions": 21,
-"minutes_per_user": 10.8
+"minutes_per_user": 0.4
 },
 {
 "dim": "os_version",
@@ -745,19 +745,19 @@
 },
 {
 "dim": "os_version",
-"value": "Android 7.0",
-"users": 17,
-"new_users": 12,
-"sessions": 42,
-"minutes_per_user": 41.4
-},
-{
-"dim": "os_version",
 "value": "Android 8.0.0",
 "users": 17,
 "new_users": 8,
 "sessions": 23,
 "minutes_per_user": 15.4
+},
+{
+"dim": "os_version",
+"value": "Android 7.0",
+"users": 17,
+"new_users": 12,
+"sessions": 42,
+"minutes_per_user": 41.4
 },
 {
 "dim": "os_version",
@@ -921,14 +921,6 @@
 },
 {
 "dim": "region",
-"value": "Ropar Division",
-"users": 728,
-"new_users": 260,
-"sessions": 822,
-"minutes_per_user": 13.4
-},
-{
-"dim": "region",
 "value": "Kerala",
 "users": 728,
 "new_users": 240,
@@ -942,6 +934,14 @@
 "new_users": 267,
 "sessions": 757,
 "minutes_per_user": 12.6
+},
+{
+"dim": "region",
+"value": "Ropar Division",
+"users": 728,
+"new_users": 260,
+"sessions": 822,
+"minutes_per_user": 13.4
 },
 {
 "dim": "region",
