@@ -11,7 +11,7 @@
   "id": "ads_01",
   "book": "ads",
   "title": "Daily Summary",
-  "rows": 159,
+  "rows": 168,
   "tables": 1,
   "charts": 0
  },
@@ -19,7 +19,7 @@
   "id": "ads_02",
   "book": "ads",
   "title": "Recommended Today",
-  "rows": 99,
+  "rows": 95,
   "tables": 1,
   "charts": 0
  },
@@ -27,7 +27,7 @@
   "id": "ads_03",
   "book": "ads",
   "title": "CPI Trend & Rules",
-  "rows": 107,
+  "rows": 104,
   "tables": 1,
   "charts": 0
  },
@@ -35,7 +35,7 @@
   "id": "ads_04",
   "book": "ads",
   "title": "All Platforms 7d·3d",
-  "rows": 180,
+  "rows": 190,
   "tables": 1,
   "charts": 0
  },
@@ -43,7 +43,7 @@
   "id": "ads_05",
   "book": "ads",
   "title": "Scale Plan",
-  "rows": 57,
+  "rows": 56,
   "tables": 1,
   "charts": 0
  },
@@ -75,7 +75,7 @@
   "id": "ads_09",
   "book": "ads",
   "title": "Weekly Optimisation",
-  "rows": 241,
+  "rows": 243,
   "tables": 2,
   "charts": 0
  },
@@ -83,7 +83,7 @@
   "id": "ads_10",
   "book": "ads",
   "title": "Day-wise",
-  "rows": 9136,
+  "rows": 8906,
   "tables": 1,
   "charts": 0
  },
@@ -91,7 +91,7 @@
   "id": "ads_11",
   "book": "ads",
   "title": "Suggestions Tracker",
-  "rows": 280,
+  "rows": 278,
   "tables": 1,
   "charts": 0
  },
@@ -139,7 +139,7 @@
   "id": "ig_01",
   "book": "ig",
   "title": "Post Log",
-  "rows": 740,
+  "rows": 742,
   "tables": 1,
   "charts": 0
  },
