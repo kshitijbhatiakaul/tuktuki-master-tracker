@@ -1,23 +1,23 @@
-Run 2026-11-26 09:42 IST  (schedule)
-onedrive=success ads_rebuild=failure ig_rebuild=success adjust=success ga=success export=success social=success
+Run 2026-11-26 10:59 IST  (schedule)
+onedrive=success ads_rebuild=success ig_rebuild=success adjust=success ga=success export=success social=success
 
 == onedrive
 Updated Tuktuki Meta Daily Report.xlsx: 2,979,154 bytes
 Updated Tuktuki Instagram Daily Analysis.xlsx: 561,064 bytes
-Tuktuki Business Performance Tracker.xlsx: 41,011 bytes
+Tuktuki Business Performance Tracker.xlsx: 41,671 bytes
 TukTuki_Influencer_Dashboard.xlsx: 139,095 bytes
 engine/adset_meta.json: 9,518 bytes
-engine/ads_hist.json: 1,826,324 bytes
+engine/ads_hist.json: 1,851,571 bytes
 
 == ads
 files from Tuktuki Meta Daily Report/_engine (do not edit): 57
 Daily Ads data up to 2026-11-25 (last run Thu Nov 26, 9:35 am )
 pm extract: 0 new comment lines from prev.xlsx (run 2026-11-23); total 62
-Traceback (most recent call last):
-  File "/tmp/eng/build.py", line 23, in <module>
-    assert D.END >= END, f'data ends {D.END} < end_date {END}'
-           ^^^^^^^^^^^^
-AssertionError: data ends 2026-11-24 < end_date 2026-11-25
+trio: CPI trio on 6 sheets; retention + Ret Effective CPI blocks on Weekly & Monthly, both change logs, Weekly Optimisation B, Outlook, Suggestions, Creative Why, Creative Playbook
+cpi_trend: rows 104
+creative rows 406 | why 38 | playbook events 6
+saved /tmp/eng/out.xlsx | summary rows 117 | recs 20 | ledger 980 | suggestions 275 | day-wise rows 9248
+Daily Ads workbook rebuilt from the engine files
 
 == ig
 files from Tuktuki Social Analytics/_pipeline: 18
@@ -49,7 +49,7 @@ ga_breakdowns.json: 834 rows
 ig_04 YT Video Log 640 rows 1 tables 0 charts
 ig_05 YT What Works 181 rows 1 tables 0 charts
 ig_06 About 30 rows 1 tables 0 charts
-biz_00 Sheet1 309 rows 12 tables 0 charts
+biz_00 Sheet1 303 rows 12 tables 0 charts
 biz_02 Syndication people 37 rows 2 tables 0 charts
 biz_03 Brand Partnerships 6 rows 2 tables 0 charts
 biz_04 Demographics 29 rows 3 tables 0 charts
@@ -70,11 +70,11 @@ infl_13 Face IPs 1 rows 1 tables 0 charts
 infl_14 Additional Activities 137 rows 1 tables 0 charts
 infl_16 Tracker Dashboard 36 rows 1 tables 0 charts
 infl_18 Influencer Tracker 34 rows 1 tables 0 charts
-ads_engine: 70 dash rows, 2776 weekly/monthly rows, end 2026-11-22
+ads_engine: 70 dash rows, 2778 weekly/monthly rows, end 2026-11-25
 
 == social
 META_TOKEN not set - Instagram left as in the workbook
 YouTube: 647 videos refreshed, 25 new
 
 == sources
-sources: {'adjust': '2026-11-25', 'admin': '2026-11-23', 'ads': '2026-11-22', 'built': '2026-11-26', 'ga': '2026-11-24', 'ig': '2026-11-25', 'oem': '2026-11-25', 'yt': '2026-11-25'}
+sources: {'adjust': '2026-11-25', 'admin': '2026-11-23', 'ads': '2026-11-25', 'built': '2026-11-26', 'ga': '2026-11-24', 'ig': '2026-11-25', 'oem': '2026-11-25', 'yt': '2026-11-25'}

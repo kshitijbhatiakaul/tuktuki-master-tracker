@@ -425,14 +425,6 @@
 },
 {
 "dim": "country",
-"value": "Türkiye",
-"users": 13,
-"new_users": 4,
-"sessions": 18,
-"minutes_per_user": 0.6
-},
-{
-"dim": "country",
 "value": "France",
 "users": 13,
 "new_users": 1,
@@ -449,19 +441,19 @@
 },
 {
 "dim": "country",
+"value": "Türkiye",
+"users": 13,
+"new_users": 4,
+"sessions": 18,
+"minutes_per_user": 0.6
+},
+{
+"dim": "country",
 "value": "Algeria",
 "users": 12,
 "new_users": 0,
 "sessions": 19,
 "minutes_per_user": 0.2
-},
-{
-"dim": "country",
-"value": "Kuwait",
-"users": 11,
-"new_users": 5,
-"sessions": 17,
-"minutes_per_user": 15.7
 },
 {
 "dim": "country",
@@ -478,6 +470,14 @@
 "new_users": 2,
 "sessions": 11,
 "minutes_per_user": 3.6
+},
+{
+"dim": "country",
+"value": "Kuwait",
+"users": 11,
+"new_users": 5,
+"sessions": 17,
+"minutes_per_user": 15.7
 },
 {
 "dim": "language",
@@ -601,19 +601,19 @@
 },
 {
 "dim": "language",
-"value": "pa-in",
-"users": 22,
-"new_users": 10,
-"sessions": 39,
-"minutes_per_user": 20.5
-},
-{
-"dim": "language",
 "value": "in-id",
 "users": 22,
 "new_users": 0,
 "sessions": 51,
 "minutes_per_user": 0.3
+},
+{
+"dim": "language",
+"value": "pa-in",
+"users": 22,
+"new_users": 10,
+"sessions": 39,
+"minutes_per_user": 20.5
 },
 {
 "dim": "language",

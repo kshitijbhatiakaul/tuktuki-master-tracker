@@ -11,7 +11,7 @@
   "id": "ads_01",
   "book": "ads",
   "title": "Daily Summary",
-  "rows": 168,
+  "rows": 161,
   "tables": 1,
   "charts": 0
  },
@@ -19,7 +19,7 @@
   "id": "ads_02",
   "book": "ads",
   "title": "Recommended Today",
-  "rows": 95,
+  "rows": 93,
   "tables": 1,
   "charts": 0
  },
@@ -27,7 +27,7 @@
   "id": "ads_03",
   "book": "ads",
   "title": "CPI Trend & Rules",
-  "rows": 104,
+  "rows": 108,
   "tables": 1,
   "charts": 0
  },
@@ -35,7 +35,7 @@
   "id": "ads_04",
   "book": "ads",
   "title": "All Platforms 7d·3d",
-  "rows": 190,
+  "rows": 180,
   "tables": 1,
   "charts": 0
  },
@@ -51,7 +51,7 @@
   "id": "ads_06",
   "book": "ads",
   "title": "Weekly & Monthly",
-  "rows": 493,
+  "rows": 494,
   "tables": 1,
   "charts": 0
  },
@@ -59,7 +59,7 @@
   "id": "ads_07",
   "book": "ads",
   "title": "Ad Set Change Log",
-  "rows": 489,
+  "rows": 491,
   "tables": 1,
   "charts": 0
  },
@@ -67,7 +67,7 @@
   "id": "ads_08",
   "book": "ads",
   "title": "Ad Change Log",
-  "rows": 494,
+  "rows": 497,
   "tables": 1,
   "charts": 0
  },
@@ -75,7 +75,7 @@
   "id": "ads_09",
   "book": "ads",
   "title": "Weekly Optimisation",
-  "rows": 243,
+  "rows": 233,
   "tables": 2,
   "charts": 0
  },
@@ -83,7 +83,7 @@
   "id": "ads_10",
   "book": "ads",
   "title": "Day-wise",
-  "rows": 8906,
+  "rows": 9252,
   "tables": 1,
   "charts": 0
  },
@@ -91,7 +91,7 @@
   "id": "ads_11",
   "book": "ads",
   "title": "Suggestions Tracker",
-  "rows": 278,
+  "rows": 280,
   "tables": 1,
   "charts": 0
  },
@@ -187,7 +187,7 @@
   "id": "biz_00",
   "book": "biz",
   "title": "Sheet1",
-  "rows": 309,
+  "rows": 303,
   "tables": 12,
   "charts": 0
  },
