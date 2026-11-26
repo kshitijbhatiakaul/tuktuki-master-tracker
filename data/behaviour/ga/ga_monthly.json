@@ -118,11 +118,11 @@
 },
 {
 "month": "2026-11",
-"active_users": 121296,
+"active_users": 121323,
 "new_users": 76993,
-"engaged_sessions": 193130,
-"engagement_rate": 0.6489,
-"avg_engagement_sec": 1689,
+"engaged_sessions": 195330,
+"engagement_rate": 0.658,
+"avg_engagement_sec": 1691,
 "revenue_usd": 300.8
 }
 ]

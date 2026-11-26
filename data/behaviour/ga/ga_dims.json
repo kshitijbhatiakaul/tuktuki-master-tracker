@@ -433,14 +433,6 @@
 },
 {
 "dim": "country",
-"value": "Spain",
-"users": 13,
-"new_users": 1,
-"sessions": 23,
-"minutes_per_user": 2.5
-},
-{
-"dim": "country",
 "value": "Kuwait",
 "users": 13,
 "new_users": 6,
@@ -457,11 +449,11 @@
 },
 {
 "dim": "country",
-"value": "Germany",
-"users": 12,
-"new_users": 3,
-"sessions": 13,
-"minutes_per_user": 3.6
+"value": "Spain",
+"users": 13,
+"new_users": 1,
+"sessions": 23,
+"minutes_per_user": 2.5
 },
 {
 "dim": "country",
@@ -470,6 +462,14 @@
 "new_users": 12,
 "sessions": 12,
 "minutes_per_user": 1.5
+},
+{
+"dim": "country",
+"value": "Germany",
+"users": 12,
+"new_users": 3,
+"sessions": 13,
+"minutes_per_user": 3.6
 },
 {
 "dim": "country",
@@ -745,19 +745,19 @@
 },
 {
 "dim": "os_version",
-"value": "Android 8.0.0",
-"users": 17,
-"new_users": 8,
-"sessions": 23,
-"minutes_per_user": 15.4
-},
-{
-"dim": "os_version",
 "value": "Android 7.0",
 "users": 17,
 "new_users": 12,
 "sessions": 42,
 "minutes_per_user": 41.4
+},
+{
+"dim": "os_version",
+"value": "Android 8.0.0",
+"users": 17,
+"new_users": 8,
+"sessions": 23,
+"minutes_per_user": 15.4
 },
 {
 "dim": "os_version",
@@ -921,14 +921,6 @@
 },
 {
 "dim": "region",
-"value": "Jharkhand",
-"users": 728,
-"new_users": 267,
-"sessions": 757,
-"minutes_per_user": 12.6
-},
-{
-"dim": "region",
 "value": "Ropar Division",
 "users": 728,
 "new_users": 260,
@@ -942,6 +934,14 @@
 "new_users": 240,
 "sessions": 782,
 "minutes_per_user": 9.4
+},
+{
+"dim": "region",
+"value": "Jharkhand",
+"users": 728,
+"new_users": 267,
+"sessions": 757,
+"minutes_per_user": 12.6
 },
 {
 "dim": "region",
