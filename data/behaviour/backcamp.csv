@@ -69,10 +69,10 @@ month,campaign_network,channel,reinstalls,reattributions,reattribution_reinstall
 2026-05,xiaomi_direct,Xiaomi Global,69,0,0
 2026-05,برنامج مسلسل الهندي,Google Organic Search,2,0,0
 2026-06,Dushyant_Viral_Zindagi,Influencer,13,32,4
-2026-06,Expired Attributions,Facebook,519,661,155
+2026-06,Expired Attributions,Facebook,519,662,155
 2026-06,Facebook,Facebook,6,16,1
 2026-06,Facebook,tuktuki,49,202,5
-2026-06,Install_Campaign_Experiment,Facebook,4,13,4
+2026-06,Install_Campaign_Experiment,Facebook,4,12,4
 2026-06,LS - Andriod App Subscription - India - In Market_07April26,Google Ads,4,0,0
 2026-06,LS - Andriod App installation - India - In Market,Google Ads,417,76,4
 2026-06,LS - Andriod App installation - India - In Market_23Feb26_NP,Google Ads,178,38,0
@@ -253,13 +253,13 @@ month,campaign_network,channel,reinstalls,reattributions,reattribution_reinstall
 2026-10,unknown,Organic,110,0,0
 2026-11,Affinity_Vivo,Vivo 国际 | Vivo Global,20,19,17
 2026-11,Facebook,tuktuki,3,56,1
-2026-11,Google/5VV_7VV/1611,Google Ads,78,96,73
-2026-11,Google/FVV_3VV_Sub/2809,Google Ads,238,379,151
+2026-11,Google/5VV_7VV/1611,Google Ads,80,98,75
+2026-11,Google/FVV_3VV_Sub/2809,Google Ads,238,381,151
 2026-11,IG_Show,Social Media,4,29,1
 2026-11,IG_Shows,Social Media,17,121,16
 2026-11,Inf,Influencer,0,1,0
 2026-11,Instagram,Social Media,1,2,1
-2026-11,Install_Campaign_Experiment,Facebook,10,0,0
+2026-11,Install_Campaign_Experiment,Facebook,11,0,0
 2026-11,LS - Andriod App installation - India - In Market_23Feb26_NP,Google Ads,2,0,0
 2026-11,LS - Andriod Videoview - India - In Market_07April26_NP,Google Ads,1,0,0
 2026-11,LS_TukTuki_Android_UA_Campaign_Apr'26,MOLOCO,1,0,0
@@ -267,11 +267,11 @@ month,campaign_network,channel,reinstalls,reattributions,reattribution_reinstall
 2026-11,OppoAffinity,OPPO国际 | OPPO Global,2,0,0
 2026-11,RT_TT_FVV&3VV_Inactive,Facebook,15,115,14
 2026-11,RT_TT_Meta_5VV_NoPurchase,Facebook,2,5,0
-2026-11,SDKOPCOD,AI Markit,25,43,25
+2026-11,SDKOPCOD,AI Markit,26,44,26
 2026-11,TT/Baapu/Int/30sec,ShareChat,4,12,4
-2026-11,TT/DT/Int/2min,ShareChat,21,75,13
+2026-11,TT/DT/Int/2min,ShareChat,21,76,13
 2026-11,TT/DT/Int/30sec,ShareChat,13,39,9
-2026-11,TT/Deva/Int/30sec,ShareChat,11,118,7
+2026-11,TT/Deva/Int/30sec,ShareChat,12,118,7
 2026-11,TT/HBBM/Int/2min,ShareChat,15,58,9
 2026-11,TT/Hisaab_Barabar/Int/30sec,ShareChat,21,80,12
 2026-11,TT/Sharechat/DT/30sec/Broad,ShareChat,14,65,7
@@ -280,15 +280,16 @@ month,campaign_network,channel,reinstalls,reattributions,reattribution_reinstall
 2026-11,TT_Meta_5VV_Oct,Facebook,10,8,3
 2026-11,TT_Meta_7VV_Nov,Facebook,2,4,1
 2026-11,TT_Meta_AppInstall,Facebook,0,3,0
-2026-11,TT_Meta_FVV_Sep,Facebook,172,184,37
+2026-11,TT_Meta_FVV_Sep,Facebook,173,184,37
 2026-11,TT_Meta_Purchase_Sep,Facebook,23,31,9
-2026-11,TT_Sharechat/Moj_20s_Sep,ShareChat,21,58,14
-2026-11,TT_Sharechat/Moj_30s_Sep,ShareChat,54,233,24
+2026-11,TT_Sharechat/Moj_20s_Sep,ShareChat,22,59,15
+2026-11,TT_Sharechat/Moj_30s_Sep,ShareChat,54,234,24
 2026-11,VP_2,Influencer,240,199,149
 2026-11,VP_3,Influencer,1,0,0
 2026-11,Xiaomi,Xiaomi Global,1,1,1
 2026-11,download tuktuki app,Google Organic Search,1,1,1
-2026-11,google,tuktuki,47,183,28
+2026-11,google,tuktuki,48,184,29
+2026-11,indian hindi short drama app,Google Organic Search,1,0,0
 2026-11,notification,tuktuki,1,0,0
 2026-11,transsion_pai,Transsion Holdings,1,0,0
 2026-11,tuktuki,Google Organic Search,1,0,0

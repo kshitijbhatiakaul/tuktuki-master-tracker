@@ -425,11 +425,11 @@
 },
 {
 "dim": "country",
-"value": "Türkiye",
+"value": "France",
 "users": 13,
-"new_users": 4,
-"sessions": 18,
-"minutes_per_user": 0.6
+"new_users": 1,
+"sessions": 23,
+"minutes_per_user": 3.5
 },
 {
 "dim": "country",
@@ -441,11 +441,11 @@
 },
 {
 "dim": "country",
-"value": "France",
+"value": "Türkiye",
 "users": 13,
-"new_users": 1,
-"sessions": 23,
-"minutes_per_user": 3.5
+"new_users": 4,
+"sessions": 18,
+"minutes_per_user": 0.6
 },
 {
 "dim": "country",
@@ -454,14 +454,6 @@
 "new_users": 0,
 "sessions": 19,
 "minutes_per_user": 0.2
-},
-{
-"dim": "country",
-"value": "Kuwait",
-"users": 11,
-"new_users": 5,
-"sessions": 17,
-"minutes_per_user": 15.7
 },
 {
 "dim": "country",
@@ -478,6 +470,14 @@
 "new_users": 6,
 "sessions": 10,
 "minutes_per_user": 2.9
+},
+{
+"dim": "country",
+"value": "Kuwait",
+"users": 11,
+"new_users": 5,
+"sessions": 17,
+"minutes_per_user": 15.7
 },
 {
 "dim": "language",
@@ -601,19 +601,19 @@
 },
 {
 "dim": "language",
-"value": "in-id",
-"users": 22,
-"new_users": 0,
-"sessions": 51,
-"minutes_per_user": 0.3
-},
-{
-"dim": "language",
 "value": "pa-in",
 "users": 22,
 "new_users": 10,
 "sessions": 39,
 "minutes_per_user": 20.5
+},
+{
+"dim": "language",
+"value": "in-id",
+"users": 22,
+"new_users": 0,
+"sessions": 51,
+"minutes_per_user": 0.3
 },
 {
 "dim": "language",
@@ -777,14 +777,6 @@
 },
 {
 "dim": "os_version",
-"value": "iOS 18.7.8",
-"users": 7,
-"new_users": 2,
-"sessions": 9,
-"minutes_per_user": 14.9
-},
-{
-"dim": "os_version",
 "value": "iOS 26.5.2",
 "users": 7,
 "new_users": 0,
@@ -793,11 +785,19 @@
 },
 {
 "dim": "os_version",
-"value": "iOS 26.7.1",
+"value": "iOS 18.7.8",
+"users": 7,
+"new_users": 2,
+"sessions": 9,
+"minutes_per_user": 14.9
+},
+{
+"dim": "os_version",
+"value": "iOS 27.2",
 "users": 5,
-"new_users": 0,
-"sessions": 12,
-"minutes_per_user": 5.4
+"new_users": 3,
+"sessions": 5,
+"minutes_per_user": 4.4
 },
 {
 "dim": "region",

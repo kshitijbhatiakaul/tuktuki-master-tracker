@@ -7,7 +7,7 @@ day,network,campaign_network,installs,reattributions,sessions,daus,uninstalls,re
 2026-11-02,Oppo Affinity,Oppo_Affinity,0,0,29,28.0,3,0.0,0.0
 2026-11-02,Transsion Holdings,transsion_pai,0,0,17,15.0,2,0.0,0.0
 2026-11-02,Xiaomi,xiaomi_direct,0,0,24,24.0,0,0.0,0.0
-2026-11-03,Oppo Affinity,OppoAffinity,1,0,101,94.0,6,0.0,0.0
+2026-11-03,Oppo Affinity,OppoAffinity,1,0,101,94.0,7,0.0,0.0
 2026-11-03,Oppo Affinity,Oppo_Affinity,0,0,29,27.0,2,0.0,0.0
 2026-11-03,Transsion Holdings,transsion_pai,0,0,13,12.0,0,0.0,0.0
 2026-11-03,Vivo Affinity,Affinity_Vivo,0,0,1,1.0,0,0.0,0.0
@@ -17,14 +17,14 @@ day,network,campaign_network,installs,reattributions,sessions,daus,uninstalls,re
 2026-11-04,Transsion Holdings,transsion_pai,0,0,18,18.0,1,0.0,0.0
 2026-11-04,Xiaomi,xiaomi_direct,0,0,24,22.0,1,0.0,0.0
 2026-11-05,Affiliate,LitmusMedia_VIVO,4,0,6,4.0,0,0.75,0.25
-2026-11-05,Oppo Affinity,OppoAffinity,0,0,105,99.0,12,0.0,0.0
+2026-11-05,Oppo Affinity,OppoAffinity,0,0,105,99.0,13,0.0,0.0
 2026-11-05,Oppo Affinity,Oppo_Affinity,0,0,21,20.0,1,0.0,0.0
 2026-11-05,Transsion Holdings,transsion_pai,0,0,14,14.0,1,0.0,0.0
 2026-11-05,Xiaomi,xiaomi_direct,0,0,27,22.0,1,0.0,0.0
 2026-11-06,Affiliate,LitmusMedia_VIVO,4,1,10,9.0,0,0.2,0.0
 2026-11-06,Oppo Affinity,OppoAffinity,0,0,72,68.0,1,0.0,0.0
-2026-11-06,Oppo Affinity,Oppo_Affinity,0,0,33,30.0,1,0.0,0.0
-2026-11-06,Transsion Holdings,transsion_pai,0,0,13,13.0,2,0.0,0.0
+2026-11-06,Oppo Affinity,Oppo_Affinity,0,0,33,30.0,2,0.0,0.0
+2026-11-06,Transsion Holdings,transsion_pai,0,0,13,13.0,3,0.0,0.0
 2026-11-06,Xiaomi,xiaomi_direct,0,0,31,28.0,2,0.0,0.0
 2026-11-07,Affiliate,LitmusMedia_VIVO,0,0,1,1.0,0,0.0,0.0
 2026-11-07,Oppo Affinity,OppoAffinity,0,0,102,94.0,5,0.0,0.0
@@ -32,13 +32,13 @@ day,network,campaign_network,installs,reattributions,sessions,daus,uninstalls,re
 2026-11-07,Transsion Holdings,transsion_pai,0,0,12,12.0,1,0.0,0.0
 2026-11-07,Vivo Affinity,Affinity_Vivo,0,0,1,1.0,1,0.0,0.0
 2026-11-07,Xiaomi,xiaomi_direct,0,0,23,20.0,0,0.0,0.0
-2026-11-08,Oppo Affinity,OppoAffinity,0,0,102,92.0,4,0.0,0.0
-2026-11-08,Oppo Affinity,Oppo_Affinity,0,0,39,38.0,3,0.0,0.0
+2026-11-08,Oppo Affinity,OppoAffinity,0,0,103,93.0,4,0.0,0.0
+2026-11-08,Oppo Affinity,Oppo_Affinity,0,0,39,38.0,4,0.0,0.0
 2026-11-08,Transsion Holdings,transsion_pai,0,0,19,19.0,1,0.0,0.0
 2026-11-08,Xiaomi,xiaomi_direct,0,0,25,23.0,1,0.0,0.0
 2026-11-09,Oppo Affinity,OppoAffinity,0,0,92,82.0,8,0.0,0.0
 2026-11-09,Oppo Affinity,Oppo_Affinity,0,0,23,22.0,0,0.0,0.0
-2026-11-09,Transsion Holdings,transsion_pai,0,0,15,13.0,1,0.0,0.0
+2026-11-09,Transsion Holdings,transsion_pai,0,0,15,13.0,2,0.0,0.0
 2026-11-09,Vivo Affinity,Affinity_Vivo,0,0,2,2.0,0,0.0,0.0
 2026-11-09,Xiaomi,xiaomi_direct,0,0,28,27.0,1,0.0,0.0
 2026-11-10,Affiliate,LitmusMedia_VIVO,0,0,1,1.0,0,0.0,0.0
@@ -78,48 +78,48 @@ day,network,campaign_network,installs,reattributions,sessions,daus,uninstalls,re
 2026-11-17,Oppo Affinity,OppoAffinity,0,0,92,90.0,4,0.0,0.0
 2026-11-17,Oppo Affinity,Oppo_Affinity,0,0,35,28.0,1,0.0,0.0
 2026-11-17,Transsion Holdings,transsion_pai,0,0,9,9.0,1,0.0,0.0
-2026-11-17,Vivo Affinity,Affinity_Vivo,170,2,203,172.0,76,0.1163,0.0291
+2026-11-17,Vivo Affinity,Affinity_Vivo,170,2,203,172.0,79,0.1163,0.0291
 2026-11-17,Xiaomi,xiaomi_direct,0,0,34,32.0,0,0.0,0.0
 2026-11-18,Oppo Affinity,OppoAffinity,0,0,99,93.0,4,0.0,0.0
 2026-11-18,Oppo Affinity,Oppo_Affinity,0,0,18,17.0,1,0.0,0.0
-2026-11-18,Transsion Holdings,transsion_pai,0,0,13,13.0,0,0.0,0.0
-2026-11-18,Vivo Affinity,Affinity_Vivo,237,4,377,285.0,110,0.112,0.0129
+2026-11-18,Transsion Holdings,transsion_pai,0,0,13,13.0,1,0.0,0.0
+2026-11-18,Vivo Affinity,Affinity_Vivo,237,4,377,285.0,115,0.112,0.0124
 2026-11-18,Xiaomi,xiaomi_direct,0,0,22,21.0,2,0.0,0.0
 2026-11-19,Oppo Affinity,OppoAffinity,0,0,70,62.0,3,0.0,0.0
 2026-11-19,Oppo Affinity,Oppo_Affinity,0,0,27,26.0,3,0.0,0.0
 2026-11-19,Transsion Holdings,transsion_pai,0,0,18,16.0,0,0.0,0.0
-2026-11-19,Vivo Affinity,Affinity_Vivo,181,2,354,244.0,85,0.1749,0.0
+2026-11-19,Vivo Affinity,Affinity_Vivo,181,2,354,244.0,94,0.1749,0.0
 2026-11-19,Xiaomi,xiaomi_direct,0,0,15,15.0,0,0.0,0.0
 2026-11-20,Oppo Affinity,OppoAffinity,0,0,100,95.0,2,0.0,0.0
 2026-11-20,Oppo Affinity,Oppo_Affinity,0,0,23,22.0,2,0.0,0.0
-2026-11-20,Transsion Holdings,transsion_pai,0,0,16,16.0,0,0.0,0.0
-2026-11-20,Vivo Affinity,Affinity_Vivo,164,1,320,232.0,80,0.0848,0.0
-2026-11-20,Xiaomi,xiaomi_direct,0,0,16,16.0,0,0.0,0.0
-2026-11-21,Oppo Affinity,OppoAffinity,0,0,93,87.0,4,0.0,0.0
-2026-11-21,Oppo Affinity,Oppo_Affinity,0,0,19,18.0,0,0.0,0.0
+2026-11-20,Transsion Holdings,transsion_pai,0,0,16,16.0,1,0.0,0.0
+2026-11-20,Vivo Affinity,Affinity_Vivo,164,1,320,232.0,86,0.0848,0.0
+2026-11-20,Xiaomi,xiaomi_direct,0,0,17,17.0,0,0.0,0.0
+2026-11-21,Oppo Affinity,OppoAffinity,0,0,93,87.0,5,0.0,0.0
+2026-11-21,Oppo Affinity,Oppo_Affinity,0,0,19,18.0,1,0.0,0.0
 2026-11-21,Transsion Holdings,transsion_pai,0,0,18,16.0,1,0.0,0.0
-2026-11-21,Vivo Affinity,Affinity_Vivo,84,4,227,168.0,50,0.1136,0.0
+2026-11-21,Vivo Affinity,Affinity_Vivo,84,4,227,168.0,60,0.1136,0.0
 2026-11-21,Xiaomi,xiaomi_direct,0,0,25,23.0,0,0.0,0.0
-2026-11-22,Oppo Affinity,OppoAffinity,0,0,103,92.0,2,0.0,0.0
-2026-11-22,Oppo Affinity,Oppo_Affinity,0,0,24,23.0,1,0.0,0.0
+2026-11-22,Oppo Affinity,OppoAffinity,0,0,103,92.0,3,0.0,0.0
+2026-11-22,Oppo Affinity,Oppo_Affinity,0,0,24,23.0,2,0.0,0.0
 2026-11-22,Transsion Holdings,transsion_pai,0,0,16,13.0,0,0.0,0.0
-2026-11-22,Vivo Affinity,Affinity_Vivo,8,1,112,75.0,13,0.1111,0.0
-2026-11-22,Xiaomi,xiaomi_direct,0,0,30,28.0,1,0.0,0.0
-2026-11-23,Oppo Affinity,OppoAffinity,0,0,77,72.0,0,0.0,0.0
-2026-11-23,Oppo Affinity,Oppo_Affinity,0,0,23,22.0,0,0.0,0.0
+2026-11-22,Vivo Affinity,Affinity_Vivo,8,1,112,75.0,16,0.1111,0.0
+2026-11-22,Xiaomi,xiaomi_direct,0,0,31,29.0,1,0.0,0.0
+2026-11-23,Oppo Affinity,OppoAffinity,0,0,77,72.0,4,0.0,0.0
+2026-11-23,Oppo Affinity,Oppo_Affinity,0,0,23,22.0,1,0.0,0.0
 2026-11-23,Transsion Holdings,transsion_pai,0,0,12,10.0,0,0.0,0.0
-2026-11-23,Vivo Affinity,Affinity_Vivo,86,1,167,133.0,0,0.1724,0.0
+2026-11-23,Vivo Affinity,Affinity_Vivo,86,1,167,133.0,34,0.1724,0.0
 2026-11-23,Xiaomi,xiaomi_direct,0,0,21,21.0,0,0.0,0.0
-2026-11-24,Ai Markit Partner,SDKOPCOD,628,22,790,650.0,0,0.0766,0.0
-2026-11-24,Oppo Affinity,OppoAffinity,0,0,78,72.0,0,0.0,0.0
+2026-11-24,Ai Markit Partner,SDKOPCOD,628,22,790,650.0,238,0.0831,0.0
+2026-11-24,Oppo Affinity,OppoAffinity,0,0,78,72.0,2,0.0,0.0
 2026-11-24,Oppo Affinity,Oppo_Affinity,0,0,13,13.0,0,0.0,0.0
 2026-11-24,Transsion Holdings,transsion_pai,0,0,13,12.0,0,0.0,0.0
-2026-11-24,Vivo Affinity,Affinity_Vivo,122,2,258,196.0,0,0.1083,0.0
-2026-11-24,Xiaomi,xiaomi_direct,0,0,26,24.0,0,0.0,0.0
-2026-11-25,Ai Markit Partner,SDKOPCOD,457,21,812,621.0,0,0.0,0.0
-2026-11-25,Oppo Affinity,OppoAffinity,0,0,71,67.0,0,0.0,0.0
-2026-11-25,Oppo Affinity,Oppo_Affinity,0,0,24,23.0,0,0.0,0.0
+2026-11-24,Vivo Affinity,Affinity_Vivo,122,2,258,196.0,60,0.121,0.0
+2026-11-24,Xiaomi,xiaomi_direct,0,0,26,24.0,1,0.0,0.0
+2026-11-25,Ai Markit Partner,SDKOPCOD,487,22,870,657.0,190,0.0,0.0
+2026-11-25,Oppo Affinity,OppoAffinity,0,0,73,68.0,4,0.0,0.0
+2026-11-25,Oppo Affinity,Oppo_Affinity,0,0,27,26.0,1,0.0,0.0
 2026-11-25,Transsion Holdings,transsion_pai,0,0,14,13.0,0,0.0,0.0
-2026-11-25,Vivo Affinity,Affinity_Vivo,115,2,252,190.0,0,0.0,0.0
+2026-11-25,Vivo Affinity,Affinity_Vivo,122,2,264,198.0,51,0.0,0.0
 2026-11-25,Xiaomi,Xiaomi,1,1,2,2.0,0,0.0,0.0
-2026-11-25,Xiaomi,xiaomi_direct,0,0,23,21.0,0,0.0,0.0
+2026-11-25,Xiaomi,xiaomi_direct,0,0,26,24.0,0,0.0,0.0
