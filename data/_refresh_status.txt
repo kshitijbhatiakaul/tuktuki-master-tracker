@@ -1,11 +1,11 @@
-Run 2026-11-26 13:05 IST  (schedule)
+Run 2026-11-26 14:49 IST  (schedule)
 onedrive=success ads_rebuild=success ig_rebuild=success adjust=success ga=success export=success social=success
 
 == onedrive
 Updated Tuktuki Meta Daily Report.xlsx: 2,979,154 bytes
 Updated Tuktuki Instagram Daily Analysis.xlsx: 561,064 bytes
 Tuktuki Business Performance Tracker.xlsx: 41,671 bytes
-TukTuki_Influencer_Dashboard.xlsx: 139,272 bytes
+TukTuki_Influencer_Dashboard.xlsx: 139,289 bytes
 engine/adset_meta.json: 9,518 bytes
 engine/ads_hist.json: 1,851,571 bytes
 
@@ -55,7 +55,7 @@ biz_03 Brand Partnerships 6 rows 2 tables 0 charts
 biz_04 Demographics 29 rows 3 tables 0 charts
 infl_00 Dashboard 76 rows 3 tables 0 charts
 infl_01 Reachout Counts 20 rows 1 tables 0 charts
-infl_02 Agencies 5 rows 1 tables 0 charts
+infl_02 Agencies 7 rows 1 tables 0 charts
 infl_03 Casting 61 rows 1 tables 0 charts
 infl_04 Sep Casting Probables 6 rows 1 tables 0 charts
 infl_05 Oct Casting Probables 15 rows 1 tables 0 charts
