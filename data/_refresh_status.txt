@@ -1,11 +1,11 @@
-Run 2026-11-27 11:43 IST  (schedule)
+Run 2026-11-27 14:09 IST  (schedule)
 onedrive=success ads_rebuild=success ig_rebuild=success adjust=success ga=success export=success social=success
 
 == onedrive
 Updated Tuktuki Meta Daily Report.xlsx: 2,979,154 bytes
 Updated Tuktuki Instagram Daily Analysis.xlsx: 561,064 bytes
-Tuktuki Business Performance Tracker.xlsx: 41,671 bytes
-TukTuki_Influencer_Dashboard.xlsx: 139,289 bytes
+Tuktuki Business Performance Tracker.xlsx: 43,357 bytes
+TukTuki_Influencer_Dashboard.xlsx: 139,364 bytes
 engine/adset_meta.json: 9,518 bytes
 engine/ads_hist.json: 1,851,571 bytes
 
@@ -46,13 +46,13 @@ ga_monthly.json: 14 months
 ga_breakdowns.json: 834 rows
 
 == export
+ig_03 YT Dashboard 12 rows 1 tables 4 charts
 ig_04 YT Video Log 640 rows 1 tables 0 charts
 ig_05 YT What Works 181 rows 1 tables 0 charts
 ig_06 About 30 rows 1 tables 0 charts
-biz_00 Sheet1 303 rows 12 tables 0 charts
+biz_00 Business Performance 303 rows 12 tables 0 charts
 biz_02 Syndication people 37 rows 2 tables 0 charts
 biz_03 Brand Partnerships 6 rows 2 tables 0 charts
-biz_04 Demographics 29 rows 3 tables 0 charts
 infl_00 Dashboard 76 rows 3 tables 0 charts
 infl_01 Reachout Counts 20 rows 1 tables 0 charts
 infl_02 Agencies 7 rows 1 tables 0 charts
@@ -74,7 +74,7 @@ ads_engine: 70 dash rows, 2778 weekly/monthly rows, end 2026-11-25
 
 == social
 META_TOKEN not set - Instagram left as in the workbook
-YouTube: 655 videos refreshed, 33 new
+YouTube: 658 videos refreshed, 36 new
 
 == sources
 sources: {'adjust': '2026-11-26', 'admin': '2026-11-23', 'ads': '2026-11-25', 'built': '2026-11-27', 'ga': '2026-11-25', 'ig': '2026-11-26', 'oem': '2026-11-26', 'yt': '2026-11-26'}

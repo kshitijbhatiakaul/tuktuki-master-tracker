@@ -186,7 +186,7 @@
  {
   "id": "biz_00",
   "book": "biz",
-  "title": "Sheet1",
+  "title": "Business Performance",
   "rows": 303,
   "tables": 12,
   "charts": 0
@@ -205,14 +205,6 @@
   "title": "Brand Partnerships",
   "rows": 6,
   "tables": 2,
-  "charts": 0
- },
- {
-  "id": "biz_04",
-  "book": "biz",
-  "title": "Demographics",
-  "rows": 29,
-  "tables": 3,
   "charts": 0
  },
  {
