@@ -1,4 +1,4 @@
-Run 2026-11-27 15:48 IST  (schedule)
+Run 2026-11-27 17:37 IST  (schedule)
 onedrive=success ads_rebuild=success ig_rebuild=success adjust=success ga=success export=success social=success
 
 == onedrive
@@ -22,7 +22,7 @@ Daily Ads workbook rebuilt from the engine files
 == ig
 files from Tuktuki Social Analytics/_pipeline: 18
 Instagram data saved on 2026-11-27 (status report )
-{"rows": 738, "with_insights": 738, "frozen": 672, "youtube": {"yt_videos": 636, "yt_shorts": 525, "yt_with_retention": 608, "yt_frozen": 395}, "out": "/tmp/igp/out.xlsx"}
+{"rows": 740, "with_insights": 740, "frozen": 672, "youtube": {"yt_videos": 636, "yt_shorts": 525, "yt_with_retention": 608, "yt_frozen": 395}, "out": "/tmp/igp/out.xlsx"}
 Instagram workbook rebuilt from the pipeline files
 
 == adjust
@@ -33,7 +33,7 @@ behaviour/purchases.csv: 118 rows, 2026-08-01 to 2026-11-26
 behaviour/paycohort.csv: 104 rows, 2026-08-15 to 2026-11-26
 behaviour/channels.csv: 178 rows, 2025-10-01 to 2026-11-26
 behaviour/paychan.csv: 36 rows, 2026-09-01 to 2026-11-26
-behaviour/backcamp.csv: 295 rows, 2026-03-01 to 2026-11-26
+behaviour/backcamp.csv: 294 rows, 2026-03-01 to 2026-11-26
 behaviour/mau.csv: 14 rows, 2025-10-01 to 2026-11-26
 behaviour/chanday.csv: 889 rows, 2026-08-01 to 2026-11-26
 oem/oem_monthly.csv: 61 rows, 2025-12-01 to 2026-10-31
