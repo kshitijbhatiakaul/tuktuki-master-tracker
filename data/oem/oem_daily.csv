@@ -93,7 +93,7 @@ day,network,campaign_network,installs,reattributions,sessions,daus,uninstalls,re
 2026-11-20,Oppo Affinity,OppoAffinity,0,0,102,97.0,2,0.0,0.0
 2026-11-20,Oppo Affinity,Oppo_Affinity,0,0,23,22.0,2,0.0,0.0
 2026-11-20,Transsion Holdings,transsion_pai,0,0,16,16.0,1,0.0,0.0
-2026-11-20,Vivo Affinity,Affinity_Vivo,164,1,320,232.0,86,0.0848,0.02
+2026-11-20,Vivo Affinity,Affinity_Vivo,164,1,320,232.0,86,0.0848,0.0137
 2026-11-20,Xiaomi,xiaomi_direct,0,0,17,17.0,0,0.0,0.0
 2026-11-21,Oppo Affinity,OppoAffinity,0,0,94,88.0,5,0.0,0.0
 2026-11-21,Oppo Affinity,Oppo_Affinity,0,0,19,18.0,1,0.0,0.0
@@ -116,7 +116,7 @@ day,network,campaign_network,installs,reattributions,sessions,daus,uninstalls,re
 2026-11-24,Transsion Holdings,transsion_pai,0,0,13,12.0,0,0.0,0.0
 2026-11-24,Vivo Affinity,Affinity_Vivo,122,2,258,196.0,60,0.1532,0.0
 2026-11-24,Xiaomi,xiaomi_direct,0,0,26,24.0,1,0.0,0.0
-2026-11-25,Ai Markit Partner,SDKOPCOD,487,22,880,658.0,190,0.1336,0.0
+2026-11-25,Ai Markit Partner,SDKOPCOD,487,22,880,658.0,190,0.1434,0.0
 2026-11-25,Oppo Affinity,OppoAffinity,0,0,74,69.0,4,0.0,0.0
 2026-11-25,Oppo Affinity,Oppo_Affinity,0,0,28,27.0,1,0.0,0.0
 2026-11-25,Transsion Holdings,transsion_pai,0,0,14,13.0,0,0.0,0.0
@@ -124,10 +124,10 @@ day,network,campaign_network,installs,reattributions,sessions,daus,uninstalls,re
 2026-11-25,Xiaomi,Xiaomi,1,1,2,2.0,0,0.0,0.0
 2026-11-25,Xiaomi,xiaomi_direct,0,0,26,24.0,0,0.0,0.0
 2026-11-26,Affiliate,LitmusMedia_VIVO,1,0,1,1.0,0,0.0,0.0
-2026-11-26,Ai Markit Partner,SDKOPCOD,555,11,1017,754.0,0,0.0408,0.0
+2026-11-26,Ai Markit Partner,SDKOPCOD,555,11,1017,754.0,0,0.035,0.0
 2026-11-26,Oppo Affinity,OppoAffinity,1,0,58,56.0,0,0.0,0.0
 2026-11-26,Oppo Affinity,Oppo_Affinity,0,0,14,13.0,0,0.0,0.0
 2026-11-26,Transsion Holdings,transsion_pai,0,0,14,14.0,0,0.0,0.0
-2026-11-26,Vivo Affinity,Affinity_Vivo,111,6,236,173.0,0,0.0952,0.0
+2026-11-26,Vivo Affinity,Affinity_Vivo,111,6,236,173.0,0,0.0962,0.0
 2026-11-26,Xiaomi,Xiaomi,33,0,50,34.0,0,1.0,0.0
 2026-11-26,Xiaomi,xiaomi_direct,0,0,21,20.0,0,0.0,0.0
