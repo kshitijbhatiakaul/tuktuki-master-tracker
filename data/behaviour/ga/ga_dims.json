@@ -433,11 +433,11 @@
 },
 {
 "dim": "country",
-"value": "Spain",
+"value": "Türkiye",
 "users": 13,
-"new_users": 1,
-"sessions": 23,
-"minutes_per_user": 2.5
+"new_users": 4,
+"sessions": 18,
+"minutes_per_user": 0.6
 },
 {
 "dim": "country",
@@ -449,27 +449,19 @@
 },
 {
 "dim": "country",
-"value": "Türkiye",
+"value": "Spain",
 "users": 13,
-"new_users": 4,
-"sessions": 18,
-"minutes_per_user": 0.6
+"new_users": 1,
+"sessions": 23,
+"minutes_per_user": 2.5
 },
 {
 "dim": "country",
-"value": "(not set)",
+"value": "Germany",
 "users": 12,
-"new_users": 12,
-"sessions": 12,
-"minutes_per_user": 1.5
-},
-{
-"dim": "country",
-"value": "Algeria",
-"users": 12,
-"new_users": 0,
-"sessions": 19,
-"minutes_per_user": 0.2
+"new_users": 3,
+"sessions": 13,
+"minutes_per_user": 3.6
 },
 {
 "dim": "country",
@@ -478,6 +470,14 @@
 "new_users": 6,
 "sessions": 10,
 "minutes_per_user": 2.6
+},
+{
+"dim": "country",
+"value": "Algeria",
+"users": 12,
+"new_users": 0,
+"sessions": 19,
+"minutes_per_user": 0.2
 },
 {
 "dim": "language",
@@ -585,19 +585,19 @@
 },
 {
 "dim": "language",
-"value": "in-id",
-"users": 26,
-"new_users": 0,
-"sessions": 60,
-"minutes_per_user": 0.4
-},
-{
-"dim": "language",
 "value": "bn-in",
 "users": 26,
 "new_users": 6,
 "sessions": 28,
 "minutes_per_user": 4.4
+},
+{
+"dim": "language",
+"value": "in-id",
+"users": 26,
+"new_users": 0,
+"sessions": 60,
+"minutes_per_user": 0.4
 },
 {
 "dim": "language",
@@ -617,19 +617,19 @@
 },
 {
 "dim": "language",
-"value": "id-id",
-"users": 21,
-"new_users": 4,
-"sessions": 40,
-"minutes_per_user": 0.6
-},
-{
-"dim": "language",
 "value": "en-",
 "users": 21,
 "new_users": 11,
 "sessions": 16,
 "minutes_per_user": 15.2
+},
+{
+"dim": "language",
+"value": "id-id",
+"users": 21,
+"new_users": 4,
+"sessions": 40,
+"minutes_per_user": 0.6
 },
 {
 "dim": "language",
@@ -921,14 +921,6 @@
 },
 {
 "dim": "region",
-"value": "Kerala",
-"users": 728,
-"new_users": 240,
-"sessions": 782,
-"minutes_per_user": 9.4
-},
-{
-"dim": "region",
 "value": "Jharkhand",
 "users": 728,
 "new_users": 267,
@@ -942,6 +934,14 @@
 "new_users": 260,
 "sessions": 822,
 "minutes_per_user": 13.4
+},
+{
+"dim": "region",
+"value": "Kerala",
+"users": 728,
+"new_users": 240,
+"sessions": 782,
+"minutes_per_user": 9.4
 },
 {
 "dim": "region",
