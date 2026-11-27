@@ -2,402 +2,402 @@
 {
 "dim": "app_version",
 "value": "1.5.6",
-"users": 30463,
-"new_users": 22595,
-"sessions": 50116,
-"minutes_per_user": 29.8
+"users": 33658,
+"new_users": 24735,
+"sessions": 56377,
+"minutes_per_user": 29.2
 },
 {
 "dim": "app_version",
 "value": "1.5.5",
-"users": 12032,
-"new_users": 2001,
-"sessions": 13606,
-"minutes_per_user": 12.1
+"users": 12597,
+"new_users": 2240,
+"sessions": 14282,
+"minutes_per_user": 11.8
 },
 {
 "dim": "app_version",
 "value": "1.3.1",
-"users": 6215,
-"new_users": 955,
-"sessions": 4781,
+"users": 6881,
+"new_users": 1058,
+"sessions": 5318,
 "minutes_per_user": 0.1
 },
 {
 "dim": "app_version",
 "value": "1.5.2",
-"users": 4631,
-"new_users": 93,
-"sessions": 4291,
-"minutes_per_user": 3.1
+"users": 5047,
+"new_users": 101,
+"sessions": 4760,
+"minutes_per_user": 3.2
 },
 {
 "dim": "app_version",
 "value": "1.2.36",
-"users": 2956,
-"new_users": 178,
-"sessions": 2947,
+"users": 3266,
+"new_users": 197,
+"sessions": 3301,
 "minutes_per_user": 0.1
 },
 {
 "dim": "app_version",
+"value": "1.5.7",
+"users": 2618,
+"new_users": 2166,
+"sessions": 2868,
+"minutes_per_user": 20.9
+},
+{
+"dim": "app_version",
 "value": "1.3.0",
-"users": 2332,
-"new_users": 330,
-"sessions": 2116,
+"users": 2598,
+"new_users": 383,
+"sessions": 2361,
 "minutes_per_user": 0.2
 },
 {
 "dim": "app_version",
 "value": "1.2.28",
-"users": 1806,
-"new_users": 127,
-"sessions": 1547,
+"users": 2002,
+"new_users": 149,
+"sessions": 1740,
 "minutes_per_user": 0.2
 },
 {
 "dim": "app_version",
 "value": "1.5.3",
-"users": 1671,
-"new_users": 98,
-"sessions": 1617,
+"users": 1805,
+"new_users": 105,
+"sessions": 1745,
 "minutes_per_user": 9
 },
 {
 "dim": "app_version",
 "value": "1.2.33",
-"users": 1392,
-"new_users": 103,
-"sessions": 1220,
+"users": 1550,
+"new_users": 119,
+"sessions": 1373,
 "minutes_per_user": 0.1
 },
 {
 "dim": "app_version",
 "value": "1.4.3",
-"users": 1088,
-"new_users": 26,
-"sessions": 1464,
-"minutes_per_user": 1.4
+"users": 1191,
+"new_users": 29,
+"sessions": 1619,
+"minutes_per_user": 1.5
 },
 {
 "dim": "app_version",
 "value": "1.5.1",
-"users": 876,
-"new_users": 32,
-"sessions": 760,
-"minutes_per_user": 2
+"users": 955,
+"new_users": 33,
+"sessions": 826,
+"minutes_per_user": 2.1
 },
 {
 "dim": "app_version",
 "value": "1.4.1",
-"users": 811,
-"new_users": 22,
-"sessions": 633,
-"minutes_per_user": 1.8
+"users": 901,
+"new_users": 25,
+"sessions": 712,
+"minutes_per_user": 1.6
 },
 {
 "dim": "app_version",
 "value": "1.2.21",
-"users": 771,
-"new_users": 42,
-"sessions": 781,
+"users": 854,
+"new_users": 52,
+"sessions": 885,
 "minutes_per_user": 0.1
 },
 {
 "dim": "app_version",
 "value": "1.5.0",
-"users": 493,
+"users": 535,
 "new_users": 7,
-"sessions": 409,
-"minutes_per_user": 2.6
-},
-{
-"dim": "app_version",
-"value": "1.4.0",
-"users": 180,
-"new_users": 1,
-"sessions": 146,
-"minutes_per_user": 0.6
+"sessions": 447,
+"minutes_per_user": 2.5
 },
 {
 "dim": "app_version",
 "value": "1.4.4",
-"users": 172,
+"users": 199,
 "new_users": 5,
-"sessions": 150,
-"minutes_per_user": 1.5
+"sessions": 171,
+"minutes_per_user": 2.2
+},
+{
+"dim": "app_version",
+"value": "1.4.0",
+"users": 198,
+"new_users": 2,
+"sessions": 162,
+"minutes_per_user": 0.5
 },
 {
 "dim": "app_version",
 "value": "1.4.2",
-"users": 164,
+"users": 185,
 "new_users": 12,
-"sessions": 138,
+"sessions": 161,
 "minutes_per_user": 0.1
 },
 {
 "dim": "app_version",
 "value": "1.13.5",
-"users": 105,
-"new_users": 62,
-"sessions": 174,
-"minutes_per_user": 19.4
+"users": 115,
+"new_users": 68,
+"sessions": 189,
+"minutes_per_user": 19
 },
 {
 "dim": "app_version",
 "value": "1.2.12",
-"users": 96,
+"users": 110,
 "new_users": 2,
-"sessions": 141,
+"sessions": 159,
 "minutes_per_user": 0.1
-},
-{
-"dim": "app_version",
-"value": "1.2.0",
-"users": 64,
-"new_users": 0,
-"sessions": 51,
-"minutes_per_user": 0.4
 },
 {
 "dim": "city",
 "value": "Patna",
-"users": 5513,
-"new_users": 1742,
-"sessions": 6503,
+"users": 6191,
+"new_users": 2072,
+"sessions": 7399,
 "minutes_per_user": 12.6
 },
 {
 "dim": "city",
 "value": "(not set)",
-"users": 5329,
-"new_users": 1464,
-"sessions": 5038,
-"minutes_per_user": 11.1
+"users": 6023,
+"new_users": 1740,
+"sessions": 5694,
+"minutes_per_user": 10.8
 },
 {
 "dim": "city",
 "value": "Lucknow",
-"users": 4204,
-"new_users": 1481,
-"sessions": 5202,
-"minutes_per_user": 14.8
+"users": 4722,
+"new_users": 1729,
+"sessions": 5920,
+"minutes_per_user": 14.7
 },
 {
 "dim": "city",
 "value": "Ahmedabad",
-"users": 3479,
-"new_users": 1356,
-"sessions": 4395,
+"users": 3930,
+"new_users": 1592,
+"sessions": 5021,
 "minutes_per_user": 16.3
 },
 {
 "dim": "city",
 "value": "Delhi",
-"users": 3379,
-"new_users": 1478,
-"sessions": 4350,
-"minutes_per_user": 20.4
-},
-{
-"dim": "city",
-"value": "Jaipur",
-"users": 3065,
-"new_users": 1238,
-"sessions": 3734,
-"minutes_per_user": 15.9
+"users": 3808,
+"new_users": 1724,
+"sessions": 4954,
+"minutes_per_user": 20.3
 },
 {
 "dim": "city",
 "value": "Indore",
-"users": 3063,
-"new_users": 1038,
-"sessions": 3584,
-"minutes_per_user": 13.5
+"users": 3463,
+"new_users": 1222,
+"sessions": 4086,
+"minutes_per_user": 13.4
+},
+{
+"dim": "city",
+"value": "Jaipur",
+"users": 3456,
+"new_users": 1461,
+"sessions": 4312,
+"minutes_per_user": 16.3
 },
 {
 "dim": "city",
 "value": "Agra",
-"users": 2763,
-"new_users": 948,
-"sessions": 3257,
-"minutes_per_user": 14.1
+"users": 3130,
+"new_users": 1123,
+"sessions": 3732,
+"minutes_per_user": 14.2
 },
 {
 "dim": "city",
 "value": "Pune",
-"users": 2339,
-"new_users": 883,
-"sessions": 2878,
-"minutes_per_user": 15.7
+"users": 2652,
+"new_users": 1044,
+"sessions": 3310,
+"minutes_per_user": 15.9
 },
 {
 "dim": "city",
 "value": "Mumbai",
-"users": 1996,
-"new_users": 872,
-"sessions": 2608,
+"users": 2233,
+"new_users": 1004,
+"sessions": 2964,
 "minutes_per_user": 18.1
 },
 {
 "dim": "city",
-"value": "Kolkata",
-"users": 1620,
-"new_users": 599,
-"sessions": 1926,
-"minutes_per_user": 15.7
-},
-{
-"dim": "city",
 "value": "Bengaluru",
-"users": 1595,
-"new_users": 715,
-"sessions": 2128,
-"minutes_per_user": 15.7
+"users": 1842,
+"new_users": 864,
+"sessions": 2473,
+"minutes_per_user": 15.3
 },
 {
 "dim": "city",
 "value": "Hyderabad",
-"users": 1558,
-"new_users": 598,
-"sessions": 1912,
-"minutes_per_user": 13
+"users": 1827,
+"new_users": 754,
+"sessions": 2229,
+"minutes_per_user": 12.7
+},
+{
+"dim": "city",
+"value": "Kolkata",
+"users": 1817,
+"new_users": 691,
+"sessions": 2206,
+"minutes_per_user": 15.7
 },
 {
 "dim": "city",
 "value": "Bhubaneswar",
-"users": 1528,
-"new_users": 540,
-"sessions": 1830,
+"users": 1706,
+"new_users": 638,
+"sessions": 2084,
 "minutes_per_user": 15.2
 },
 {
 "dim": "city",
 "value": "Ludhiana",
-"users": 1341,
-"new_users": 504,
-"sessions": 1603,
-"minutes_per_user": 17.4
+"users": 1510,
+"new_users": 588,
+"sessions": 1840,
+"minutes_per_user": 17.6
 },
 {
 "dim": "city",
 "value": "Guwahati",
-"users": 1328,
-"new_users": 433,
-"sessions": 1538,
-"minutes_per_user": 14.8
+"users": 1496,
+"new_users": 520,
+"sessions": 1776,
+"minutes_per_user": 14.7
 },
 {
 "dim": "city",
 "value": "Bhopal",
-"users": 1194,
-"new_users": 410,
-"sessions": 1354,
-"minutes_per_user": 15.3
+"users": 1370,
+"new_users": 480,
+"sessions": 1540,
+"minutes_per_user": 15
 },
 {
 "dim": "city",
 "value": "Nagpur",
-"users": 1156,
-"new_users": 383,
-"sessions": 1346,
-"minutes_per_user": 14.1
+"users": 1297,
+"new_users": 451,
+"sessions": 1520,
+"minutes_per_user": 13.9
 },
 {
 "dim": "city",
 "value": "Surat",
-"users": 1079,
-"new_users": 380,
-"sessions": 1274,
-"minutes_per_user": 15.9
+"users": 1218,
+"new_users": 448,
+"sessions": 1455,
+"minutes_per_user": 16.2
 },
 {
 "dim": "city",
 "value": "Meerut",
-"users": 1037,
-"new_users": 375,
-"sessions": 1152,
-"minutes_per_user": 15.2
-},
-{
-"dim": "country",
-"value": "India",
-"users": 65598,
-"new_users": 26429,
-"sessions": 86051,
-"minutes_per_user": 16.6
-},
-{
-"dim": "country",
-"value": "Nepal",
-"users": 169,
-"new_users": 40,
-"sessions": 182,
-"minutes_per_user": 3.6
-},
-{
-"dim": "country",
-"value": "United Arab Emirates",
-"users": 75,
-"new_users": 30,
-"sessions": 93,
+"users": 1154,
+"new_users": 424,
+"sessions": 1292,
 "minutes_per_user": 14.9
 },
 {
 "dim": "country",
-"value": "Saudi Arabia",
-"users": 68,
-"new_users": 24,
-"sessions": 95,
-"minutes_per_user": 19.2
+"value": "India",
+"users": 73916,
+"new_users": 31175,
+"sessions": 98332,
+"minutes_per_user": 16.5
 },
 {
 "dim": "country",
-"value": "United States",
-"users": 61,
-"new_users": 23,
-"sessions": 61,
-"minutes_per_user": 4.8
+"value": "Nepal",
+"users": 187,
+"new_users": 45,
+"sessions": 198,
+"minutes_per_user": 3.3
+},
+{
+"dim": "country",
+"value": "United Arab Emirates",
+"users": 84,
+"new_users": 34,
+"sessions": 106,
+"minutes_per_user": 14.6
+},
+{
+"dim": "country",
+"value": "Saudi Arabia",
+"users": 74,
+"new_users": 27,
+"sessions": 101,
+"minutes_per_user": 18.8
 },
 {
 "dim": "country",
 "value": "Bangladesh",
-"users": 56,
-"new_users": 9,
-"sessions": 73,
-"minutes_per_user": 2.9
+"users": 68,
+"new_users": 16,
+"sessions": 86,
+"minutes_per_user": 2.5
+},
+{
+"dim": "country",
+"value": "United States",
+"users": 64,
+"new_users": 24,
+"sessions": 64,
+"minutes_per_user": 4.6
 },
 {
 "dim": "country",
 "value": "Indonesia",
-"users": 55,
-"new_users": 4,
-"sessions": 114,
+"users": 59,
+"new_users": 5,
+"sessions": 121,
 "minutes_per_user": 0.5
 },
 {
 "dim": "country",
 "value": "Pakistan",
-"users": 47,
-"new_users": 8,
-"sessions": 72,
-"minutes_per_user": 1.5
+"users": 54,
+"new_users": 12,
+"sessions": 84,
+"minutes_per_user": 1.6
 },
 {
 "dim": "country",
 "value": "Malaysia",
-"users": 28,
-"new_users": 7,
-"sessions": 38,
-"minutes_per_user": 4.9
+"users": 31,
+"new_users": 8,
+"sessions": 41,
+"minutes_per_user": 5
 },
 {
 "dim": "country",
 "value": "China",
-"users": 23,
-"new_users": 22,
-"sessions": 24,
-"minutes_per_user": 0.6
+"users": 26,
+"new_users": 24,
+"sessions": 27,
+"minutes_per_user": 0.5
 },
 {
 "dim": "country",
@@ -410,354 +410,354 @@
 {
 "dim": "country",
 "value": "United Kingdom",
-"users": 18,
+"users": 19,
 "new_users": 6,
-"sessions": 23,
-"minutes_per_user": 0.4
+"sessions": 25,
+"minutes_per_user": 0.8
 },
 {
 "dim": "country",
 "value": "Mexico",
-"users": 17,
+"users": 18,
 "new_users": 0,
-"sessions": 34,
+"sessions": 38,
 "minutes_per_user": 0.2
 },
 {
 "dim": "country",
+"value": "Kuwait",
+"users": 16,
+"new_users": 8,
+"sessions": 21,
+"minutes_per_user": 16.5
+},
+{
+"dim": "country",
 "value": "France",
-"users": 15,
-"new_users": 1,
-"sessions": 24,
-"minutes_per_user": 3.3
+"users": 16,
+"new_users": 2,
+"sessions": 26,
+"minutes_per_user": 3.7
 },
 {
 "dim": "country",
 "value": "Türkiye",
-"users": 13,
+"users": 15,
 "new_users": 4,
-"sessions": 18,
-"minutes_per_user": 0.6
+"sessions": 23,
+"minutes_per_user": 0.5
+},
+{
+"dim": "country",
+"value": "Germany",
+"users": 14,
+"new_users": 3,
+"sessions": 13,
+"minutes_per_user": 3.1
+},
+{
+"dim": "country",
+"value": "Romania",
+"users": 14,
+"new_users": 8,
+"sessions": 14,
+"minutes_per_user": 3
+},
+{
+"dim": "country",
+"value": "Algeria",
+"users": 13,
+"new_users": 0,
+"sessions": 20,
+"minutes_per_user": 0.1
 },
 {
 "dim": "country",
 "value": "Spain",
 "users": 13,
 "new_users": 1,
-"sessions": 23,
-"minutes_per_user": 2.5
-},
-{
-"dim": "country",
-"value": "Kuwait",
-"users": 13,
-"new_users": 6,
-"sessions": 18,
-"minutes_per_user": 13.3
-},
-{
-"dim": "country",
-"value": "Germany",
-"users": 12,
-"new_users": 3,
-"sessions": 13,
-"minutes_per_user": 3.6
-},
-{
-"dim": "country",
-"value": "Romania",
-"users": 12,
-"new_users": 6,
-"sessions": 10,
-"minutes_per_user": 2.6
-},
-{
-"dim": "country",
-"value": "(not set)",
-"users": 12,
-"new_users": 12,
-"sessions": 12,
-"minutes_per_user": 1.5
+"sessions": 26,
+"minutes_per_user": 5.5
 },
 {
 "dim": "language",
 "value": "en-in",
-"users": 23558,
-"new_users": 10424,
-"sessions": 33471,
-"minutes_per_user": 19.1
+"users": 26349,
+"new_users": 12101,
+"sessions": 38031,
+"minutes_per_user": 19.2
 },
 {
 "dim": "language",
 "value": "en-us",
-"users": 20932,
-"new_users": 8921,
-"sessions": 27145,
-"minutes_per_user": 16.7
+"users": 23401,
+"new_users": 10326,
+"sessions": 30836,
+"minutes_per_user": 16.8
 },
 {
 "dim": "language",
 "value": "en-gb",
-"users": 16009,
-"new_users": 5094,
-"sessions": 18881,
-"minutes_per_user": 13.1
+"users": 18408,
+"new_users": 6409,
+"sessions": 21941,
+"minutes_per_user": 12.7
 },
 {
 "dim": "language",
 "value": "hi-in",
-"users": 3847,
-"new_users": 1529,
-"sessions": 5072,
-"minutes_per_user": 16.4
+"users": 4336,
+"new_users": 1792,
+"sessions": 5811,
+"minutes_per_user": 16.5
 },
 {
 "dim": "language",
 "value": "gu-in",
-"users": 529,
-"new_users": 194,
-"sessions": 632,
-"minutes_per_user": 9.9
+"users": 593,
+"new_users": 225,
+"sessions": 719,
+"minutes_per_user": 10.1
 },
 {
 "dim": "language",
 "value": "en-au",
-"users": 358,
-"new_users": 99,
-"sessions": 387,
+"users": 405,
+"new_users": 120,
+"sessions": 448,
 "minutes_per_user": 9.3
 },
 {
 "dim": "language",
 "value": "mr-in",
-"users": 315,
-"new_users": 108,
-"sessions": 394,
-"minutes_per_user": 9.9
+"users": 344,
+"new_users": 121,
+"sessions": 440,
+"minutes_per_user": 9.6
 },
 {
 "dim": "language",
 "value": "en-nz",
-"users": 54,
-"new_users": 14,
-"sessions": 59,
-"minutes_per_user": 3.9
-},
-{
-"dim": "language",
-"value": "en-ie",
-"users": 47,
-"new_users": 12,
-"sessions": 51,
-"minutes_per_user": 11.7
-},
-{
-"dim": "language",
-"value": "es-us",
-"users": 46,
-"new_users": 9,
-"sessions": 78,
-"minutes_per_user": 5.7
+"users": 62,
+"new_users": 17,
+"sessions": 69,
+"minutes_per_user": 3.5
 },
 {
 "dim": "language",
 "value": "en-dz",
-"users": 45,
-"new_users": 23,
-"sessions": 63,
-"minutes_per_user": 30.6
+"users": 54,
+"new_users": 29,
+"sessions": 76,
+"minutes_per_user": 27.7
+},
+{
+"dim": "language",
+"value": "en-ie",
+"users": 54,
+"new_users": 16,
+"sessions": 58,
+"minutes_per_user": 10.2
+},
+{
+"dim": "language",
+"value": "es-us",
+"users": 48,
+"new_users": 9,
+"sessions": 87,
+"minutes_per_user": 5.5
 },
 {
 "dim": "language",
 "value": "fr-fr",
-"users": 30,
+"users": 34,
 "new_users": 3,
-"sessions": 47,
-"minutes_per_user": 5.3
+"sessions": 63,
+"minutes_per_user": 4.8
 },
 {
 "dim": "language",
 "value": "en-mm",
-"users": 27,
-"new_users": 12,
-"sessions": 36,
-"minutes_per_user": 14.1
+"users": 32,
+"new_users": 15,
+"sessions": 42,
+"minutes_per_user": 12.2
 },
 {
 "dim": "language",
 "value": "bn-in",
-"users": 26,
-"new_users": 6,
-"sessions": 28,
-"minutes_per_user": 4.4
-},
-{
-"dim": "language",
-"value": "in-id",
-"users": 26,
-"new_users": 0,
-"sessions": 60,
-"minutes_per_user": 0.4
+"users": 31,
+"new_users": 10,
+"sessions": 33,
+"minutes_per_user": 3.9
 },
 {
 "dim": "language",
 "value": "en-ca",
-"users": 23,
-"new_users": 10,
-"sessions": 39,
-"minutes_per_user": 14.9
-},
-{
-"dim": "language",
-"value": "pa-in",
-"users": 22,
-"new_users": 10,
-"sessions": 41,
+"users": 28,
+"new_users": 15,
+"sessions": 46,
 "minutes_per_user": 20.7
 },
 {
 "dim": "language",
-"value": "id-id",
-"users": 21,
-"new_users": 4,
-"sessions": 40,
+"value": "in-id",
+"users": 28,
+"new_users": 0,
+"sessions": 65,
+"minutes_per_user": 0.4
+},
+{
+"dim": "language",
+"value": "pa-in",
+"users": 27,
+"new_users": 14,
+"sessions": 46,
+"minutes_per_user": 19.9
+},
+{
+"dim": "language",
+"value": "en-ae",
+"users": 23,
+"new_users": 12,
+"sessions": 24,
+"minutes_per_user": 9.3
+},
+{
+"dim": "language",
+"value": "ta-in",
+"users": 22,
+"new_users": 12,
+"sessions": 26,
 "minutes_per_user": 0.6
 },
 {
 "dim": "language",
 "value": "en-",
-"users": 21,
+"users": 22,
 "new_users": 11,
-"sessions": 16,
-"minutes_per_user": 15.2
-},
-{
-"dim": "language",
-"value": "en-ae",
-"users": 19,
-"new_users": 10,
-"sessions": 21,
-"minutes_per_user": 10.8
+"sessions": 17,
+"minutes_per_user": 14.5
 },
 {
 "dim": "os_version",
 "value": "Android 16",
-"users": 20230,
-"new_users": 9762,
-"sessions": 28502,
-"minutes_per_user": 20.9
+"users": 23013,
+"new_users": 11594,
+"sessions": 32705,
+"minutes_per_user": 20.6
 },
 {
 "dim": "os_version",
 "value": "Android 15",
-"users": 16036,
-"new_users": 6011,
-"sessions": 21130,
+"users": 17985,
+"new_users": 7066,
+"sessions": 24098,
 "minutes_per_user": 15
 },
 {
 "dim": "os_version",
 "value": "Android 14",
-"users": 8447,
-"new_users": 2957,
-"sessions": 10198,
-"minutes_per_user": 14.2
-},
-{
-"dim": "os_version",
-"value": "Android 13",
-"users": 6872,
-"new_users": 2367,
-"sessions": 8329,
-"minutes_per_user": 13.8
-},
-{
-"dim": "os_version",
-"value": "Android 12",
-"users": 4668,
-"new_users": 1704,
-"sessions": 5870,
-"minutes_per_user": 14.6
-},
-{
-"dim": "os_version",
-"value": "Android 11",
-"users": 4232,
-"new_users": 1494,
-"sessions": 5581,
+"users": 9478,
+"new_users": 3459,
+"sessions": 11599,
 "minutes_per_user": 14.1
 },
 {
 "dim": "os_version",
+"value": "Android 13",
+"users": 7701,
+"new_users": 2776,
+"sessions": 9467,
+"minutes_per_user": 14.1
+},
+{
+"dim": "os_version",
+"value": "Android 12",
+"users": 5220,
+"new_users": 1994,
+"sessions": 6690,
+"minutes_per_user": 14.5
+},
+{
+"dim": "os_version",
+"value": "Android 11",
+"users": 4724,
+"new_users": 1731,
+"sessions": 6335,
+"minutes_per_user": 14.3
+},
+{
+"dim": "os_version",
 "value": "Android 10",
-"users": 2430,
-"new_users": 837,
-"sessions": 2800,
-"minutes_per_user": 6.5
+"users": 2735,
+"new_users": 989,
+"sessions": 3196,
+"minutes_per_user": 6.6
 },
 {
 "dim": "os_version",
 "value": "Android 17",
-"users": 1999,
-"new_users": 860,
-"sessions": 2472,
-"minutes_per_user": 19.7
+"users": 2251,
+"new_users": 990,
+"sessions": 2815,
+"minutes_per_user": 20
 },
 {
 "dim": "os_version",
 "value": "Android 9",
-"users": 965,
-"new_users": 337,
-"sessions": 1218,
-"minutes_per_user": 15.4
+"users": 1103,
+"new_users": 423,
+"sessions": 1424,
+"minutes_per_user": 15.1
 },
 {
 "dim": "os_version",
 "value": "Android 8.1.0",
-"users": 559,
-"new_users": 276,
-"sessions": 885,
-"minutes_per_user": 23.7
+"users": 653,
+"new_users": 356,
+"sessions": 1030,
+"minutes_per_user": 21.7
 },
 {
 "dim": "os_version",
 "value": "Android 7.1.1",
-"users": 40,
-"new_users": 17,
-"sessions": 93,
-"minutes_per_user": 19.2
+"users": 44,
+"new_users": 19,
+"sessions": 116,
+"minutes_per_user": 22.4
 },
 {
 "dim": "os_version",
 "value": "iOS 27.2.1",
-"users": 24,
-"new_users": 14,
-"sessions": 45,
-"minutes_per_user": 5.9
+"users": 29,
+"new_users": 16,
+"sessions": 53,
+"minutes_per_user": 6.3
 },
 {
 "dim": "os_version",
 "value": "iOS 26.6.1",
-"users": 21,
-"new_users": 18,
-"sessions": 36,
-"minutes_per_user": 26.4
-},
-{
-"dim": "os_version",
-"value": "Android 8.0.0",
-"users": 17,
-"new_users": 8,
-"sessions": 23,
-"minutes_per_user": 15.4
+"users": 25,
+"new_users": 21,
+"sessions": 44,
+"minutes_per_user": 25.4
 },
 {
 "dim": "os_version",
 "value": "Android 7.0",
-"users": 17,
-"new_users": 12,
-"sessions": 42,
-"minutes_per_user": 41.4
+"users": 21,
+"new_users": 15,
+"sessions": 51,
+"minutes_per_user": 45.2
+},
+{
+"dim": "os_version",
+"value": "Android 8.0.0",
+"users": 18,
+"new_users": 8,
+"sessions": 25,
+"minutes_per_user": 16.1
 },
 {
 "dim": "os_version",
@@ -770,10 +770,10 @@
 {
 "dim": "os_version",
 "value": "iOS 26.6.2",
-"users": 10,
-"new_users": 4,
-"sessions": 21,
-"minutes_per_user": 24.8
+"users": 12,
+"new_users": 5,
+"sessions": 25,
+"minutes_per_user": 25.9
 },
 {
 "dim": "os_version",
@@ -802,169 +802,169 @@
 {
 "dim": "region",
 "value": "Uttar Pradesh",
-"users": 12097,
-"new_users": 4770,
-"sessions": 15896,
-"minutes_per_user": 16
+"users": 13553,
+"new_users": 5552,
+"sessions": 18075,
+"minutes_per_user": 16.1
 },
 {
 "dim": "region",
 "value": "Maharashtra",
-"users": 7660,
-"new_users": 3164,
-"sessions": 10149,
-"minutes_per_user": 17.6
+"users": 8631,
+"new_users": 3702,
+"sessions": 11593,
+"minutes_per_user": 17.5
 },
 {
 "dim": "region",
 "value": "Bihar",
-"users": 6637,
-"new_users": 2226,
-"sessions": 8117,
-"minutes_per_user": 13.2
+"users": 7454,
+"new_users": 2632,
+"sessions": 9233,
+"minutes_per_user": 13.1
 },
 {
 "dim": "region",
 "value": "Gujarat",
-"users": 6209,
-"new_users": 2591,
-"sessions": 8267,
+"users": 6977,
+"new_users": 3019,
+"sessions": 9436,
 "minutes_per_user": 17.4
 },
 {
 "dim": "region",
 "value": "Madhya Pradesh",
-"users": 4985,
-"new_users": 1925,
-"sessions": 6403,
+"users": 5608,
+"new_users": 2255,
+"sessions": 7276,
 "minutes_per_user": 15.6
 },
 {
 "dim": "region",
 "value": "Rajasthan",
-"users": 4795,
-"new_users": 2045,
-"sessions": 6179,
-"minutes_per_user": 17.6
+"users": 5404,
+"new_users": 2413,
+"sessions": 7126,
+"minutes_per_user": 17.8
 },
 {
 "dim": "region",
 "value": "West Bengal",
-"users": 3998,
-"new_users": 1459,
-"sessions": 4873,
-"minutes_per_user": 14.5
+"users": 4438,
+"new_users": 1676,
+"sessions": 5476,
+"minutes_per_user": 14.2
 },
 {
 "dim": "region",
 "value": "Delhi",
-"users": 3580,
-"new_users": 1591,
-"sessions": 4687,
-"minutes_per_user": 20.9
+"users": 4035,
+"new_users": 1855,
+"sessions": 5340,
+"minutes_per_user": 20.7
 },
 {
 "dim": "region",
 "value": "Punjab",
-"users": 2062,
-"new_users": 829,
-"sessions": 2635,
-"minutes_per_user": 18.4
+"users": 2316,
+"new_users": 961,
+"sessions": 3004,
+"minutes_per_user": 18.8
 },
 {
 "dim": "region",
 "value": "Haryana",
-"users": 2039,
-"new_users": 811,
-"sessions": 2669,
-"minutes_per_user": 20.4
-},
-{
-"dim": "region",
-"value": "Odisha",
-"users": 1863,
-"new_users": 685,
-"sessions": 2375,
-"minutes_per_user": 16.8
+"users": 2311,
+"new_users": 968,
+"sessions": 3077,
+"minutes_per_user": 20.2
 },
 {
 "dim": "region",
 "value": "Karnataka",
-"users": 1858,
-"new_users": 830,
-"sessions": 2531,
-"minutes_per_user": 16.2
+"users": 2138,
+"new_users": 999,
+"sessions": 2922,
+"minutes_per_user": 15.7
+},
+{
+"dim": "region",
+"value": "Odisha",
+"users": 2083,
+"new_users": 815,
+"sessions": 2704,
+"minutes_per_user": 16.9
 },
 {
 "dim": "region",
 "value": "Telangana",
-"users": 1626,
-"new_users": 634,
-"sessions": 2010,
-"minutes_per_user": 12.9
+"users": 1905,
+"new_users": 798,
+"sessions": 2339,
+"minutes_per_user": 12.6
 },
 {
 "dim": "region",
 "value": "Assam",
-"users": 1486,
-"new_users": 514,
-"sessions": 1771,
+"users": 1670,
+"new_users": 611,
+"sessions": 2040,
 "minutes_per_user": 15.5
 },
 {
 "dim": "region",
 "value": "Tamil Nadu",
-"users": 1278,
-"new_users": 454,
-"sessions": 1473,
-"minutes_per_user": 8.2
-},
-{
-"dim": "region",
-"value": "Ropar Division",
-"users": 728,
-"new_users": 260,
-"sessions": 822,
-"minutes_per_user": 13.4
+"users": 1541,
+"new_users": 632,
+"sessions": 1772,
+"minutes_per_user": 7.4
 },
 {
 "dim": "region",
 "value": "Kerala",
-"users": 728,
-"new_users": 240,
-"sessions": 782,
-"minutes_per_user": 9.4
+"users": 831,
+"new_users": 298,
+"sessions": 903,
+"minutes_per_user": 9.1
 },
 {
 "dim": "region",
-"value": "Jharkhand",
-"users": 728,
-"new_users": 267,
-"sessions": 757,
-"minutes_per_user": 12.6
+"value": "Ropar Division",
+"users": 826,
+"new_users": 312,
+"sessions": 948,
+"minutes_per_user": 13.8
 },
 {
 "dim": "region",
 "value": "Jammu and Kashmir",
-"users": 723,
-"new_users": 333,
-"sessions": 962,
-"minutes_per_user": 19
+"users": 825,
+"new_users": 394,
+"sessions": 1095,
+"minutes_per_user": 19.1
+},
+{
+"dim": "region",
+"value": "Jharkhand",
+"users": 819,
+"new_users": 311,
+"sessions": 867,
+"minutes_per_user": 13
 },
 {
 "dim": "region",
 "value": "Chhattisgarh",
-"users": 550,
-"new_users": 186,
-"sessions": 653,
-"minutes_per_user": 16.2
+"users": 616,
+"new_users": 209,
+"sessions": 739,
+"minutes_per_user": 16.5
 },
 {
 "dim": "total",
 "value": "all",
-"users": 66509,
-"new_users": 26713,
-"sessions": 87362,
-"minutes_per_user": 16.5
+"users": 74922,
+"new_users": 31499,
+"sessions": 99794,
+"minutes_per_user": 16.4
 }
 ]
