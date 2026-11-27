@@ -1,4 +1,4 @@
-Run 2026-11-27 23:33 IST  (schedule)
+Run 2026-11-28 00:38 IST  (schedule)
 onedrive=success ads_rebuild=success ig_rebuild=success adjust=success ga=success export=success social=success
 
 == onedrive
@@ -26,24 +26,24 @@ Instagram data saved on 2026-11-27 (status report )
 Instagram workbook rebuilt from the pipeline files
 
 == adjust
-behaviour/daily.csv: 417 rows, 2025-10-06 to 2026-11-26
-behaviour/events.csv: 417 rows, 2025-10-06 to 2026-11-26
-behaviour/cohorts.csv: 417 rows, 2025-10-06 to 2026-11-26
-behaviour/purchases.csv: 118 rows, 2026-08-01 to 2026-11-26
-behaviour/paycohort.csv: 104 rows, 2026-08-15 to 2026-11-26
-behaviour/channels.csv: 178 rows, 2025-10-01 to 2026-11-26
-behaviour/paychan.csv: 36 rows, 2026-09-01 to 2026-11-26
-behaviour/backcamp.csv: 293 rows, 2026-03-01 to 2026-11-26
-behaviour/mau.csv: 14 rows, 2025-10-01 to 2026-11-26
-behaviour/chanday.csv: 889 rows, 2026-08-01 to 2026-11-26
+behaviour/daily.csv: 418 rows, 2025-10-06 to 2026-11-27
+behaviour/events.csv: 418 rows, 2025-10-06 to 2026-11-27
+behaviour/cohorts.csv: 418 rows, 2025-10-06 to 2026-11-27
+behaviour/purchases.csv: 119 rows, 2026-08-01 to 2026-11-27
+behaviour/paycohort.csv: 105 rows, 2026-08-15 to 2026-11-27
+behaviour/channels.csv: 178 rows, 2025-10-01 to 2026-11-27
+behaviour/paychan.csv: 36 rows, 2026-09-01 to 2026-11-27
+behaviour/backcamp.csv: 293 rows, 2026-03-01 to 2026-11-27
+behaviour/mau.csv: 14 rows, 2025-10-01 to 2026-11-27
+behaviour/chanday.csv: 900 rows, 2026-08-01 to 2026-11-27
 oem/oem_monthly.csv: 61 rows, 2025-12-01 to 2026-10-31
-oem/oem_daily.csv: 132 rows, 2026-11-01 to 2026-11-26
+oem/oem_daily.csv: 139 rows, 2026-11-01 to 2026-11-27
 
 == ga
 ga_daily.csv: 10 days
 ga_dims.json: 121 rows
 ga_monthly.json: 14 months
-ga_breakdowns.json: 834 rows
+ga_breakdowns.json: 836 rows
 
 == export
 ig_03 YT Dashboard 12 rows 1 tables 4 charts
@@ -77,4 +77,4 @@ META_TOKEN not set - Instagram left as in the workbook
 YouTube: 662 videos refreshed, 40 new
 
 == sources
-sources: {'adjust': '2026-11-26', 'admin': '2026-11-26', 'ads': '2026-11-25', 'built': '2026-11-27', 'ga': '2026-11-26', 'ig': '2026-11-26', 'oem': '2026-11-26', 'yt': '2026-11-26'}
+sources: {'adjust': '2026-11-27', 'admin': '2026-11-26', 'ads': '2026-11-25', 'built': '2026-11-28', 'ga': '2026-11-26', 'ig': '2026-11-26', 'oem': '2026-11-27', 'yt': '2026-11-27'}

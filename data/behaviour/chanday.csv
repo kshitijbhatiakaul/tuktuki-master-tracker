@@ -502,7 +502,7 @@ day,channel,installs,first_video_view_d0_conversions_cohort,third_video_view_com
 2026-10-13,Google Ads,35,28,15,15,0,0
 2026-10-13,Google Organic Search,8,5,2,1,0,0
 2026-10-13,Influencer,14,4,2,1,0,0
-2026-10-13,Organic,368,109,22,21,0,0
+2026-10-13,Organic,369,109,22,21,0,0
 2026-10-13,ShareChat,178,150,64,53,0,0
 2026-10-13,Social Media,36,32,15,15,0,0
 2026-10-13,tuktuki,169,139,68,70,0,0
@@ -596,7 +596,7 @@ day,channel,installs,first_video_view_d0_conversions_cohort,third_video_view_com
 2026-10-24,Google Organic Search,7,7,0,1,0,0
 2026-10-24,Influencer,425,306,150,133,0,0
 2026-10-24,OPPO国际 | OPPO Global,1,0,0,0,0,0
-2026-10-24,Organic,225,44,10,11,0,0
+2026-10-24,Organic,226,44,10,11,0,0
 2026-10-24,ShareChat,79,69,26,28,0,0
 2026-10-24,Social Media,23,21,8,8,0,0
 2026-10-24,tuktuki,103,91,52,57,0,0
@@ -621,7 +621,7 @@ day,channel,installs,first_video_view_d0_conversions_cohort,third_video_view_com
 2026-10-27,Google Organic Search,2,1,0,0,0,0
 2026-10-27,Influencer,405,292,135,118,0,0
 2026-10-27,OPPO国际 | OPPO Global,1,0,0,0,0,0
-2026-10-27,Organic,263,47,8,7,0,0
+2026-10-27,Organic,264,47,8,7,0,0
 2026-10-27,ShareChat,52,42,17,14,0,0
 2026-10-27,Social Media,26,23,11,11,0,0
 2026-10-27,tuktuki,101,82,35,36,0,0
@@ -875,9 +875,9 @@ day,channel,installs,first_video_view_d0_conversions_cohort,third_video_view_com
 2026-11-25,Vivo 国际 | Vivo Global,122,89,43,38,41,37
 2026-11-25,Xiaomi Global,1,1,1,1,1,1
 2026-11-25,tuktuki,83,68,31,37,34,23
-2026-11-26,AI Markit,555,380,167,155,150,139
+2026-11-26,AI Markit,555,380,167,155,151,139
 2026-11-26,Affiliate,1,0,0,0,0,0
-2026-11-26,Facebook,1464,1116,502,474,437,384
+2026-11-26,Facebook,1464,1116,502,474,437,385
 2026-11-26,Google Ads,77,57,32,35,34,26
 2026-11-26,Google Organic Search,3,3,0,0,0,0
 2026-11-26,Influencer,408,314,139,142,139,119
@@ -888,3 +888,14 @@ day,channel,installs,first_video_view_d0_conversions_cohort,third_video_view_com
 2026-11-26,Vivo 国际 | Vivo Global,111,90,42,40,37,32
 2026-11-26,Xiaomi Global,33,27,11,9,10,6
 2026-11-26,tuktuki,88,69,37,30,30,26
+2026-11-27,AI Markit,140,104,47,45,42,32
+2026-11-27,Facebook,1674,1270,509,491,439,380
+2026-11-27,Google Ads,72,52,22,22,22,13
+2026-11-27,Google Organic Search,2,2,1,0,0,0
+2026-11-27,Influencer,65,44,23,19,21,18
+2026-11-27,Organic,210,43,9,5,5,6
+2026-11-27,ShareChat,62,52,19,12,13,6
+2026-11-27,Social Media,37,31,16,13,12,8
+2026-11-27,Vivo 国际 | Vivo Global,108,82,34,37,34,27
+2026-11-27,Xiaomi Global,173,134,47,38,28,24
+2026-11-27,tuktuki,81,55,21,20,17,11
