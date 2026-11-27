@@ -1,4 +1,4 @@
-Run 2026-11-27 19:04 IST  (push)
+Run 2026-11-27 20:37 IST  (schedule)
 onedrive=success ads_rebuild=success ig_rebuild=success adjust=success ga=success export=success social=success
 
 == onedrive
@@ -74,7 +74,7 @@ ads_engine: 70 dash rows, 2778 weekly/monthly rows, end 2026-11-25
 
 == social
 META_TOKEN not set - Instagram left as in the workbook
-YouTube: 661 videos refreshed, 39 new
+YouTube: 662 videos refreshed, 40 new
 
 == sources
 sources: {'adjust': '2026-11-26', 'admin': '2026-11-26', 'ads': '2026-11-25', 'built': '2026-11-27', 'ga': '2026-11-25', 'ig': '2026-11-26', 'oem': '2026-11-26', 'yt': '2026-11-26'}
