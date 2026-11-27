@@ -457,11 +457,11 @@
 },
 {
 "dim": "country",
-"value": "Romania",
+"value": "Algeria",
 "users": 12,
-"new_users": 6,
-"sessions": 10,
-"minutes_per_user": 2.6
+"new_users": 0,
+"sessions": 19,
+"minutes_per_user": 0.2
 },
 {
 "dim": "country",
@@ -473,11 +473,11 @@
 },
 {
 "dim": "country",
-"value": "Algeria",
+"value": "Germany",
 "users": 12,
-"new_users": 0,
-"sessions": 19,
-"minutes_per_user": 0.2
+"new_users": 3,
+"sessions": 13,
+"minutes_per_user": 3.6
 },
 {
 "dim": "language",
@@ -585,19 +585,19 @@
 },
 {
 "dim": "language",
-"value": "bn-in",
-"users": 26,
-"new_users": 6,
-"sessions": 28,
-"minutes_per_user": 4.4
-},
-{
-"dim": "language",
 "value": "in-id",
 "users": 26,
 "new_users": 0,
 "sessions": 60,
 "minutes_per_user": 0.4
+},
+{
+"dim": "language",
+"value": "bn-in",
+"users": 26,
+"new_users": 6,
+"sessions": 28,
+"minutes_per_user": 4.4
 },
 {
 "dim": "language",
@@ -617,19 +617,19 @@
 },
 {
 "dim": "language",
-"value": "id-id",
-"users": 21,
-"new_users": 4,
-"sessions": 40,
-"minutes_per_user": 0.6
-},
-{
-"dim": "language",
 "value": "en-",
 "users": 21,
 "new_users": 11,
 "sessions": 16,
 "minutes_per_user": 15.2
+},
+{
+"dim": "language",
+"value": "id-id",
+"users": 21,
+"new_users": 4,
+"sessions": 40,
+"minutes_per_user": 0.6
 },
 {
 "dim": "language",
@@ -921,11 +921,11 @@
 },
 {
 "dim": "region",
-"value": "Jharkhand",
+"value": "Kerala",
 "users": 728,
-"new_users": 267,
-"sessions": 757,
-"minutes_per_user": 12.6
+"new_users": 240,
+"sessions": 782,
+"minutes_per_user": 9.4
 },
 {
 "dim": "region",
@@ -937,11 +937,11 @@
 },
 {
 "dim": "region",
-"value": "Kerala",
+"value": "Jharkhand",
 "users": 728,
-"new_users": 240,
-"sessions": 782,
-"minutes_per_user": 9.4
+"new_users": 267,
+"sessions": 757,
+"minutes_per_user": 12.6
 },
 {
 "dim": "region",

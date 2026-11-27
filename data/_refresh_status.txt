@@ -1,4 +1,4 @@
-Run 2026-11-27 08:35 IST  (schedule)
+Run 2026-11-27 09:45 IST  (schedule)
 onedrive=success ads_rebuild=success ig_rebuild=success adjust=success ga=success export=success social=success
 
 == onedrive
@@ -21,7 +21,7 @@ Daily Ads workbook rebuilt from the engine files
 
 == ig
 files from Tuktuki Social Analytics/_pipeline: 18
-Instagram data saved on 2026-11-26 (status report )
+Instagram data saved on 2026-11-27 (status report )
 {"rows": 738, "with_insights": 738, "frozen": 672, "youtube": {"yt_videos": 636, "yt_shorts": 525, "yt_with_retention": 608, "yt_frozen": 395}, "out": "/tmp/igp/out.xlsx"}
 Instagram workbook rebuilt from the pipeline files
 
@@ -77,4 +77,4 @@ META_TOKEN not set - Instagram left as in the workbook
 YouTube: 655 videos refreshed, 33 new
 
 == sources
-sources: {'adjust': '2026-11-26', 'admin': '2026-11-23', 'ads': '2026-11-25', 'built': '2026-11-27', 'ga': '2026-11-25', 'ig': '2026-11-25', 'oem': '2026-11-26', 'yt': '2026-11-26'}
+sources: {'adjust': '2026-11-26', 'admin': '2026-11-23', 'ads': '2026-11-25', 'built': '2026-11-27', 'ga': '2026-11-25', 'ig': '2026-11-26', 'oem': '2026-11-26', 'yt': '2026-11-26'}
