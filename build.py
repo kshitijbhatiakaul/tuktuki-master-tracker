@@ -116,12 +116,48 @@ def read_csv(path):
         return list(csv.DictReader(f))
 
 
+# Kshitij, 27 Nov 2026: installs Adjust credits to the OEM network "Ai Markit Partner" (channel "AI Markit", first day 24 Nov 2026)
+# are Meta installs – count them in the Facebook (Meta) channel everywhere, and not as an OEM. Remove this map to undo.
+CHANNEL_AS_META = {"AI Markit": "Facebook"}
+OEM_AS_META = {"Ai Markit Partner"}
+
+
+def _fold_channels(text):
+    """Relabel CHANNEL_AS_META channels and merge them into the target channel's rows (counts summed, rates install-weighted)."""
+    rows = list(csv.DictReader(io.StringIO(text)))
+    if not rows or "channel" not in rows[0] or not any(r["channel"] in CHANNEL_AS_META for r in rows):
+        return text
+    cols = list(rows[0].keys())
+    num = lambda v: float(v) if v not in (None, "") else 0.0
+    rate = lambda c: c.startswith("retention_rate") or "per_user" in c
+    keys = [c for c in cols if c in ("day", "month", "channel", "campaign_network", "network")]
+    out, order = {}, []
+    for r in rows:
+        r = dict(r); r["channel"] = CHANNEL_AS_META.get(r["channel"], r["channel"])
+        k = tuple(r[c] for c in keys)
+        if k not in out:
+            out[k] = r; order.append(k); continue
+        t = out[k]; wi, wr = num(t.get("installs")), num(r.get("installs"))
+        for c in cols:
+            if c in keys: continue
+            try:
+                if rate(c):
+                    t[c] = str(round((num(t[c]) * wi + num(r[c]) * wr) / (wi + wr), 6)) if wi + wr else t[c]
+                else:
+                    t[c] = str(round(num(t[c]) + num(r[c]), 4))
+            except ValueError:
+                pass
+    buf = io.StringIO(); w = csv.DictWriter(buf, fieldnames=cols, lineterminator="\n"); w.writeheader()
+    for k in order: w.writerow(out[k])
+    return buf.getvalue()
+
+
 def load_raw():
     raw = {}
     for name in ADJUST:
         p = os.path.join(BEH, name + ".csv")
         if os.path.exists(p):
-            raw[name] = {"text": open(p, encoding="utf-8").read()}
+            raw[name] = {"text": _fold_channels(open(p, encoding="utf-8").read())}
     for name in ADMIN:
         p = os.path.join(BEH, "admin", name + ".csv")
         if os.path.exists(p):
@@ -158,7 +194,8 @@ def load_master():
     import subprocess
     subprocess.run([sys.executable, os.path.join(ROOT, "tools", "spend_daily.py")], check=True, stdout=subprocess.DEVNULL)
     daily = json.load(open(os.path.join(DATA, "spend", "daily.json"), encoding="utf-8"))
-    oem = {k: read_csv(os.path.join(DATA, "oem", f"oem_{k}.csv")) for k in ("monthly", "daily") if os.path.exists(os.path.join(DATA, "oem", f"oem_{k}.csv"))}
+    oem = {k: [r for r in read_csv(os.path.join(DATA, "oem", f"oem_{k}.csv")) if r.get("network") not in OEM_AS_META]
+           for k in ("monthly", "daily") if os.path.exists(os.path.join(DATA, "oem", f"oem_{k}.csv"))}
     src_path = os.path.join(DATA, "sources.json")
     sources = json.load(open(src_path)) if os.path.exists(src_path) else {}
     return {"index": index, "sheets": sheets, "engine": eng, "pmHistory": hist, "spendDaily": daily, "oem": oem, "sources": sources}

@@ -792,7 +792,7 @@
 
   // ====================================================================== OEM
   // OEM networks (Adjust network names). Every one is listed even in months with no installs, so a partner going quiet is visible.
-  const OEMN = ['Oppo Affinity', 'Xiaomi', 'Vivo Affinity', 'Transsion Holdings', 'Ai Markit Partner', 'Affiliate'];
+  const OEMN = ['Oppo Affinity', 'Xiaomi', 'Vivo Affinity', 'Transsion Holdings', 'Affiliate']; // Ai Markit Partner counted as Meta (Kshitij, 27 Nov 2026)
   const OEMC = { 'Oppo Affinity': '#1f8f4e', Xiaomi: '#f08c2e', 'Vivo Affinity': '#2f6fd1', 'Transsion Holdings': '#7c4ddb', 'Ai Markit Partner': '#d63384', Affiliate: '#8a8f98' };
   const OEML = { 'Oppo Affinity': 'Oppo', Xiaomi: 'Xiaomi', 'Vivo Affinity': 'Vivo', 'Transsion Holdings': 'Transsion', 'Ai Markit Partner': 'AI Markit', Affiliate: 'Affiliate (Vivo, LitmusMedia)', Affiliate_Vivo: 'Affiliate (Vivo)', 'Affinity veve': 'Affinity Veve' };
   const oemName = (nw) => OEML[nw] || nw;
