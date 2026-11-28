@@ -545,19 +545,19 @@
 },
 {
 "dim": "language",
-"value": "en-ie",
-"users": 54,
-"new_users": 16,
-"sessions": 58,
-"minutes_per_user": 10.2
-},
-{
-"dim": "language",
 "value": "en-dz",
 "users": 54,
 "new_users": 29,
 "sessions": 76,
 "minutes_per_user": 27.7
+},
+{
+"dim": "language",
+"value": "en-ie",
+"users": 54,
+"new_users": 16,
+"sessions": 58,
+"minutes_per_user": 10.2
 },
 {
 "dim": "language",
