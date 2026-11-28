@@ -7,9 +7,9 @@
 name: Daily workbook refresh
 on:
   schedule:
-    # GitHub starts scheduled runs late or skips them when it is busy, so the tracker checks every hour
-    # from ~07:30 to ~23:30 IST; a run with nothing new commits nothing.
-    - cron: "7 2-18 * * *"
+    # Every hour from ~05:03 to ~23:03 IST (first run gives the morning picture; GA's previous day lands
+    # by the afternoon runs). GitHub may start a run late. A run with no new data commits nothing.
+    - cron: "33 23,0-17 * * *"
   push:
     branches: [main]
     paths: ["data/behaviour/admin/**", "data/behaviour/ga/**", "source/**", "build.py", "tools/**", ".github/workflows/daily-refresh.yml"]
@@ -101,7 +101,8 @@ jobs:
           git config user.name "tracker-refresh[bot]"
           git config user.email "tracker-refresh@users.noreply.github.com"
           git add -A data docs
-          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          # Only the run log changed -> nothing new to publish (keeps the repo and Pages builds small)
+          if git diff --cached --quiet -- . ':!data/_refresh_status.txt'; then echo "No new data"; exit 0; fi
           git commit -m "Tracker refresh $(TZ=Asia/Kolkata date '+%F %H:%M') IST (GitHub Actions)"
           git pull --rebase -X theirs origin main || true
           python3 build.py build && git add -A docs && git commit -q --amend --no-edit || true

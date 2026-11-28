@@ -1,6 +1,8 @@
 # Refresh schedule
 
-Everything except the admin panel is refreshed by the GitHub Action **"Daily workbook refresh"** (`.github/workflows/daily-refresh.yml`) — no Claude, no computer, no credits. It runs every hour from about 07:37 to 23:37 IST (GitHub may start a run late), whenever Claude pushes admin data, and on demand (Actions tab → Run workflow). Every run writes `data/_refresh_status.txt` (step results + last log lines).
+Everything except the admin panel is refreshed by the GitHub Action **"Daily workbook refresh"** (`.github/workflows/daily-refresh.yml`) — no Claude, no computer, no credits. It runs every hour from about 05:03 to 23:03 IST (GitHub may start a run late), whenever Claude pushes admin data, and on demand (Actions tab → Run workflow). Every run writes `data/_refresh_status.txt` (step results + last log lines), but a run commits only when some data actually changed.
+
+Free-tier notes: the repo is public, so Actions minutes cost nothing; ~19 runs a day at ~5–10 min each, at most one commit and one Pages build per run (Pages allows ~10 builds an hour), and each commit adds only the changed lines.
 
 | Data | How the Action gets it | Key (repo secret) |
 |---|---|---|
