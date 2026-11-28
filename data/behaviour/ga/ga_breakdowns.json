@@ -7527,8 +7527,8 @@
 "month": "2026-11",
 "active_users": 5630,
 "new_users": 4765,
-"engaged_sessions": 8028,
-"engagement_rate": 0.884,
+"engaged_sessions": 8040,
+"engagement_rate": 0.8846,
 "avg_engagement_sec": 1505,
 "revenue_usd": 31.84
 },
@@ -7593,7 +7593,7 @@
 "month": "2026-11",
 "active_users": 8790,
 "new_users": 4830,
-"engaged_sessions": 13185,
+"engaged_sessions": 13187,
 "engagement_rate": 0.6608,
 "avg_engagement_sec": 1440,
 "revenue_usd": 11.77
@@ -7649,7 +7649,7 @@
 "active_users": 6010,
 "new_users": 3274,
 "engaged_sessions": 9028,
-"engagement_rate": 0.6725,
+"engagement_rate": 0.6724,
 "avg_engagement_sec": 1452,
 "revenue_usd": 5.25
 },
@@ -7681,8 +7681,8 @@
 "month": "2026-11",
 "active_users": 3238,
 "new_users": 2106,
-"engaged_sessions": 5126,
-"engagement_rate": 0.6668,
+"engaged_sessions": 5129,
+"engagement_rate": 0.6671,
 "avg_engagement_sec": 1499,
 "revenue_usd": 17.78
 },
@@ -8033,8 +8033,8 @@
 "month": "2026-11",
 "active_users": 14593,
 "new_users": 9448,
-"engaged_sessions": 18246,
-"engagement_rate": 0.4215,
+"engaged_sessions": 18257,
+"engagement_rate": 0.4218,
 "avg_engagement_sec": 1167,
 "revenue_usd": 48.1
 },
@@ -8495,8 +8495,8 @@
 "month": "2026-11",
 "active_users": 3724,
 "new_users": 2461,
-"engaged_sessions": 5925,
-"engagement_rate": 0.6594,
+"engaged_sessions": 5929,
+"engagement_rate": 0.6597,
 "avg_engagement_sec": 1537,
 "revenue_usd": 21.78
 },
