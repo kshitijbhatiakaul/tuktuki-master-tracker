@@ -449,19 +449,19 @@
 },
 {
 "dim": "country",
-"value": "Romania",
-"users": 14,
-"new_users": 8,
-"sessions": 14,
-"minutes_per_user": 3
-},
-{
-"dim": "country",
 "value": "Germany",
 "users": 14,
 "new_users": 3,
 "sessions": 13,
 "minutes_per_user": 3.1
+},
+{
+"dim": "country",
+"value": "Romania",
+"users": 14,
+"new_users": 8,
+"sessions": 14,
+"minutes_per_user": 3
 },
 {
 "dim": "country",
@@ -593,19 +593,19 @@
 },
 {
 "dim": "language",
-"value": "en-ca",
-"users": 28,
-"new_users": 15,
-"sessions": 46,
-"minutes_per_user": 20.7
-},
-{
-"dim": "language",
 "value": "in-id",
 "users": 28,
 "new_users": 0,
 "sessions": 65,
 "minutes_per_user": 0.4
+},
+{
+"dim": "language",
+"value": "en-ca",
+"users": 28,
+"new_users": 15,
+"sessions": 46,
+"minutes_per_user": 20.7
 },
 {
 "dim": "language",
@@ -625,19 +625,19 @@
 },
 {
 "dim": "language",
-"value": "en-",
-"users": 22,
-"new_users": 11,
-"sessions": 17,
-"minutes_per_user": 14.5
-},
-{
-"dim": "language",
 "value": "ta-in",
 "users": 22,
 "new_users": 12,
 "sessions": 26,
 "minutes_per_user": 0.6
+},
+{
+"dim": "language",
+"value": "en-",
+"users": 22,
+"new_users": 11,
+"sessions": 17,
+"minutes_per_user": 14.5
 },
 {
 "dim": "os_version",
