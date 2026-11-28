@@ -465,19 +465,19 @@
 },
 {
 "dim": "country",
-"value": "Algeria",
-"users": 13,
-"new_users": 0,
-"sessions": 20,
-"minutes_per_user": 0.1
-},
-{
-"dim": "country",
 "value": "Spain",
 "users": 13,
 "new_users": 1,
 "sessions": 26,
 "minutes_per_user": 5.5
+},
+{
+"dim": "country",
+"value": "Algeria",
+"users": 13,
+"new_users": 0,
+"sessions": 20,
+"minutes_per_user": 0.1
 },
 {
 "dim": "language",

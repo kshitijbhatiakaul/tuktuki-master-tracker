@@ -1,4 +1,4 @@
-Run 2026-11-28 20:57 IST  (schedule)
+Run 2026-11-28 22:05 IST  (schedule)
 onedrive=success ads_rebuild=success ig_rebuild=success adjust=success ga=success export=success social=success
 
 == onedrive
@@ -29,7 +29,7 @@ Instagram workbook rebuilt from the pipeline files
 behaviour/daily.csv: 418 rows, 2025-10-06 to 2026-11-27
 behaviour/events.csv: 418 rows, 2025-10-06 to 2026-11-27
 behaviour/cohorts.csv: 418 rows, 2025-10-06 to 2026-11-27
-behaviour/purchases.csv: 119 rows, 2026-08-01 to 2026-11-27
+!! behaviour/purchases.csv: The read operation timed out - kept the old file
 behaviour/paycohort.csv: 105 rows, 2026-08-15 to 2026-11-27
 behaviour/channels.csv: 178 rows, 2025-10-01 to 2026-11-27
 behaviour/paychan.csv: 36 rows, 2026-09-01 to 2026-11-27
