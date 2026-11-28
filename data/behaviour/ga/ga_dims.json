@@ -545,19 +545,19 @@
 },
 {
 "dim": "language",
-"value": "en-dz",
-"users": 54,
-"new_users": 29,
-"sessions": 76,
-"minutes_per_user": 27.7
-},
-{
-"dim": "language",
 "value": "en-ie",
 "users": 54,
 "new_users": 16,
 "sessions": 58,
 "minutes_per_user": 10.2
+},
+{
+"dim": "language",
+"value": "en-dz",
+"users": 54,
+"new_users": 29,
+"sessions": 76,
+"minutes_per_user": 27.7
 },
 {
 "dim": "language",
@@ -793,11 +793,11 @@
 },
 {
 "dim": "os_version",
-"value": "Android 7.1.2",
+"value": "iOS 27.2",
 "users": 6,
 "new_users": 4,
-"sessions": 10,
-"minutes_per_user": 39.1
+"sessions": 6,
+"minutes_per_user": 5.9
 },
 {
 "dim": "region",
