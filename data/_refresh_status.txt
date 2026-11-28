@@ -1,4 +1,4 @@
-Run 2026-11-28 22:05 IST  (schedule)
+Run 2026-11-28 22:59 IST  (schedule)
 onedrive=success ads_rebuild=success ig_rebuild=success adjust=success ga=success export=success social=success
 
 == onedrive
@@ -29,7 +29,7 @@ Instagram workbook rebuilt from the pipeline files
 behaviour/daily.csv: 418 rows, 2025-10-06 to 2026-11-27
 behaviour/events.csv: 418 rows, 2025-10-06 to 2026-11-27
 behaviour/cohorts.csv: 418 rows, 2025-10-06 to 2026-11-27
-!! behaviour/purchases.csv: The read operation timed out - kept the old file
+behaviour/purchases.csv: 119 rows, 2026-08-01 to 2026-11-27
 behaviour/paycohort.csv: 105 rows, 2026-08-15 to 2026-11-27
 behaviour/channels.csv: 178 rows, 2025-10-01 to 2026-11-27
 behaviour/paychan.csv: 36 rows, 2026-09-01 to 2026-11-27
@@ -40,7 +40,7 @@ oem/oem_monthly.csv: 61 rows, 2025-12-01 to 2026-10-31
 oem/oem_daily.csv: 139 rows, 2026-11-01 to 2026-11-27
 
 == ga
-ga_daily.csv: 10 days
+ga_daily.csv: 11 days
 ga_dims.json: 121 rows
 ga_monthly.json: 14 months
 ga_breakdowns.json: 836 rows
@@ -77,4 +77,4 @@ META_TOKEN not set - Instagram left as in the workbook
 YouTube: 664 videos refreshed, 42 new
 
 == sources
-sources: {'adjust': '2026-11-27', 'admin': '2026-11-26', 'ads': '2026-11-25', 'built': '2026-11-28', 'ga': '2026-11-26', 'ig': '2026-11-26', 'oem': '2026-11-27', 'yt': '2026-11-27'}
+sources: {'adjust': '2026-11-27', 'admin': '2026-11-26', 'ads': '2026-11-25', 'built': '2026-11-28', 'ga': '2026-11-27', 'ig': '2026-11-26', 'oem': '2026-11-27', 'yt': '2026-11-27'}
