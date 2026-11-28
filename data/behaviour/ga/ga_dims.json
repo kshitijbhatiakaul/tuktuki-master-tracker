@@ -545,19 +545,19 @@
 },
 {
 "dim": "language",
-"value": "en-ie",
-"users": 54,
-"new_users": 16,
-"sessions": 58,
-"minutes_per_user": 10.2
-},
-{
-"dim": "language",
 "value": "en-dz",
 "users": 54,
 "new_users": 29,
 "sessions": 76,
 "minutes_per_user": 27.7
+},
+{
+"dim": "language",
+"value": "en-ie",
+"users": 54,
+"new_users": 16,
+"sessions": 58,
+"minutes_per_user": 10.2
 },
 {
 "dim": "language",
@@ -593,19 +593,19 @@
 },
 {
 "dim": "language",
-"value": "in-id",
-"users": 28,
-"new_users": 0,
-"sessions": 65,
-"minutes_per_user": 0.4
-},
-{
-"dim": "language",
 "value": "en-ca",
 "users": 28,
 "new_users": 15,
 "sessions": 46,
 "minutes_per_user": 20.7
+},
+{
+"dim": "language",
+"value": "in-id",
+"users": 28,
+"new_users": 0,
+"sessions": 65,
+"minutes_per_user": 0.4
 },
 {
 "dim": "language",
@@ -625,19 +625,19 @@
 },
 {
 "dim": "language",
-"value": "ta-in",
-"users": 22,
-"new_users": 12,
-"sessions": 26,
-"minutes_per_user": 0.6
-},
-{
-"dim": "language",
 "value": "en-",
 "users": 22,
 "new_users": 11,
 "sessions": 17,
 "minutes_per_user": 14.5
+},
+{
+"dim": "language",
+"value": "ta-in",
+"users": 22,
+"new_users": 12,
+"sessions": 26,
+"minutes_per_user": 0.6
 },
 {
 "dim": "os_version",
