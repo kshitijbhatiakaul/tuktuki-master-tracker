@@ -425,19 +425,19 @@
 },
 {
 "dim": "country",
-"value": "Kuwait",
-"users": 16,
-"new_users": 8,
-"sessions": 21,
-"minutes_per_user": 16.5
-},
-{
-"dim": "country",
 "value": "France",
 "users": 16,
 "new_users": 2,
 "sessions": 26,
 "minutes_per_user": 3.7
+},
+{
+"dim": "country",
+"value": "Kuwait",
+"users": 16,
+"new_users": 8,
+"sessions": 21,
+"minutes_per_user": 16.5
 },
 {
 "dim": "country",
@@ -449,14 +449,6 @@
 },
 {
 "dim": "country",
-"value": "Romania",
-"users": 14,
-"new_users": 8,
-"sessions": 14,
-"minutes_per_user": 3
-},
-{
-"dim": "country",
 "value": "Germany",
 "users": 14,
 "new_users": 3,
@@ -465,11 +457,11 @@
 },
 {
 "dim": "country",
-"value": "Algeria",
-"users": 13,
-"new_users": 0,
-"sessions": 20,
-"minutes_per_user": 0.1
+"value": "Romania",
+"users": 14,
+"new_users": 8,
+"sessions": 14,
+"minutes_per_user": 3
 },
 {
 "dim": "country",
@@ -478,6 +470,14 @@
 "new_users": 1,
 "sessions": 26,
 "minutes_per_user": 5.5
+},
+{
+"dim": "country",
+"value": "Algeria",
+"users": 13,
+"new_users": 0,
+"sessions": 20,
+"minutes_per_user": 0.1
 },
 {
 "dim": "language",
@@ -593,19 +593,19 @@
 },
 {
 "dim": "language",
-"value": "in-id",
-"users": 28,
-"new_users": 0,
-"sessions": 65,
-"minutes_per_user": 0.4
-},
-{
-"dim": "language",
 "value": "en-ca",
 "users": 28,
 "new_users": 15,
 "sessions": 46,
 "minutes_per_user": 20.7
+},
+{
+"dim": "language",
+"value": "in-id",
+"users": 28,
+"new_users": 0,
+"sessions": 65,
+"minutes_per_user": 0.4
 },
 {
 "dim": "language",
@@ -625,19 +625,19 @@
 },
 {
 "dim": "language",
-"value": "en-",
-"users": 22,
-"new_users": 11,
-"sessions": 17,
-"minutes_per_user": 14.5
-},
-{
-"dim": "language",
 "value": "ta-in",
 "users": 22,
 "new_users": 12,
 "sessions": 26,
 "minutes_per_user": 0.6
+},
+{
+"dim": "language",
+"value": "en-",
+"users": 22,
+"new_users": 11,
+"sessions": 17,
+"minutes_per_user": 14.5
 },
 {
 "dim": "os_version",
@@ -793,11 +793,11 @@
 },
 {
 "dim": "os_version",
-"value": "iOS 27.2",
+"value": "Android 7.1.2",
 "users": 6,
 "new_users": 4,
-"sessions": 6,
-"minutes_per_user": 5.9
+"sessions": 10,
+"minutes_per_user": 39.1
 },
 {
 "dim": "region",
