@@ -12,14 +12,14 @@ Free-tier notes: the repo is public, so Actions minutes cost nothing; ~19 runs a
 | GA: daily, places/versions (BigQuery), monthly totals and breakdowns incl. age/gender/interests (GA Data API) | `tools/ga_fetch.py`, service account `tracker-read@claude-tuktuki.iam.gserviceaccount.com` | `GCP_SA_KEY` |
 | YouTube (views, likes, comments, new videos) | YouTube Data API, channel @tuktuki_in (`tools/social_fetch.py`) | `YT_API_KEY` |
 | Instagram (reach, views, interactions, new posts) | Instagram Graph API (`tools/social_fetch.py`) | `META_TOKEN` |
-| Admin panel (viewing, subscriptions, series) | **Claude, Mondays** — the behaviour routine pushes `data/behaviour/admin/` (and `source/behaviour.html`); the push starts the Action | — |
+| Admin panel (viewing, subscriptions, series) | **Claude, every weekday** (~9:30 AM, or when the Mac comes online) — the behaviour routine pushes `data/behaviour/admin/` (Mondays also `source/behaviour.html`); the push starts the Action | — |
 
 - If the OneDrive sign-in expires, run **Connect OneDrive** from the Actions tab. `GH_PAT` expires a year after it was created — make a new one the same way.
 - Analysis columns of the Instagram / YouTube logs come from the Monday Instagram workbook; the API only refreshes the numbers and adds new posts.
 
-# Monday (Claude — admin panel only)
+# Weekdays (Claude — admin panel only)
 
-The Monday behaviour routine (Mac scheduled task) refreshes the admin-panel data in `tuktuki-user-behaviour`, then here:
+The behaviour routine (Mac scheduled task, Mon–Fri; a hourly catch-up task restarts it if the Mac was off) refreshes the admin-panel data in `tuktuki-user-behaviour`, then here:
 1. `cp ../tuktuki-user-behaviour/data/admin/* data/behaviour/admin/ && cp ../tuktuki-user-behaviour/source/dashboard.html source/behaviour.html`
 2. Commit only those paths, `git pull --rebase`, push. Never commit `docs/` from Claude — the push starts the GitHub Action, which rebuilds and publishes.
 3. Optionally republish the Claude artifact copy from a local `python3 build.py build` (not committed).
