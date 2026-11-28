@@ -425,19 +425,19 @@
 },
 {
 "dim": "country",
-"value": "France",
-"users": 16,
-"new_users": 2,
-"sessions": 26,
-"minutes_per_user": 3.7
-},
-{
-"dim": "country",
 "value": "Kuwait",
 "users": 16,
 "new_users": 8,
 "sessions": 21,
 "minutes_per_user": 16.5
+},
+{
+"dim": "country",
+"value": "France",
+"users": 16,
+"new_users": 2,
+"sessions": 26,
+"minutes_per_user": 3.7
 },
 {
 "dim": "country",
