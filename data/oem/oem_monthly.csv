@@ -13,13 +13,13 @@ Oppo Affinity,2026-05,Oppo_Affinity,17121,280,281,35986,1034.4839,13761,0.0488,0
 Oppo Affinity,2026-05,unknown,1,0,0,2,0.0645,1,0.0,0.0,83.0
 Oppo Affinity,2026-06,OppoAffinity,2,15,0,13667,426.7333,2595,0.0,0.0,0.0
 Oppo Affinity,2026-06,Oppo_Affinity,67,62,0,6663,204.3,1214,0.0,0.0,0.0
-Oppo Affinity,2026-07,OppoAffinity,0,8,0,9819,296.5161,1538,0.0,0.0,0.0
-Oppo Affinity,2026-07,Oppo_Affinity,0,11,0,3960,115.0,577,0.0,0.0,0.0
-Oppo Affinity,2026-08,OppoAffinity,1,2,0,6912,208.6129,736,0.0,0.0,0.0
-Oppo Affinity,2026-08,Oppo_Affinity,0,2,0,2487,73.6774,263,0.0,0.0,0.0
-Oppo Affinity,2026-09,OppoAffinity,12,4,0,4977,154.5,453,0.0,0.0,0.0
-Oppo Affinity,2026-09,Oppo_Affinity,0,0,0,1605,49.0333,155,0.0,0.0,0.0
-Oppo Affinity,2026-10,OppoAffinity,13,0,0,3790,114.2903,273,0.0,0.0,0.0
+Oppo Affinity,2026-07,OppoAffinity,0,8,0,9819,296.5161,1583,0.0,0.0,0.0
+Oppo Affinity,2026-07,Oppo_Affinity,0,11,0,3960,115.0,595,0.0,0.0,0.0
+Oppo Affinity,2026-08,OppoAffinity,1,2,0,6912,208.6129,743,0.0,0.0,0.0
+Oppo Affinity,2026-08,Oppo_Affinity,0,2,0,2487,73.6774,265,0.0,0.0,0.0
+Oppo Affinity,2026-09,OppoAffinity,12,4,0,4977,154.5,463,0.0,0.0,0.0
+Oppo Affinity,2026-09,Oppo_Affinity,0,0,0,1605,49.0333,158,0.0,0.0,0.0
+Oppo Affinity,2026-10,OppoAffinity,13,0,0,3790,114.2903,279,0.0,0.0,0.0
 Oppo Affinity,2026-10,Oppo_Affinity,0,2,0,1169,33.1613,61,0.0,0.0,0.0
 Transsion Holdings,2026-01,Transsion,1,0,2,3,0.0968,0,0.0,0.0,0.0
 Transsion Holdings,2026-02,Transsion,1,0,2,4,0.1429,0,0.0,0.0,0.0
@@ -31,12 +31,12 @@ Transsion Holdings,2026-05,transsion_pai,13180,9,0,26431,782.9032,6103,0.0482,0.
 Transsion Holdings,2026-06,Transsion,1,0,0,3,0.1,0,0.0,0.0,0.0
 Transsion Holdings,2026-06,transsion_pai,315,6,0,6520,201.1667,953,0.0286,0.0159,1.0
 Transsion Holdings,2026-07,Transsion,0,0,0,2,0.0645,0,0.0,0.0,0.0
-Transsion Holdings,2026-07,transsion_pai,0,5,0,3318,96.8387,485,0.0,0.0,0.0
-Transsion Holdings,2026-08,transsion_pai,1,2,0,1787,53.8065,225,0.0,0.0,216.0
+Transsion Holdings,2026-07,transsion_pai,0,5,0,3318,96.8387,492,0.0,0.0,0.0
+Transsion Holdings,2026-08,transsion_pai,1,2,0,1787,53.8065,226,0.0,0.0,216.0
 Transsion Holdings,2026-09,Transsion,0,0,0,4,0.1333,0,0.0,0.0,0.0
 Transsion Holdings,2026-09,transsion_pai,0,0,0,1129,34.7333,101,0.0,0.0,0.0
 Transsion Holdings,2026-10,Transsion,0,0,0,2,0.0645,1,0.0,0.0,0.0
-Transsion Holdings,2026-10,transsion_pai,0,0,0,737,22.2581,79,0.0,0.0,0.0
+Transsion Holdings,2026-10,transsion_pai,0,0,0,737,22.2581,80,0.0,0.0,0.0
 Vivo Affinity,2025-12,Affinity_Vivo,10805,0,57,12359,375.9355,0,0.0161,0.0035,21.0
 Vivo Affinity,2026-01,Affinity_Vivo,6386,0,39,8495,259.0323,1,0.0135,0.007,15.0
 Vivo Affinity,2026-02,Affinity_Vivo,287,0,0,1458,47.5,0,0.0105,0.0105,10.0
@@ -56,7 +56,7 @@ Xiaomi,2026-03,xiaomi_direct,40326,3,1042,63280,1888.0,979,0.0279,0.0083,14.0
 Xiaomi,2026-04,xiaomi_direct,19995,156,339,40500,1141.6,12360,0.0549,0.011,271.0
 Xiaomi,2026-05,xiaomi_direct,143,53,0,6657,197.7742,934,0.028,0.007,28.0
 Xiaomi,2026-06,xiaomi_direct,0,23,0,3823,120.7667,430,0.0,0.0,0.0
-Xiaomi,2026-07,xiaomi_direct,0,2,0,2743,84.2903,256,0.0,0.0,0.0
-Xiaomi,2026-08,xiaomi_direct,0,0,0,1994,60.0323,120,0.0,0.0,0.0
+Xiaomi,2026-07,xiaomi_direct,0,2,0,2743,84.2903,266,0.0,0.0,0.0
+Xiaomi,2026-08,xiaomi_direct,0,0,0,1994,60.0323,122,0.0,0.0,0.0
 Xiaomi,2026-09,xiaomi_direct,0,2,0,1377,43.1667,73,0.0,0.0,0.0
 Xiaomi,2026-10,xiaomi_direct,0,0,0,988,29.9355,34,0.0,0.0,0.0
